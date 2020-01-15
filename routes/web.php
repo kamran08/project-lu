@@ -13,6 +13,8 @@
 
 Route::post('/app/registration', "UserController@registration");
 Route::post('/app/login', "UserController@login");
+Route::post('/app/upload', "UserController@uploadImages");
+Route::post('/uploadImages', 'UserController@getImage');
 //logout
 Route::get('/logout', function () {
     Auth::logout();

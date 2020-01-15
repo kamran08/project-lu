@@ -1874,8 +1874,7 @@ __webpack_require__.r(__webpack_exports__);
     headerSection: _components_header_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     footerSection: _components_footer_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
-  created: function created() {
-    this.$store.commit('setAuthuser', window.authUser);
+  created: function created() {//  this.$store.commit('setAuthuser', (window.authUser));
   }
 });
 
@@ -2031,16 +2030,115 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      tab: 1,
+      uploads: [],
+      defaultList: [],
+      listMethod: false,
+      uploadList: [],
+      tab: 2,
       value: "",
-      from: {}
+      from: {
+        projectName: '',
+        type: '',
+        category: '',
+        description: '',
+        image: ''
+      },
+      imageUrl: '',
+      imgName: '',
+      image: '' //   crfObj: {
+      //         'X-CSRF-TOKEN' : document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+      //     },
+
     };
   },
   created: function created() {},
-  methods: {}
+  methods: {
+    submitMethod1: function submitMethod1() {
+      if (this.from.projectName == '') {
+        return this.e("Project Name can not be empty!!");
+      }
+
+      if (this.from.category == '') {
+        return this.e("Project category can not be empty!!");
+      }
+
+      if (this.from.type == '') {
+        return this.e("Select type can not be empty!!");
+      }
+
+      if (this.from.description == '') {
+        return this.e("Project description can not be empty!!");
+      }
+
+      this.tab = 2;
+    },
+    submitMethod2: function submitMethod2() {},
+    submitFrom: function submitFrom() {},
+    handleSuccess: function handleSuccess(res, file) {
+      this.uploadList.push({
+        link: res.imageUrl
+      });
+      console.log(this.uploadList);
+    },
+    handleFormatError: function handleFormatError(file) {
+      this.$Notice.warning({
+        title: 'The file format is incorrect',
+        desc: 'File format of ' + file.name + ' is incorrect, please select jpg or png.'
+      });
+    },
+    handleMaxSize: function handleMaxSize(file) {
+      this.$Notice.warning({
+        title: 'Exceeding file size limit',
+        desc: 'File  ' + file.name + ' is too large, no more than 2M.'
+      });
+    },
+    handleBeforeUpload: function handleBeforeUpload() {// const check = this.uploadList.length < 6;
+      // if (!check) {
+      //     this.$Notice.warning({
+      //         title: 'Up to five pictures can be uploaded.'
+      //     });
+      // }
+      // return check;
+    }
+  }
 });
 
 /***/ }),
@@ -69183,52 +69281,78 @@ var render = function() {
             _c("div", { staticClass: "authentication-card upload-card" }, [
               _vm._m(1),
               _vm._v(" "),
-              _c("div", { staticClass: "upload-project-menu" }, [
-                _c("ul", [
-                  _c(
-                    "li",
-                    {
-                      class: _vm.tab == 1 ? "active_1" : "",
-                      on: {
-                        click: function($event) {
-                          _vm.tab = 1
-                        }
-                      }
-                    },
-                    [_vm._v("Project"), _vm._m(2)]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "li",
-                    {
-                      class: _vm.tab == 2 ? "active_1" : "",
-                      on: {
-                        click: function($event) {
-                          _vm.tab = 2
-                        }
-                      }
-                    },
-                    [_vm._v("Cover & Image"), _vm._m(3)]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "li",
-                    {
-                      class: _vm.tab == 3 ? "active_1" : "",
-                      on: {
-                        click: function($event) {
-                          _vm.tab = 3
-                        }
-                      }
-                    },
-                    [_vm._v("Publishing")]
-                  )
-                ])
-              ]),
+              _vm.tab
+                ? _c("div", { staticClass: "upload-project-menu" }, [
+                    _c("ul", [
+                      _c(
+                        "li",
+                        {
+                          class: _vm.tab == 1 ? "active_1" : "",
+                          on: {
+                            click: function($event) {
+                              _vm.tab = 1
+                            }
+                          }
+                        },
+                        [_vm._v("Project"), _vm._m(2)]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        {
+                          class: _vm.tab == 2 ? "active_1" : "",
+                          on: { click: _vm.submitMethod1 }
+                        },
+                        [_vm._v("Cover & Image"), _vm._m(3)]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        {
+                          class: _vm.tab == 3 ? "active_1" : "",
+                          on: { click: _vm.submitFrom }
+                        },
+                        [_vm._v("Publishing")]
+                      )
+                    ])
+                  ])
+                : _vm._e(),
               _vm._v(" "),
               _vm.tab == 1
                 ? _c("div", { staticClass: "authentication-log" }, [
-                    _vm._m(4),
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Project Title")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.from.projectName,
+                            expression: "from.projectName"
+                          }
+                        ],
+                        attrs: {
+                          type: "text",
+                          placeholder: "E-Commerce website"
+                        },
+                        domProps: { value: _vm.from.projectName },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.from,
+                              "projectName",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "authentication-item" }, [
                       _c("label", { attrs: { for: "input" } }, [
@@ -69242,8 +69366,8 @@ var render = function() {
                             {
                               name: "model",
                               rawName: "v-model",
-                              value: _vm.value,
-                              expression: "value"
+                              value: _vm.from.type,
+                              expression: "from.type"
                             }
                           ],
                           staticClass: "select-category",
@@ -69258,9 +69382,13 @@ var render = function() {
                                   var val = "_value" in o ? o._value : o.value
                                   return val
                                 })
-                              _vm.value = $event.target.multiple
-                                ? $$selectedVal
-                                : $$selectedVal[0]
+                              _vm.$set(
+                                _vm.from,
+                                "type",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
                             }
                           }
                         },
@@ -69284,34 +69412,150 @@ var render = function() {
                       )
                     ]),
                     _vm._v(" "),
-                    _vm._m(5),
-                    _vm._v(" "),
-                    _vm._m(6),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass: "authentication next-button",
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Project Category")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.from.category,
+                            expression: "from.category"
+                          }
+                        ],
+                        attrs: {
+                          type: "text",
+                          placeholder: "Type category of webaite"
+                        },
+                        domProps: { value: _vm.from.category },
                         on: {
-                          click: function($event) {
-                            _vm.tab = 2
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.from, "category", $event.target.value)
                           }
                         }
-                      },
-                      [
-                        _c(
-                          "button",
-                          { staticClass: "sign-now-button next-btn" },
-                          [_vm._v("Next")]
-                        )
-                      ]
-                    )
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Project description")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "textarea",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.from.description,
+                              expression: "from.description"
+                            }
+                          ],
+                          staticClass: "textarea upload-textarea",
+                          domProps: { value: _vm.from.description },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.from,
+                                "description",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        },
+                        [_vm._v("Describe your project")]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "authentication next-button" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "sign-now-button next-btn",
+                          on: { click: _vm.submitMethod1 }
+                        },
+                        [_vm._v("Next")]
+                      )
+                    ])
                   ])
                 : _vm._e(),
               _vm._v(" "),
               _vm.tab == 2
                 ? _c("div", { staticClass: "authentication-log" }, [
-                    _vm._m(7),
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("div", { staticClass: "file-upload" }, [
+                        _c("div", { staticClass: "col-12 col-md-6 col-lg-6" }, [
+                          _c("div", { staticClass: "_1input_group" }, [
+                            _c("div", { staticClass: "_1upload" }, [
+                              _c("div", { staticClass: "_image_upload_pic" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "_1upload_upload" },
+                                  [
+                                    _c(
+                                      "Upload",
+                                      {
+                                        ref: "upload",
+                                        attrs: {
+                                          name: "img",
+                                          "show-upload-list": false,
+                                          "on-success": _vm.handleSuccess,
+                                          format: ["jpg", "jpeg", "png"],
+                                          "max-size": 2048,
+                                          "on-format-error":
+                                            _vm.handleFormatError,
+                                          "on-exceeded-size": _vm.handleMaxSize,
+                                          "before-upload":
+                                            _vm.handleBeforeUpload,
+                                          type: "drag",
+                                          action: "/uploadImages"
+                                        }
+                                      },
+                                      [
+                                        _c("div", [
+                                          _c(
+                                            "div",
+                                            { staticClass: "_1upload_main" },
+                                            [
+                                              _c(
+                                                "p",
+                                                {
+                                                  staticClass: "_1upload_icon"
+                                                },
+                                                [
+                                                  _c("i", {
+                                                    staticClass: "fas fa-camera"
+                                                  })
+                                                ]
+                                              )
+                                            ]
+                                          )
+                                        ])
+                                      ]
+                                    )
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c("p", { staticClass: "_upload_text" }, [
+                                  _vm._v("Upload your Picture")
+                                ])
+                              ])
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]),
                     _vm._v(" "),
                     _c(
                       "div",
@@ -69339,7 +69583,7 @@ var render = function() {
                     "div",
                     { staticClass: "authentication-log publish-card" },
                     [
-                      _vm._m(8),
+                      _vm._m(4),
                       _vm._v(" "),
                       _c(
                         "div",
@@ -69366,8 +69610,7 @@ var render = function() {
           ])
         ])
       ])
-    ]),
-    _vm._v("\n    " + _vm._s(_vm.tab + "hell") + "\n\n")
+    ])
   ])
 }
 var staticRenderFns = [
@@ -69403,100 +69646,6 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("span", [_c("i", { staticClass: "fas fa-angle-double-right" })])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "authentication-item" }, [
-      _c("label", { attrs: { for: "input" } }, [_vm._v("Project Title")]),
-      _vm._v(" "),
-      _c("input", {
-        attrs: { type: "text", placeholder: "E-Commerce website" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "authentication-item" }, [
-      _c("label", { attrs: { for: "input" } }, [_vm._v("Project Category")]),
-      _vm._v(" "),
-      _c("input", {
-        attrs: { type: "text", placeholder: "Type category of webaite" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "authentication-item" }, [
-      _c("label", { attrs: { for: "input" } }, [_vm._v("Project description")]),
-      _vm._v(" "),
-      _c("textarea", { staticClass: "textarea upload-textarea" }, [
-        _vm._v("Describe your project")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "authentication-item" }, [
-      _c("div", { staticClass: "file-upload" }, [
-        _c(
-          "button",
-          {
-            staticClass: "file-upload-btn",
-            attrs: {
-              type: "button",
-              onclick: "$('.file-upload-input').trigger( 'click' )"
-            }
-          },
-          [_vm._v("Add Image")]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "image-upload-wrap" }, [
-          _c("input", {
-            staticClass: "file-upload-input",
-            attrs: {
-              type: "file",
-              onchange: "readURL(this);",
-              accept: "image/*"
-            }
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "drag-text" }, [
-            _c("h3", [_vm._v("Drag and drop a file or select add Image")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "file-upload-content" }, [
-          _c("img", {
-            staticClass: "file-upload-image",
-            attrs: { src: "#", alt: "your image" }
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "image-title-wrap" }, [
-            _c(
-              "button",
-              {
-                staticClass: "remove-image",
-                attrs: { type: "button", onclick: "removeUpload()" }
-              },
-              [
-                _vm._v("Remove "),
-                _c("span", { staticClass: "image-title" }, [
-                  _vm._v("Uploaded Image")
-                ])
-              ]
-            )
-          ])
-        ])
-      ])
-    ])
   },
   function() {
     var _vm = this
@@ -87586,8 +87735,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\project-lu\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! E:\project-lu\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! G:\project-rakho\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! G:\project-rakho\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

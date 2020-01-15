@@ -20,24 +20,24 @@
 
                             </div>
 
-                            <div class="upload-project-menu">
+                            <div class="upload-project-menu" v-if="tab">
                                 <ul>
                                     <li :class="(tab==1)?'active_1':''" @click="tab=1">Project<span><i
                                                     class="fas fa-angle-double-right"></i></span></li>
-                                    <li :class="(tab==2)?'active_1':''" @click="tab=2">Cover & Image<span><i
+                                    <li :class="(tab==2)?'active_1':''" @click="submitMethod1">Cover & Image<span><i
                                                     class="fas fa-angle-double-right"></i></span></li>
-                                    <li :class="(tab==3)?'active_1':''" @click="tab=3">Publishing</li>
+                                    <li :class="(tab==3)?'active_1':''" @click="submitFrom">Publishing</li>
 
                                 </ul>
                             </div>
                             <div class="authentication-log" v-if="tab==1">
                                     <div class="authentication-item">
                                         <label for="input">Project Title</label>
-                                        <input type="text" placeholder="E-Commerce website">
+                                        <input v-model="from.projectName" type="text" placeholder="E-Commerce website">
                                     </div>
                                     <div class="authentication-item">
                                         <label for="input">Project Type</label>
-                                        <select v-model="value" class="select-category" id="sel1">
+                                        <select v-model="from.type" class="select-category" id="sel1">
                                             <option value="Website">Website</option>
                                             <option value="Apps">Apps</option>
                                             <option value="Game">Game</option>
@@ -47,16 +47,16 @@
 
                                     <div class="authentication-item">
                                         <label for="input">Project Category</label>
-                                        <input type="text" placeholder="Type category of webaite">
+                                        <input v-model="from.category" type="text" placeholder="Type category of webaite">
                                     </div>
                                     <div class="authentication-item">
                                         <label for="input">Project description</label>
-                                        <textarea class="textarea upload-textarea">Describe your project</textarea>
+                                        <textarea v-model="from.description"  class="textarea upload-textarea">Describe your project</textarea>
                                     </div>
 
-                                <div class="authentication next-button" @click="tab=2">
+                                <div class="authentication next-button" >
                                     
-                                    <button class="sign-now-button next-btn">Next</button>
+                                    <button class="sign-now-button next-btn" @click="submitMethod1">Next</button>
                                    
                                 </div>
                             </div>
@@ -66,23 +66,59 @@
                                 
                                     <div class="authentication-item">
                                         
-                                        <div class="file-upload">
-                                            <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
-                                          
-                                            <div class="image-upload-wrap">
-                                              <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-                                              <div class="drag-text">
-                                                <h3>Drag and drop a file or select add Image</h3>
-                                              </div>
+                                <div class="file-upload">
+                                    
+                                    <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="_1input_group">
+                                    <div class="_1upload">
+                                    <div class="_image_upload_pic">
+                                        <!-- Image -->
+                                        <!-- <div class="_upload_image" >
+                                        <img class="_image_upload_img" :src="from.image" alt="" title="" >
+
+                                        <p class="_1upload_edit" @click="from.image=false"><i class="fas fa-pen"></i></p>
+                                        </div> -->
+                                        <!-- Image -->
+
+                                        <!-- Upload -->
+                                        <div class="_1upload_upload">
+
+<!-- :headers="crfObj" -->
+                                      <Upload
+                                        name='img'
+                                        ref="upload"
+                                        :show-upload-list="false"
+                                        :on-success="handleSuccess"
+                                        :format="['jpg','jpeg','png']"
+                                        :max-size="2048"
+                                        
+                                        :on-format-error="handleFormatError"
+                                        :on-exceeded-size="handleMaxSize"
+                                        :before-upload="handleBeforeUpload"
+                                        type="drag"
+                                        action="/uploadImages"
+                                        >
+                                            <div>
+                                            <div class="_1upload_main">
+                                                <p class="_1upload_icon"><i class="fas fa-camera"></i></p>
                                             </div>
-                                            <div class="file-upload-content">
-                                              <img class="file-upload-image" src="#" alt="your image" />
-                                              <div class="image-title-wrap">
-                                                <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
-                                              </div>
                                             </div>
-                                          </div>
+                                        </Upload>
+                               	         
+                                        </div>
+                                        <!-- Upload -->
+
+                                        <p class="_upload_text">Upload your Picture</p>
                                     </div>
+                                    </div>
+
+                                    </div>
+                                </div>
+
+
+
+                                </div>
+                                                    </div>
      
                                
                                 <div class="authentication next-button" @click="tab=3">
@@ -134,7 +170,6 @@
                 </div>
             </div>
         </div>
-        {{tab +"hell"}}
 
     </div>
 </template>
@@ -143,17 +178,81 @@
 export default {
     data(){
         return{
-            tab:1,
+            uploads:[],
+            defaultList:[],
+            listMethod:false,
+            uploadList:[],
+            tab:2,
             value:"",
             from:{
-                
-            }
+                projectName:'',
+                type:'',
+                category:'',
+                description:'',
+                image:''
+            },
+             imageUrl:'',
+             imgName: '',
+             image:'',
+           
+            //   crfObj: {
+            //         'X-CSRF-TOKEN' : document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            //     },
+            
         }
     },
     created(){
 
     },
     methods:{
+        submitMethod1(){
+            if(this.from.projectName==''){
+                return this.e("Project Name can not be empty!!")
+            }
+            if(this.from.category==''){
+                return this.e("Project category can not be empty!!")
+            }
+            if(this.from.type==''){
+                return this.e("Select type can not be empty!!")
+            }
+            if(this.from.description==''){
+                return this.e("Project description can not be empty!!")
+            }
+            this.tab = 2
+
+        },
+       submitMethod2(){
+            
+        },
+       submitFrom(){
+            
+        },
+        handleSuccess(res, file){
+				this.uploadList.push({link:res.imageUrl})
+				console.log(this.uploadList);
+        },
+         handleFormatError (file) {
+            this.$Notice.warning({
+                title: 'The file format is incorrect',
+                desc: 'File format of ' + file.name + ' is incorrect, please select jpg or png.'
+            });
+        },
+
+         handleMaxSize (file) {
+            this.$Notice.warning({
+                title: 'Exceeding file size limit',
+                desc: 'File  ' + file.name + ' is too large, no more than 2M.'
+            });
+        },
+          handleBeforeUpload () {
+            // const check = this.uploadList.length < 6;
+            // if (!check) {
+            //     this.$Notice.warning({
+            //         title: 'Up to five pictures can be uploaded.'
+            //     });
+            // }
+            // return check;
+        },
 
     }
 
