@@ -2083,7 +2083,10 @@ __webpack_require__.r(__webpack_exports__);
       },
       imageUrl: '',
       imgName: '',
-      image: '' //   crfObj: {
+      image: '',
+      crfObj: {
+        "X-CSRF-TOKEN": $('meta[name="_token"]').attr('content')
+      } //   crfObj: {
       //         'X-CSRF-TOKEN' : document.querySelector('meta[name="csrf-token"]').getAttribute('content')
       //     },
 
@@ -69512,6 +69515,7 @@ var render = function() {
                                           "on-success": _vm.handleSuccess,
                                           format: ["jpg", "jpeg", "png"],
                                           "max-size": 2048,
+                                          headers: _vm.crfObj,
                                           "on-format-error":
                                             _vm.handleFormatError,
                                           "on-exceeded-size": _vm.handleMaxSize,
@@ -87735,8 +87739,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! G:\project-rakho\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! G:\project-rakho\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! E:\project-lu\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! E:\project-lu\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

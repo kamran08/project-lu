@@ -91,7 +91,7 @@
                                         :on-success="handleSuccess"
                                         :format="['jpg','jpeg','png']"
                                         :max-size="2048"
-                                        
+                                        :headers="crfObj"
                                         :on-format-error="handleFormatError"
                                         :on-exceeded-size="handleMaxSize"
                                         :before-upload="handleBeforeUpload"
@@ -194,7 +194,7 @@ export default {
              imageUrl:'',
              imgName: '',
              image:'',
-           
+            crfObj: { "X-CSRF-TOKEN" : $('meta[name="_token"]').attr('content') },
             //   crfObj: {
             //         'X-CSRF-TOKEN' : document.querySelector('meta[name="csrf-token"]').getAttribute('content')
             //     },

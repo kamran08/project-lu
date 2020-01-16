@@ -57,8 +57,7 @@ class UserController extends Controller
 
     public function getImage(Request $request)
     {
-        return "Hell";
-        return $request->all();
+      
         request()->file('img')->store('uploads');
         $pic = "/uploads/" . $request->img->hashName();
         return $pic;
