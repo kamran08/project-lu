@@ -1880,6 +1880,262 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/add_member.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/add_member.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      from: {
+        name: '',
+        batch: '',
+        student_id: '',
+        image: false
+      }
+    };
+  },
+  methods: {
+    addNewMemeber: function () {
+      var _addNewMemeber = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        var res;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                if (!(this.from.name == '')) {
+                  _context.next = 2;
+                  break;
+                }
+
+                return _context.abrupt("return", this.e("name field can not be empty!!"));
+
+              case 2:
+                if (!(this.from.batch == '')) {
+                  _context.next = 4;
+                  break;
+                }
+
+                return _context.abrupt("return", this.e("batch field can not be empty!!"));
+
+              case 4:
+                if (!(this.from.student_id == '')) {
+                  _context.next = 6;
+                  break;
+                }
+
+                return _context.abrupt("return", this.e("student_id field can not be empty!!"));
+
+              case 6:
+                if (this.from.image) {
+                  _context.next = 8;
+                  break;
+                }
+
+                return _context.abrupt("return", this.e("upload a Image!!"));
+
+              case 8:
+                _context.next = 10;
+                return this.callApi('post', '/addTeamMember', this.from);
+
+              case 10:
+                res = _context.sent;
+
+                if (res.status == 200 || res.status == 201) {
+                  this.s("New Member Added!!");
+                  this.from = {
+                    name: '',
+                    batch: '',
+                    student_id: '',
+                    image: false
+                  };
+                } else if (res.status == 401) {
+                  this.e(res.data.msg);
+                } else {
+                  this.e("check your network");
+                }
+
+              case 12:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function addNewMemeber() {
+        return _addNewMemeber.apply(this, arguments);
+      }
+
+      return addNewMemeber;
+    }(),
+    handleSuccess: function handleSuccess(res, file) {
+      this.from.image = res;
+    },
+    handleFormatError: function handleFormatError(file) {
+      this.$Notice.warning({
+        title: 'The file format is incorrect',
+        desc: 'File format of ' + file.name + ' is incorrect, please select jpg or png.'
+      });
+    },
+    handleMaxSize: function handleMaxSize(file) {
+      this.$Notice.warning({
+        title: 'Exceeding file size limit',
+        desc: 'File  ' + file.name + ' is too large, no more than 2M.'
+      });
+    },
+    handleBeforeUpload: function handleBeforeUpload() {}
+  },
+  created: function created() {}
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/upload_project.vue?vue&type=script&lang=js&":
 /*!********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/upload_project.vue?vue&type=script&lang=js& ***!
@@ -1889,6 +2145,51 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2072,21 +2373,19 @@ __webpack_require__.r(__webpack_exports__);
       defaultList: [],
       listMethod: false,
       uploadList: [],
-      tab: 2,
+      tab: 1,
       value: "",
       from: {
         projectName: '',
         type: '',
         category: '',
         description: '',
-        image: ''
+        image: false,
+        file: false
       },
       imageUrl: '',
       imgName: '',
-      image: '',
-      crfObj: {
-        "X-CSRF-TOKEN": $('meta[name="_token"]').attr('content')
-      } //   crfObj: {
+      image: '' //   crfObj: {
       //         'X-CSRF-TOKEN' : document.querySelector('meta[name="csrf-token"]').getAttribute('content')
       //     },
 
@@ -2113,13 +2412,68 @@ __webpack_require__.r(__webpack_exports__);
 
       this.tab = 2;
     },
-    submitMethod2: function submitMethod2() {},
-    submitFrom: function submitFrom() {},
+    submitMethod2: function submitMethod2() {
+      if (this.from.image) {
+        this.tab = 3;
+        return;
+      }
+
+      return this.e("Please upload Image");
+    },
+    submitFrom: function () {
+      var _submitFrom = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        var res;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                if (this.from.file) {
+                  _context.next = 4;
+                  break;
+                }
+
+                return _context.abrupt("return", this.e("Please upload Image"));
+
+              case 4:
+                _context.next = 6;
+                return this.callApi('post', 'uploadPorject', this.from);
+
+              case 6:
+                res = _context.sent;
+
+                if (res.status == 200 || res.status == 201) {
+                  this.s("Project has been uploaded!!");
+                } else if (res.status == 401) {
+                  this.e(res.data.msg);
+                } else {
+                  this.swr();
+                }
+
+              case 8:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function submitFrom() {
+        return _submitFrom.apply(this, arguments);
+      }
+
+      return submitFrom;
+    }(),
     handleSuccess: function handleSuccess(res, file) {
-      this.uploadList.push({
-        link: res.imageUrl
-      });
-      console.log(this.uploadList);
+      console.log(res);
+      this.from.image = res; // this.uploadList.push({link:res.imageUrl})
+      // console.log(this.uploadList);
+    },
+    handleSuccess1: function handleSuccess1(res, file) {
+      console.log(res);
+      this.from.file = res; // this.uploadList.push({link:res.imageUrl})
+      // console.log(this.uploadList);
     },
     handleFormatError: function handleFormatError(file) {
       this.$Notice.warning({
@@ -65266,20 +65620,155 @@ var render = function() {
                 _vm._m(1),
                 _vm._v(" "),
                 _c("div", { staticClass: "authentication-log" }, [
-                  _vm._m(2),
+                  _c("form", { attrs: { action: "#" } }, [
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("User Name")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.from.name,
+                            expression: "from.name"
+                          }
+                        ],
+                        attrs: { type: "text", placeholder: "User name " },
+                        domProps: { value: _vm.from.name },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.from, "name", $event.target.value)
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Student ID")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.from.student_id,
+                            expression: "from.student_id"
+                          }
+                        ],
+                        attrs: { type: "text", placeholder: "1612020051" },
+                        domProps: { value: _vm.from.student_id },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.from,
+                              "student_id",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Batch")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.from.batch,
+                            expression: "from.batch"
+                          }
+                        ],
+                        attrs: { type: "text", placeholder: "bach name" },
+                        domProps: { value: _vm.from.batch },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.from, "batch", $event.target.value)
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Upload Photo")
+                      ]),
+                      _vm._v(" "),
+                      !_vm.from.image
+                        ? _c(
+                            "div",
+                            { staticClass: "_1upload_upload" },
+                            [
+                              _c(
+                                "Upload",
+                                {
+                                  ref: "upload",
+                                  attrs: {
+                                    name: "img",
+                                    "show-upload-list": false,
+                                    "on-success": _vm.handleSuccess,
+                                    format: ["jpg", "jpeg", "png"],
+                                    "max-size": 2048,
+                                    "on-format-error": _vm.handleFormatError,
+                                    "on-exceeded-size": _vm.handleMaxSize,
+                                    "before-upload": _vm.handleBeforeUpload,
+                                    type: "drag",
+                                    action: "/uploadImages"
+                                  }
+                                },
+                                [
+                                  _c("div", [
+                                    _c(
+                                      "div",
+                                      { staticClass: "_1upload_main" },
+                                      [
+                                        _c(
+                                          "p",
+                                          { staticClass: "_1upload_icon" },
+                                          [
+                                            _c("i", {
+                                              staticClass: "fas fa-camera"
+                                            })
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ])
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.from.image
+                        ? _c("div", [
+                            _c("img", {
+                              attrs: { src: _vm.from.image, alt: "" }
+                            })
+                          ])
+                        : _vm._e()
+                    ])
+                  ]),
                   _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "authentication " },
-                    [
-                      _c("router-link", { attrs: { to: "/" } }, [
-                        _c("button", { staticClass: "add-now-button" }, [
-                          _vm._v("Add now")
-                        ])
-                      ])
-                    ],
-                    1
-                  )
+                  _vm._m(2)
                 ])
               ]),
               _vm._v(" "),
@@ -65386,26 +65875,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("form", { attrs: { action: "#" } }, [
-      _c("div", { staticClass: "authentication-item" }, [
-        _c("label", { attrs: { for: "input" } }, [_vm._v("User Name")]),
-        _vm._v(" "),
-        _c("input", {
-          attrs: { type: "text", placeholder: "User name or email" }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "authentication-item" }, [
-        _c("label", { attrs: { for: "input" } }, [_vm._v("Student ID")]),
-        _vm._v(" "),
-        _c("input", { attrs: { type: "text", placeholder: "1612020051" } })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "authentication-item" }, [
-        _c("label", { attrs: { for: "input" } }, [_vm._v("Student ID")]),
-        _vm._v(" "),
-        _c("input", { attrs: { type: "text", placeholder: "1612020053" } })
-      ])
+    return _c("div", { staticClass: "authentication " }, [
+      _c("button", { staticClass: "add-now-button" }, [_vm._v("Add now")])
     ])
   }
 ]
@@ -69501,6 +69972,40 @@ var render = function() {
                           _c("div", { staticClass: "_1input_group" }, [
                             _c("div", { staticClass: "_1upload" }, [
                               _c("div", { staticClass: "_image_upload_pic" }, [
+                                _vm.from.image
+                                  ? _c(
+                                      "div",
+                                      { staticClass: "_upload_image" },
+                                      [
+                                        _c("img", {
+                                          staticClass: "_image_upload_img",
+                                          attrs: {
+                                            src: _vm.from.image,
+                                            alt: "",
+                                            title: ""
+                                          }
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "p",
+                                          {
+                                            staticClass: "_1upload_edit",
+                                            on: {
+                                              click: function($event) {
+                                                _vm.from.image = false
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _c("i", {
+                                              staticClass: "fas fa-pen"
+                                            })
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  : _vm._e(),
+                                _vm._v(" "),
                                 _c(
                                   "div",
                                   { staticClass: "_1upload_upload" },
@@ -69515,7 +70020,6 @@ var render = function() {
                                           "on-success": _vm.handleSuccess,
                                           format: ["jpg", "jpeg", "png"],
                                           "max-size": 2048,
-                                          headers: _vm.crfObj,
                                           "on-format-error":
                                             _vm.handleFormatError,
                                           "on-exceeded-size": _vm.handleMaxSize,
@@ -69587,17 +70091,130 @@ var render = function() {
                     "div",
                     { staticClass: "authentication-log publish-card" },
                     [
-                      _vm._m(4),
+                      _c("form", { attrs: { action: "#" } }, [
+                        _c("div", { staticClass: "authentication-item " }, [
+                          _c("label", { attrs: { for: "input" } }, [
+                            _vm._v("Upload source file")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "file-upload" }, [
+                            _c(
+                              "div",
+                              { staticClass: "col-12 col-md-6 col-lg-6" },
+                              [
+                                _c("div", { staticClass: "_1input_group" }, [
+                                  _c("div", { staticClass: "_1upload" }, [
+                                    _c(
+                                      "div",
+                                      { staticClass: "_image_upload_pic" },
+                                      [
+                                        _vm.from.file
+                                          ? _c(
+                                              "div",
+                                              { staticClass: "_upload_image" },
+                                              [
+                                                _c("span", [
+                                                  _vm._v(_vm._s(_vm.from.file))
+                                                ]),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "p",
+                                                  {
+                                                    staticClass:
+                                                      "_1upload_edit",
+                                                    on: {
+                                                      click: function($event) {
+                                                        _vm.from.file = false
+                                                      }
+                                                    }
+                                                  },
+                                                  [
+                                                    _c("i", {
+                                                      staticClass: "fas fa-pen"
+                                                    })
+                                                  ]
+                                                )
+                                              ]
+                                            )
+                                          : _vm._e(),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "_1upload_upload" },
+                                          [
+                                            _c(
+                                              "Upload",
+                                              {
+                                                ref: "upload",
+                                                attrs: {
+                                                  name: "img",
+                                                  "show-upload-list": false,
+                                                  "on-success":
+                                                    _vm.handleSuccess1,
+                                                  "max-size": 2048,
+                                                  "on-format-error":
+                                                    _vm.handleFormatError,
+                                                  "on-exceeded-size":
+                                                    _vm.handleMaxSize,
+                                                  "before-upload":
+                                                    _vm.handleBeforeUpload,
+                                                  type: "drag",
+                                                  action: "/uploadImages"
+                                                }
+                                              },
+                                              [
+                                                _c("div", [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "_1upload_main"
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "p",
+                                                        {
+                                                          staticClass:
+                                                            "_1upload_icon"
+                                                        },
+                                                        [
+                                                          _c("i", {
+                                                            staticClass:
+                                                              "fas fa-camera"
+                                                          })
+                                                        ]
+                                                      )
+                                                    ]
+                                                  )
+                                                ])
+                                              ]
+                                            )
+                                          ],
+                                          1
+                                        )
+                                      ]
+                                    )
+                                  ])
+                                ])
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "Create a .Zip file with all of your code and resources like html, css, JavaScript, php files. Don't worry! Download will be controlled only by you or your project team"
+                            )
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _vm._m(4)
+                      ]),
                       _vm._v(" "),
                       _c(
                         "div",
                         {
                           staticClass: "authentication next-button",
-                          on: {
-                            click: function($event) {
-                              _vm.tab = 1
-                            }
-                          }
+                          on: { click: _vm.submitFrom }
                         },
                         [
                           _c(
@@ -69655,31 +70272,12 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("form", { attrs: { action: "#" } }, [
-      _c("div", { staticClass: "authentication-item " }, [
-        _c("label", { attrs: { for: "input" } }, [
-          _vm._v("Upload source file")
-        ]),
-        _vm._v(" "),
-        _c("input", {
-          staticClass: "publish-label",
-          attrs: { name: "input", type: "file" }
-        }),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "Create a .Zip file with all of your code and resources like html, css, JavaScript, php files. Don't worry! Download will be controlled only by you or your project team"
-          )
-        ])
-      ]),
+    return _c("div", { staticClass: "authentication-item" }, [
+      _c("label", { attrs: { for: "input" } }, [_vm._v("Settings")]),
       _vm._v(" "),
-      _c("div", { staticClass: "authentication-item" }, [
-        _c("label", { attrs: { for: "input" } }, [_vm._v("Settings")]),
-        _vm._v(" "),
-        _c("label", [
-          _c("input", { attrs: { type: "checkbox", value: "" } }),
-          _vm._v("Cloase Comments")
-        ])
+      _c("label", [
+        _c("input", { attrs: { type: "checkbox", value: "" } }),
+        _vm._v("Cloase Comments")
       ])
     ])
   }
@@ -86535,15 +87133,17 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _add_member_vue_vue_type_template_id_16619221___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./add_member.vue?vue&type=template&id=16619221& */ "./resources/js/pages/add_member.vue?vue&type=template&id=16619221&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _add_member_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./add_member.vue?vue&type=script&lang=js& */ "./resources/js/pages/add_member.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _add_member_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _add_member_vue_vue_type_template_id_16619221___WEBPACK_IMPORTED_MODULE_0__["render"],
   _add_member_vue_vue_type_template_id_16619221___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -86557,6 +87157,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/pages/add_member.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/pages/add_member.vue?vue&type=script&lang=js&":
+/*!********************************************************************!*\
+  !*** ./resources/js/pages/add_member.vue?vue&type=script&lang=js& ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_add_member_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./add_member.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/add_member.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_add_member_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -87739,8 +88353,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\project-lu\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! E:\project-lu\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! G:\project-rakho\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! G:\project-rakho\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

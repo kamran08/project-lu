@@ -15,6 +15,12 @@ Route::post('/app/registration', "UserController@registration");
 Route::post('/app/login', "UserController@login");
 Route::post('/app/upload', "UserController@uploadImages");
 Route::post('/uploadImages', 'UserController@getImage');
+
+// project route
+Route::post('/app/uploadPorject', 'HomeController@uploadPorject');
+Route::post('/app/addTeamMember', 'HomeController@addTeamMember');
+
+
 //logout
 Route::get('/logout', function () {
     Auth::logout();
