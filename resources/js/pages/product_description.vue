@@ -19,14 +19,14 @@
                 <div class="row">
 
                     <div class="col-md-8 col-sm-8 ">
-                        <div class="image-part-left">
-                            <img class="content-image" src="/assets/img/webkit-sec-card-img.png">
+                        <div class="image-part-left" v-if="alldata.image">
+                            <img class="content-image" :src="alldata.image">
                         </div>
 
                         <div class="list ">
                             <ul>
-                                <li><a class="active-m" href="product-description.html">Description</a></li>
-                                <li><a href="product-review.html">Review</a></li>
+                                <li><a class="active-m" :href="'product-description/'+alldata.id">Description</a></li>
+                                <li><a href="product-review">Review</a></li>
 
 
                             </ul>
@@ -35,12 +35,9 @@
                         <div class="text-part-left">
                             <div class="about-product border-b ptb-20">
                                 <h1 class="product-desc-h">About this product</h1>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                <p> 
+                                    {{alldata.description}}
                                 </p>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                             </div>
 
                             <div class="features border-b ptb-20">
@@ -163,11 +160,9 @@
 
                         <div class="authentication-card product-desc-card">
                             <div class="advertisement">
-                                <p><span>Upload</span> <span class="flt-right">20 May 2019</span> </p>
-                                <p><span>Last Update</span><span class="flt-right">20 June 2019</span></p>
-                                <p><span>Resulation</span><span class="flt-right">High</span></p>
-                                <p><span>Layout</span><span class="flt-right">Responsive</span></p>
-                                <p><span>Catagories</span><span class="flt-right">Business Website</span></p>
+                                <p><span>Upload</span> <span class="flt-right">{{alldata.created_at.substring(0, 10)}}</span> </p>
+                                <p><span>Last Update</span><span class="flt-right">{{alldata.updated_at.substring(0, 10)}}</span></p>
+                                <p><span>Catagories</span><span class="flt-right">{{alldata.category}}</span></p>
 
 
 
@@ -180,45 +175,21 @@
                                 <h3><span>Project</span>team</h3>
 
                             </div>
-                            <div class="member-name">
-                                <div class="name-item">
-                                    <div class="image">
-                                        <img class="hachib" src="/assets/img/hachib.png" alt="">
+                            <div class="member-name" v-if="alldata.team">
+                                <div class="name-item" v-for="(item,index) in alldata.team" :key="index">
+                                    <div class="image" v-if="item.image">
+                                        <img class="hachib" :src="item.image" alt="">
                                     </div>
 
                                     <div class="name">
-                                        <h3>Hachibur Rahaman</h3>
-                                        <p class="describe-p">Student Id: 1612020051</p>
-                                        <p class="describe-p">Batch: 41'st</p>
+                                        <h3>{{item.name}}</h3>
+                                        <p class="describe-p">Student Id: {{item.user_id}}</p>
+                                        <p class="describe-p">Batch: {{item.batch}}</p>
                                     </div>
 
                                 </div>
-                                <div class="name-item">
-                                    <div class="image">
-                                        <img class="hachib" src="/assets/img/suhas.png" alt="">
-                                    </div>
+                         
 
-                                    <div class="name">
-                                        <h3>Suhas Chowdhury</h3>
-                                        <p class="describe-p">Student Id: 1612020053</p>
-                                        <p class="describe-p">Batch: 41'st</p>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="name-item">
-                                    <div class="image">
-                                        <img class="hachib" src="/assets/img/3rd-member.png" alt="">
-                                    </div>
-                                    <div class="name">
-                                        <h3>Al Juned</h3>
-                                        <p class="describe-p">Student Id: 1612020090</p>
-                                        <p class="describe-p">Batch: 41'st</p>
-
-                                    </div>
-
-                                </div>
 
                             </div>
 

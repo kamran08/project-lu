@@ -12,6 +12,6 @@ class Project extends Model
     ];
     public function team()
     {
-        return $this->hasMany('App\Team', 'user_id', 'team_id');
+        return $this->hasMany('App\Team', 'user_id', 'user_id');
     }
 }

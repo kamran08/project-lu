@@ -44,7 +44,7 @@ class HomeController extends Controller
     }
     public function getProjectById($key){
 
-        $project = Project::where('id', $key)->with('team')->get();
+        $project = Project::where('id', $key)->with('team')->first();
         return $project;
        
     }

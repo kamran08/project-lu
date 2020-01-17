@@ -3034,35 +3034,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -69661,476 +69632,408 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "second-section-account content-bg product-desc-all ptb-30"
+      },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-8 col-sm-8 " }, [
+              _vm.alldata.image
+                ? _c("div", { staticClass: "image-part-left" }, [
+                    _c("img", {
+                      staticClass: "content-image",
+                      attrs: { src: _vm.alldata.image }
+                    })
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _c("div", { staticClass: "list " }, [
+                _c("ul", [
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "active-m",
+                        attrs: { href: "product-description/" + _vm.alldata.id }
+                      },
+                      [_vm._v("Description")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(1)
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "text-part-left" }, [
+                _c("div", { staticClass: "about-product border-b ptb-20" }, [
+                  _c("h1", { staticClass: "product-desc-h" }, [
+                    _vm._v("About this product")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      " \n                                " +
+                        _vm._s(_vm.alldata.description) +
+                        "\n                            "
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(2),
+                _vm._v(" "),
+                _vm._m(3),
+                _vm._v(" "),
+                _vm._m(4),
+                _vm._v(" "),
+                _vm._m(5)
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-4 col-sm-4" }, [
+              _vm._m(6),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "authentication-card product-desc-card" },
+                [
+                  _c("div", { staticClass: "advertisement" }, [
+                    _c("p", [
+                      _c("span", [_vm._v("Upload")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "flt-right" }, [
+                        _vm._v(_vm._s(_vm.alldata.created_at.substring(0, 10)))
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _c("span", [_vm._v("Last Update")]),
+                      _c("span", { staticClass: "flt-right" }, [
+                        _vm._v(_vm._s(_vm.alldata.updated_at.substring(0, 10)))
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _c("span", [_vm._v("Catagories")]),
+                      _c("span", { staticClass: "flt-right" }, [
+                        _vm._v(_vm._s(_vm.alldata.category))
+                      ])
+                    ])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "authentication-card product-desc-card" },
+                [
+                  _vm._m(7),
+                  _vm._v(" "),
+                  _vm.alldata.team
+                    ? _c(
+                        "div",
+                        { staticClass: "member-name" },
+                        _vm._l(_vm.alldata.team, function(item, index) {
+                          return _c(
+                            "div",
+                            { key: index, staticClass: "name-item" },
+                            [
+                              item.image
+                                ? _c("div", { staticClass: "image" }, [
+                                    _c("img", {
+                                      staticClass: "hachib",
+                                      attrs: { src: item.image, alt: "" }
+                                    })
+                                  ])
+                                : _vm._e(),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "name" }, [
+                                _c("h3", [_vm._v(_vm._s(item.name))]),
+                                _vm._v(" "),
+                                _c("p", { staticClass: "describe-p" }, [
+                                  _vm._v("Student Id: " + _vm._s(item.user_id))
+                                ]),
+                                _vm._v(" "),
+                                _c("p", { staticClass: "describe-p" }, [
+                                  _vm._v("Batch: " + _vm._s(item.batch))
+                                ])
+                              ])
+                            ]
+                          )
+                        }),
+                        0
+                      )
+                    : _vm._e()
+                ]
+              )
+            ])
+          ])
+        ])
+      ]
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "all-temp-header" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("h1", { staticClass: "Product-Header Product-desc-header" }, [
-            _vm._v("Ecommerce website template")
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "Product-desc-p" }, [
-            _vm._v(
-              "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just\n                click “Edit Text” or double click me.I'm a paragraph. Click here to add your own text and edit me.\n                It’s easy. Just\n                click “Edit Text” or double click me."
-            )
-          ]),
-          _vm._v(" "),
-          _c("img", {
-            staticClass: "all-temp-back-right-up",
-            attrs: { src: "/assets/img/back-design-right-up.png", alt: "" }
-          })
+    return _c("div", { staticClass: "all-temp-header" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("h1", { staticClass: "Product-Header Product-desc-header" }, [
+          _vm._v("Ecommerce website template")
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "Product-desc-p" }, [
+          _vm._v(
+            "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just\n                click “Edit Text” or double click me.I'm a paragraph. Click here to add your own text and edit me.\n                It’s easy. Just\n                click “Edit Text” or double click me."
+          )
+        ]),
+        _vm._v(" "),
+        _c("img", {
+          staticClass: "all-temp-back-right-up",
+          attrs: { src: "/assets/img/back-design-right-up.png", alt: "" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "product-review" } }, [_vm._v("Review")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "features border-b ptb-20" }, [
+      _c("h1", { staticClass: "product-desc-h" }, [_vm._v("Features")]),
+      _vm._v(" "),
+      _c("p", [
+        _c("span", [_c("i", { staticClass: "fas fa-square-full" })]),
+        _vm._v("Fully Responsive and Mobile ready")
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _c("span", [_c("i", { staticClass: "fas fa-square-full" })]),
+        _vm._v(
+          "Unlimited Color and Typhography option\n                            "
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _c("span", [_c("i", { staticClass: "fas fa-square-full" })]),
+        _vm._v("Fully Customizable every elmenty")
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _c("span", [_c("i", { staticClass: "fas fa-square-full" })]),
+        _vm._v("Cross Browser Capbility")
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _c("span", [_c("i", { staticClass: "fas fa-square-full" })]),
+        _vm._v("17 Page Template")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "workfollow border-b ptb-20" }, [
+      _c("h1", { staticClass: "product-desc-h" }, [
+        _vm._v("Workfollow(Tools)")
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has been the industry's standard dummy text ever since the 1500s, when an\n                                unknown printer took a galley of type and scrambled it to make a type specimen book.\n                            "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "theam-supprt border-b ptb-20" }, [
+      _c("h1", { staticClass: "product-desc-h" }, [_vm._v("Theam Supprt")]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has been the industry's standard dummy text ever since the 1500s, when an\n                                unknown printer took a galley of type and scrambled it to make a type specimen book.\n                            "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "faq border-b ptb-20" }, [
+      _c("h1", { staticClass: "product-desc-h " }, [_vm._v("FAQ")]),
+      _vm._v(" "),
+      _c("button", { staticClass: "accordion" }, [
+        _vm._v("Ask a first question?")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "panel" }, [
+        _c("p", [
+          _vm._v(
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor\n                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis\n                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n                                "
+          )
         ])
       ]),
       _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "second-section-account content-bg product-desc-all ptb-30"
-        },
-        [
-          _c("div", { staticClass: "container" }, [
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-md-8 col-sm-8 " }, [
-                _c("div", { staticClass: "image-part-left" }, [
-                  _c("img", {
-                    staticClass: "content-image",
-                    attrs: { src: "/assets/img/webkit-sec-card-img.png" }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "list " }, [
-                  _c("ul", [
-                    _c("li", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "active-m",
-                          attrs: { href: "product-description.html" }
-                        },
-                        [_vm._v("Description")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "product-review.html" } }, [
-                        _vm._v("Review")
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "text-part-left" }, [
-                  _c("div", { staticClass: "about-product border-b ptb-20" }, [
-                    _c("h1", { staticClass: "product-desc-h" }, [
-                      _vm._v("About this product")
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has been the industry's standard dummy text ever since the 1500s, when an\n                                unknown printer took a galley of type and scrambled it to make a type specimen book.\n                            "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has been the industry's standard dummy text ever since the 1500s."
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "features border-b ptb-20" }, [
-                    _c("h1", { staticClass: "product-desc-h" }, [
-                      _vm._v("Features")
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _c("span", [
-                        _c("i", { staticClass: "fas fa-square-full" })
-                      ]),
-                      _vm._v("Fully Responsive and Mobile ready")
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _c("span", [
-                        _c("i", { staticClass: "fas fa-square-full" })
-                      ]),
-                      _vm._v(
-                        "Unlimited Color and Typhography option\n                            "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _c("span", [
-                        _c("i", { staticClass: "fas fa-square-full" })
-                      ]),
-                      _vm._v("Fully Customizable every elmenty")
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _c("span", [
-                        _c("i", { staticClass: "fas fa-square-full" })
-                      ]),
-                      _vm._v("Cross Browser Capbility")
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _c("span", [
-                        _c("i", { staticClass: "fas fa-square-full" })
-                      ]),
-                      _vm._v("17 Page Template")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "workfollow border-b ptb-20" }, [
-                    _c("h1", { staticClass: "product-desc-h" }, [
-                      _vm._v("Workfollow(Tools)")
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has been the industry's standard dummy text ever since the 1500s, when an\n                                unknown printer took a galley of type and scrambled it to make a type specimen book.\n                            "
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "theam-supprt border-b ptb-20" }, [
-                    _c("h1", { staticClass: "product-desc-h" }, [
-                      _vm._v("Theam Supprt")
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has been the industry's standard dummy text ever since the 1500s, when an\n                                unknown printer took a galley of type and scrambled it to make a type specimen book.\n                            "
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "faq border-b ptb-20" }, [
-                    _c("h1", { staticClass: "product-desc-h " }, [
-                      _vm._v("FAQ")
-                    ]),
-                    _vm._v(" "),
-                    _c("button", { staticClass: "accordion" }, [
-                      _vm._v("Ask a first question?")
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "panel" }, [
-                      _c("p", [
-                        _vm._v(
-                          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor\n                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis\n                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n                                "
-                        )
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("button", { staticClass: "accordion" }, [
-                      _vm._v("Ask a second question??")
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "panel" }, [
-                      _c("p", [
-                        _vm._v(
-                          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor\n                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis\n                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n                                "
-                        )
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("button", { staticClass: "accordion" }, [
-                      _vm._v("Ask a third question??")
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "panel" }, [
-                      _c("p", [
-                        _vm._v(
-                          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor\n                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis\n                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n                                "
-                        )
-                      ])
-                    ])
-                  ])
+      _c("button", { staticClass: "accordion" }, [
+        _vm._v("Ask a second question??")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "panel" }, [
+        _c("p", [
+          _vm._v(
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor\n                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis\n                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n                                "
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("button", { staticClass: "accordion" }, [
+        _vm._v("Ask a third question??")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "panel" }, [
+        _c("p", [
+          _vm._v(
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor\n                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis\n                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n                                "
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "authentication-card product-desc-card" }, [
+      _c("div", { staticClass: "authentication-title" }, [
+        _c("h3", [_c("span", [_vm._v("Have")]), _vm._v("sourse code")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "rating" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-6 rate-side" }, [
+            _c("p", [_vm._v("Rating "), _c("span", [_vm._v("(3.0)")])]),
+            _vm._v(" "),
+            _c("ul", [
+              _c("li", [
+                _c("span", { staticClass: "gold-star" }, [
+                  _c("i", { staticClass: "fas fa-star" })
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-md-4 col-sm-4" }, [
-                _c(
-                  "div",
-                  { staticClass: "authentication-card product-desc-card" },
-                  [
-                    _c("div", { staticClass: "authentication-title" }, [
-                      _c("h3", [
-                        _c("span", [_vm._v("Have")]),
-                        _vm._v("sourse code")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "rating" }, [
-                      _c("div", { staticClass: "row" }, [
-                        _c("div", { staticClass: "col-md-6 rate-side" }, [
-                          _c("p", [
-                            _vm._v("Rating "),
-                            _c("span", [_vm._v("(3.0)")])
-                          ]),
-                          _vm._v(" "),
-                          _c("ul", [
-                            _c("li", [
-                              _c("span", { staticClass: "gold-star" }, [
-                                _c("i", { staticClass: "fas fa-star" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", [
-                              _c("span", { staticClass: "gold-star" }, [
-                                _c("i", { staticClass: "fas fa-star" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", [
-                              _c("span", { staticClass: "gold-star" }, [
-                                _c("i", { staticClass: "fas fa-star" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", [
-                              _c("span", { staticClass: "half-star" }, [
-                                _c("i", { staticClass: "fas fa-star-half-alt" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", [
-                              _c("span", [
-                                _c("i", { staticClass: "far fa-star" })
-                              ])
-                            ])
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-6 download" }, [
-                          _c("p", [
-                            _c("span", [
-                              _c("i", {
-                                staticClass: "fas fa-arrow-circle-down"
-                              })
-                            ]),
-                            _vm._v(" 25")
-                          ]),
-                          _vm._v(" "),
-                          _c("a", { staticClass: "get-source" }, [
-                            _vm._v("Get source code")
-                          ])
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "code-advise" }, [
-                      _c("div", { staticClass: "benifits" }, [
-                        _c("p", { staticClass: "benifits-p" }, [
-                          _c("span", [
-                            _c("i", { staticClass: "fas fa-check-circle" })
-                          ]),
-                          _vm._v(
-                            "Reviewed by\n                                    the Bootstarp team"
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "benifits-p" }, [
-                          _c("span", [
-                            _c("i", { staticClass: "fas fa-check-circle" })
-                          ]),
-                          _vm._v(
-                            "6 months\n                                    technical support"
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "benifits-p" }, [
-                          _c("span", [
-                            _c("i", { staticClass: "fas fa-check-circle" })
-                          ]),
-                          _vm._v(
-                            "100% money\n                                    back guarantee"
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("p")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "authentication download-button " },
-                        [
-                          _c("a", { attrs: { href: "home.html" } }, [
-                            _c(
-                              "button",
-                              {
-                                staticClass:
-                                  "sign-now-button live-preview-button"
-                              },
-                              [
-                                _c("span", [
-                                  _c("i", { staticClass: "far fa-file-pdf" })
-                                ]),
-                                _vm._v("Live preview")
-                              ]
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            { attrs: { href: "download-request.html" } },
-                            [
-                              _c(
-                                "button",
-                                {
-                                  staticClass:
-                                    "sign-now-button request-for-code-button"
-                                },
-                                [
-                                  _vm._v(
-                                    "Request for\n                                        code"
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "authentication-card product-desc-card" },
-                  [
-                    _c("div", { staticClass: "advertisement" }, [
-                      _c("p", [
-                        _c("span", [_vm._v("Upload")]),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "flt-right" }, [
-                          _vm._v("20 May 2019")
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _c("span", [_vm._v("Last Update")]),
-                        _c("span", { staticClass: "flt-right" }, [
-                          _vm._v("20 June 2019")
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _c("span", [_vm._v("Resulation")]),
-                        _c("span", { staticClass: "flt-right" }, [
-                          _vm._v("High")
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _c("span", [_vm._v("Layout")]),
-                        _c("span", { staticClass: "flt-right" }, [
-                          _vm._v("Responsive")
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _c("span", [_vm._v("Catagories")]),
-                        _c("span", { staticClass: "flt-right" }, [
-                          _vm._v("Business Website")
-                        ])
-                      ])
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "authentication-card product-desc-card" },
-                  [
-                    _c("div", { staticClass: "authentication-title" }, [
-                      _c("h3", [
-                        _c("span", [_vm._v("Project")]),
-                        _vm._v("team")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "member-name" }, [
-                      _c("div", { staticClass: "name-item" }, [
-                        _c("div", { staticClass: "image" }, [
-                          _c("img", {
-                            staticClass: "hachib",
-                            attrs: { src: "/assets/img/hachib.png", alt: "" }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "name" }, [
-                          _c("h3", [_vm._v("Hachibur Rahaman")]),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "describe-p" }, [
-                            _vm._v("Student Id: 1612020051")
-                          ]),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "describe-p" }, [
-                            _vm._v("Batch: 41'st")
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "name-item" }, [
-                        _c("div", { staticClass: "image" }, [
-                          _c("img", {
-                            staticClass: "hachib",
-                            attrs: { src: "/assets/img/suhas.png", alt: "" }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "name" }, [
-                          _c("h3", [_vm._v("Suhas Chowdhury")]),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "describe-p" }, [
-                            _vm._v("Student Id: 1612020053")
-                          ]),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "describe-p" }, [
-                            _vm._v("Batch: 41'st")
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "name-item" }, [
-                        _c("div", { staticClass: "image" }, [
-                          _c("img", {
-                            staticClass: "hachib",
-                            attrs: {
-                              src: "/assets/img/3rd-member.png",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "name" }, [
-                          _c("h3", [_vm._v("Al Juned")]),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "describe-p" }, [
-                            _vm._v("Student Id: 1612020090")
-                          ]),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "describe-p" }, [
-                            _vm._v("Batch: 41'st")
-                          ])
-                        ])
-                      ])
-                    ])
-                  ]
-                )
-              ])
+              _c("li", [
+                _c("span", { staticClass: "gold-star" }, [
+                  _c("i", { staticClass: "fas fa-star" })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("span", { staticClass: "gold-star" }, [
+                  _c("i", { staticClass: "fas fa-star" })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("span", { staticClass: "half-star" }, [
+                  _c("i", { staticClass: "fas fa-star-half-alt" })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", [_c("span", [_c("i", { staticClass: "far fa-star" })])])
             ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 download" }, [
+            _c("p", [
+              _c("span", [
+                _c("i", { staticClass: "fas fa-arrow-circle-down" })
+              ]),
+              _vm._v(" 25")
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "get-source" }, [_vm._v("Get source code")])
           ])
-        ]
-      )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "code-advise" }, [
+        _c("div", { staticClass: "benifits" }, [
+          _c("p", { staticClass: "benifits-p" }, [
+            _c("span", [_c("i", { staticClass: "fas fa-check-circle" })]),
+            _vm._v(
+              "Reviewed by\n                                    the Bootstarp team"
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "benifits-p" }, [
+            _c("span", [_c("i", { staticClass: "fas fa-check-circle" })]),
+            _vm._v(
+              "6 months\n                                    technical support"
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "benifits-p" }, [
+            _c("span", [_c("i", { staticClass: "fas fa-check-circle" })]),
+            _vm._v(
+              "100% money\n                                    back guarantee"
+            )
+          ]),
+          _vm._v(" "),
+          _c("p")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "authentication download-button " }, [
+          _c("a", { attrs: { href: "home.html" } }, [
+            _c(
+              "button",
+              { staticClass: "sign-now-button live-preview-button" },
+              [
+                _c("span", [_c("i", { staticClass: "far fa-file-pdf" })]),
+                _vm._v("Live preview")
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("a", { attrs: { href: "download-request.html" } }, [
+            _c(
+              "button",
+              { staticClass: "sign-now-button request-for-code-button" },
+              [
+                _vm._v(
+                  "Request for\n                                        code"
+                )
+              ]
+            )
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "authentication-title" }, [
+      _c("h3", [_c("span", [_vm._v("Project")]), _vm._v("team")])
     ])
   }
 ]
