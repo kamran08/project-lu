@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 11, 2020 at 10:51 PM
+-- Generation Time: Jan 17, 2020 at 07:28 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.7
 
@@ -82,6 +82,7 @@ CREATE TABLE `password_resets` (
 
 CREATE TABLE `projects` (
   `id` bigint(20) UNSIGNED NOT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci,
   `team_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `projectName` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -93,6 +94,14 @@ CREATE TABLE `projects` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `projects`
+--
+
+INSERT INTO `projects` (`id`, `description`, `team_id`, `user_id`, `projectName`, `type`, `category`, `image`, `file`, `link`, `created_at`, `updated_at`) VALUES
+(1, 'asdf afds asfasd', 2, 2, 'dsfaf afds', 'Website', 'sfda dfa', '/uploads/Za815AOGvdMKSqJXTcrxpXa4r5vo09vqkwppNqHO.png', '/uploads/STTPcROvHd79iooWKS8Y02IRZqwDjyJh8rKRanPE.pdf', '', '2020-01-16 14:03:46', '2020-01-16 14:03:46'),
+(2, 'asdf afds asfasd', 2, 2, 'dsfaf afds', 'Website', 'sfda dfa', '/uploads/Za815AOGvdMKSqJXTcrxpXa4r5vo09vqkwppNqHO.png', '/uploads/STTPcROvHd79iooWKS8Y02IRZqwDjyJh8rKRanPE.pdf', '', '2020-01-16 14:03:46', '2020-01-16 14:03:46');
 
 -- --------------------------------------------------------
 
@@ -136,13 +145,25 @@ CREATE TABLE `reviews` (
 
 CREATE TABLE `teams` (
   `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `user_id` int(11) NOT NULL,
-  `student_id` int(11) NOT NULL,
+  `student_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `teams`
+--
+
+INSERT INTO `teams` (`id`, `name`, `user_id`, `student_id`, `image`, `batch`, `created_at`, `updated_at`) VALUES
+(1, 'salman', 0, '0', '/uploads/wQ5PLg4mecyoqd2sSkbhaFu91yUKONgyxtq38dfr.png', '38th', '2020-01-17 00:26:02', '2020-01-17 00:26:02'),
+(2, 'saf', 1, '150', '/uploads/VEOcNkzvI22ebybUdHiZfacvotrB34wmikB3GbeH.png', '38th', '2020-01-17 00:27:20', '2020-01-17 00:27:20'),
+(3, 'Hachibur Rahman', 1, '1612020051', '/uploads/DwAWfuRe7dq52Ovn5EaFBgh2eZzLnRlfvvjVrYbg.jpeg', '41 st', '2020-01-17 10:48:46', '2020-01-17 10:48:46'),
+(4, 'salman', 1, '151202021', '/uploads/kDqDIu42UqkG3M7vzK86dhOptp0UYbl81CwhUcmE.png', '41th', '2020-01-17 10:59:14', '2020-01-17 10:59:14'),
+(5, 'Hachibur Rahman', 1, '1612020051', '/uploads/Za815AOGvdMKSqJXTcrxpXa4r5vo09vqkwppNqHO.png', '41 st', '2020-01-17 11:38:51', '2020-01-17 11:38:51');
 
 -- --------------------------------------------------------
 
@@ -153,6 +174,7 @@ CREATE TABLE `teams` (
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `batch` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `student_id` int(11) NOT NULL,
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
@@ -161,6 +183,13 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `batch`, `student_id`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, '', NULL, 0, 'salman@gmail.com', NULL, '$2y$10$eFBv2imTtPahSl/PRb1ESe.RYl3iJbSAGdo7sRPhAoFg512OwINMe', NULL, '2020-01-17 10:09:16', '2020-01-17 10:09:16');
 
 --
 -- Indexes for dumped tables
@@ -235,7 +264,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `requests`
@@ -253,13 +282,13 @@ ALTER TABLE `reviews`
 -- AUTO_INCREMENT for table `teams`
 --
 ALTER TABLE `teams`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
