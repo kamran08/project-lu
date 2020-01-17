@@ -41,7 +41,7 @@
                                             <option value="Website">Website</option>
                                             <option value="Apps">Apps</option>
                                             <option value="Game">Game</option>
-                                            <option value="Thesis">Thesis</option>
+                                            <!-- <option value="Thesis">Thesis</option> -->
                                         </select>
                                     </div>
 

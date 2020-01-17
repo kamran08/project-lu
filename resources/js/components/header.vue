@@ -12,7 +12,7 @@
 					<div class="col-md-7 center">
 						<ul class="nav_list ">
 							<li><router-link to="/">Home</router-link></li>
-							<li><router-link to="/team-profile">Team Profile</router-link></li>
+							<li v-if="authInfo"><router-link to="/team-profile">Team Profile</router-link></li>
 							<li><router-link to="/website">Website</router-link></li>
 							<li><router-link to="/apps">Apps</router-link></li>
 							<li><router-link to="/games">Games</router-link></li>
@@ -28,7 +28,7 @@
 							<div id="myDropdown" class="dropdown-content">
 								<ul class="dropdown-item-wrap">
 
-									<template v-if="authInfo">
+								<template v-if="authInfo">
 									<li class="dropdown-item">
 										<router-link to="add-member">
 

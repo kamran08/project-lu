@@ -1220,8 +1220,8 @@ input {
 }
 
 .name-item img{
- width:auto ;
- height: auto;
+ width:10pc;
+ height: 10pc !important;
  padding: 10px;
  border: 0.5px black solid;
  border-radius: 50%;
@@ -1772,4 +1772,7 @@ input {
 }
 .ivu-notice{
 	z-index: 1040 !important;
+}
+.coustom_image img{
+	height: 200px;
 }

@@ -232,3 +232,36 @@
         
     </div>
 </template>
+
+<script>
+export default {
+    data(){
+        return{
+        alldata:{},
+            id:''
+        }
+    },
+    created(){
+            if(this.$route.params.id){
+
+                this.id = this.$route.params.id
+                this.getProjectDetails(this.id)
+            }
+            else{
+                window.location = '/'
+            }
+
+    },
+    methods:{
+        async getProjectDetails(key){
+            const res = await this.callApi('get', `getProject/${key}`)
+            if(res.status == 200){
+                this.alldata = res.data
+            }
+            else{
+                window.location = '/'
+            }
+        }
+    }
+}
+</script>

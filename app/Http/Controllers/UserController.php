@@ -20,11 +20,11 @@ class UserController extends Controller
     }
     
     public function login(Request $request){
-        if((User::where('email', $request->email)->count())==0){
-            return response()->json([
-                'msg' => "Email doesn't exist!",
-            ],422);
-        }
+        // if((User::where('email', $request->email)->count())==0){
+        //     return response()->json([
+        //         'msg' => "Email doesn't exist!",
+        //     ],422);
+        // }
     
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password ])) {
            return Auth::user();

@@ -181,7 +181,7 @@ export default new Router({
   
       },
     {
-        path: '/product-description',
+        path: '/product-description/:id',
         name: 'product_description',
         component: product_description,
         meta: {

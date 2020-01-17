@@ -21,9 +21,10 @@ class HomeController extends Controller
                 'msg' => "your are not auth user!!",
             ], 401);
         }
+        $data = $request->all();
         $id = Auth::user()->id;
         $data['user_id'] = $id;
-        $data = $request->all();
+        $data['team_id'] = $id;
         $project = Project::create($data);
         return $project;
        
@@ -38,6 +39,12 @@ class HomeController extends Controller
         else{
             $project = Project::where('type', 'Website')->get();
         }
+        return $project;
+       
+    }
+    public function getProjectById($key){
+
+        $project = Project::where('id', $key)->with('team')->get();
         return $project;
        
     }

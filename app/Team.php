@@ -8,6 +8,7 @@ class Team extends Model
 {
     //
     protected $fillable = [
-        'name', 'user_id', 'student_id', 'image', 'batch'
+        'name', 'user_id','student_id', 'image', 'batch'
     ];
+    
 }

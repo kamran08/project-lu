@@ -16,7 +16,6 @@
                                         
                                     </div>
                                     <div class="authentication-log">
-                                        <form action="#">
                                             <div class="authentication-item">
                                                 <label for="input">Email</label>
                                                 <input v-model="from.email" type="text" placeholder="User email">
@@ -24,13 +23,13 @@
                                             <div class="authentication-item">
                                                 <label for="input">password</label>
                                                 <input v-model="from.password" type="password" placeholder="Enter password">
+                                                <!-- {{from.password}} -->
                                             </div>
                                             
                                              <div class="checkbox">
                                                 <label><input type="checkbox" value="">Remember me</label>
-                                                <a class="lost-pass-link" href="#">Lost your password?</a>
+                                                <!-- <a class="lost-pass-link" href="#">Lost your password?</a> -->
                                              </div>                                         
-                                        </form>
 
                                         <div class="authentication create-account-button">
                                                  <button class="sign-now-button" @click="login">Log in</button>
@@ -69,11 +68,10 @@ export default {
     } ,
     methods:{
         async login(){
-      
-            if(this.from.email==''){
+            if(this.from.email=='' || this.from.email==null){
                     return this.e("email does not match!!")
             }
-            if(this.from.password=''){
+            if(this.from.password==''){
                  return this.e("password does not match!!")
             }
             const res = await this.callApi('post','login', this.from)
@@ -93,6 +91,9 @@ export default {
                         return this.e(res.data.errors.email[0])
                     }
                     if(res.data.errors.password){
+                        return this.e(res.data.errors.password[0])
+                    }
+                    if(res.data.msg){
                         return this.e(res.data.errors.password[0])
                     }
                 }

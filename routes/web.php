@@ -19,10 +19,12 @@ Route::post('/uploadImages', 'UserController@getImage');
 // project route
 Route::post('/app/uploadPorject', 'HomeController@uploadPorject');
 Route::get('/app/getProject', 'HomeController@getProject');
+Route::get('/app/getProject/{key}', 'HomeController@getProjectById');
 
 // 
 Route::post('/app/addTeamMember', 'TeamController@addTeamMember');
 Route::get('/app/getTeamMembers', 'TeamController@getTeamMembers');
+Route::post('/app/editTeamMemeber', 'TeamController@editTeamMemeber');
 
 
 
