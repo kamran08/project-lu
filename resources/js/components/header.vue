@@ -16,7 +16,6 @@
 							<li><router-link to="/website">Website</router-link></li>
 							<li><router-link to="/apps">Apps</router-link></li>
 							<li><router-link to="/games">Games</router-link></li>
-							<li><router-link to="/games">Games</router-link></li>
 							
 
 						</ul>
@@ -28,6 +27,8 @@
 										class="fas fa-user-circle"></i></span> My Account</button>
 							<div id="myDropdown" class="dropdown-content">
 								<ul class="dropdown-item-wrap">
+
+									<template v-if="authInfo">
 									<li class="dropdown-item">
 										<router-link to="add-member">
 
@@ -95,7 +96,7 @@
 
 									<li class="dropdown-item">
 
-										<router-link to="/">
+										<a href="/logout">
 
 											<div class="img-drp-down">
 												<img class="hachib" src="/assets/img/sign-out-small.png" alt="">
@@ -106,12 +107,16 @@
 											</div>
 
 
-										</router-link>
+										</a>
 
 									</li>
+									</template>
+									<template v-else>
+
+									
 									<li class="dropdown-item">
 
-										<router-link to="/registration">
+										<router-link to="/login">
 
 											<div class="img-drp-down">
 												<img class="hachib" src="/assets/img/sign-out-small.png" alt="">
@@ -141,6 +146,7 @@
 										</router-link>
 
 									</li>
+									</template>
 
 								</ul>
 

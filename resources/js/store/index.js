@@ -8,7 +8,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state:{
-	authUser:false,
+		authUser:false,
 	
 		
 	},
@@ -35,8 +35,8 @@ export default new Vuex.Store({
 	},
 	actions:{
 
-		 // updateCart (state,data) {
-			// 		  state.commit('updateCart', data);
-   //               }
-	         }  
+		setAuthuser (state,data) {
+				state.commit('setAuthuser', data);
+			}
+		}  
    });
