@@ -16,27 +16,27 @@
 
                                 </div>
                                 <div class="authentication-log">
-                                    <form action="#">
                                         <div class="authentication-item">
                                             <label for="input">User Name</label>
-                                            <input type="text" placeholder="User name or email">
+                                            <input v-model="from.name" type="text" placeholder="User name or email">
                                         </div>
                                         <div class="authentication-item">
                                             <label for="input">Student ID</label>
-                                            <input type="text" placeholder="1612----56">
+                                            <input v-model="from.student_id" type="text" placeholder="1612----56">
                                         </div>
 
                                         <div class="authentication-item">
-                                            <label for="input">Student ID</label>
-                                            <textarea class="textarea">Why you want source file? </textarea>
+                                            <label for="input">Reason</label>
+                                            <textarea  v-model="from.reason" class="textarea">Why you want source file? </textarea>
+                                        </div>
+                                        <div class="authentication-item">
+                                            <label for="input">Email</label>
+                                            <input v-model="from.email" type="text" placeholder="writer your email">
                                         </div>
 
-                                    </form>
 
                                     <div class="authentication download-button">
-                                        <router-link to="/">
-                                            <button class="save-now-button">Send a request</button>
-                                        </router-link>
+                                            <button class="save-now-button" @click="sendRequest">Send a request</button>
                                     </div>
 
                                 </div>
@@ -49,3 +49,14 @@
 
     </div>
 </template>
+<script>
+export default {
+    data(){
+        return{
+            from:{
+                name:''
+            }
+        }
+    }
+}
+</script>

@@ -123,8 +123,9 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-6 download">
-                                        <p><span><i class="fas fa-arrow-circle-down"></i></span> 25</p>
-                                        <a class="get-source">Get source code</a>
+                                        <p><span><i class="fas fa-arrow-circle-down"></i></span> </p>
+                                        <a  :href="alldata.file"  class="get-source" :download="alldata.file">Get source code</a>
+                                        <!-- <a class="get-source">Get source code</a> -->
                                     </div>
                                 </div>
                             </div>
@@ -144,14 +145,14 @@
                                 </div>
                                 <div class="authentication download-button ">
 
-                                    <a href="home.html">
+                                    <a :href="alldata.link" v-if="alldata.link">
                                         <button class="sign-now-button live-preview-button"><span><i
                                                     class="far fa-file-pdf"></i></span>Live preview</button>
                                     </a>
-                                    <a href="download-request.html">
+                                    <router-link :to="'/download-request/'+alldata.id">
                                         <button class="sign-now-button request-for-code-button">Request for
                                             code</button>
-                                    </a>
+                                    </router-link>
                                 </div>
 
                             </div>

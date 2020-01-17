@@ -2390,6 +2390,78 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/download_request.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/download_request.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      from: {
+        name: ''
+      }
+    };
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/games.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/games.vue?vue&type=script&lang=js& ***!
@@ -2828,6 +2900,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+//
 //
 //
 //
@@ -68758,20 +68831,129 @@ var render = function() {
                 _vm._m(1),
                 _vm._v(" "),
                 _c("div", { staticClass: "authentication-log" }, [
-                  _vm._m(2),
+                  _c("div", { staticClass: "authentication-item" }, [
+                    _c("label", { attrs: { for: "input" } }, [
+                      _vm._v("User Name")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.from.name,
+                          expression: "from.name"
+                        }
+                      ],
+                      attrs: {
+                        type: "text",
+                        placeholder: "User name or email"
+                      },
+                      domProps: { value: _vm.from.name },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.from, "name", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
                   _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "authentication download-button" },
-                    [
-                      _c("router-link", { attrs: { to: "/" } }, [
-                        _c("button", { staticClass: "save-now-button" }, [
-                          _vm._v("Send a request")
-                        ])
-                      ])
-                    ],
-                    1
-                  )
+                  _c("div", { staticClass: "authentication-item" }, [
+                    _c("label", { attrs: { for: "input" } }, [
+                      _vm._v("Student ID")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.from.student_id,
+                          expression: "from.student_id"
+                        }
+                      ],
+                      attrs: { type: "text", placeholder: "1612----56" },
+                      domProps: { value: _vm.from.student_id },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.from, "student_id", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "authentication-item" }, [
+                    _c("label", { attrs: { for: "input" } }, [
+                      _vm._v("Reason")
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "textarea",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.from.reason,
+                            expression: "from.reason"
+                          }
+                        ],
+                        staticClass: "textarea",
+                        domProps: { value: _vm.from.reason },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.from, "reason", $event.target.value)
+                          }
+                        }
+                      },
+                      [_vm._v("Why you want source file? ")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "authentication-item" }, [
+                    _c("label", { attrs: { for: "input" } }, [_vm._v("Email")]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.from.email,
+                          expression: "from.email"
+                        }
+                      ],
+                      attrs: { type: "text", placeholder: "writer your email" },
+                      domProps: { value: _vm.from.email },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.from, "email", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "authentication download-button" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "save-now-button",
+                        on: { click: _vm.sendRequest }
+                      },
+                      [_vm._v("Send a request")]
+                    )
+                  ])
                 ])
               ])
             ])
@@ -68798,34 +68980,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "authentication-title" }, [
       _c("h3", [_c("span", [_vm._v("Download")]), _vm._v("request form")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("form", { attrs: { action: "#" } }, [
-      _c("div", { staticClass: "authentication-item" }, [
-        _c("label", { attrs: { for: "input" } }, [_vm._v("User Name")]),
-        _vm._v(" "),
-        _c("input", {
-          attrs: { type: "text", placeholder: "User name or email" }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "authentication-item" }, [
-        _c("label", { attrs: { for: "input" } }, [_vm._v("Student ID")]),
-        _vm._v(" "),
-        _c("input", { attrs: { type: "text", placeholder: "1612----56" } })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "authentication-item" }, [
-        _c("label", { attrs: { for: "input" } }, [_vm._v("Student ID")]),
-        _vm._v(" "),
-        _c("textarea", { staticClass: "textarea" }, [
-          _vm._v("Why you want source file? ")
-        ])
-      ])
     ])
   }
 ]
@@ -69696,7 +69850,73 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "col-md-4 col-sm-4" }, [
-              _vm._m(6),
+              _c(
+                "div",
+                { staticClass: "authentication-card product-desc-card" },
+                [
+                  _vm._m(6),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "rating" }, [
+                    _c("div", { staticClass: "row" }, [
+                      _vm._m(7),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-md-6 download" }, [
+                        _vm._m(8),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "get-source",
+                            attrs: {
+                              href: _vm.alldata.file,
+                              download: _vm.alldata.file
+                            }
+                          },
+                          [_vm._v("Get source code")]
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "code-advise" }, [
+                    _vm._m(9),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "authentication download-button " },
+                      [
+                        _vm.alldata.link
+                          ? _c("a", { attrs: { href: _vm.alldata.link } }, [
+                              _vm._m(10)
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _c(
+                          "router-link",
+                          {
+                            attrs: { to: "/download-request/" + _vm.alldata.id }
+                          },
+                          [
+                            _c(
+                              "button",
+                              {
+                                staticClass:
+                                  "sign-now-button request-for-code-button"
+                              },
+                              [
+                                _vm._v(
+                                  "Request for\n                                        code"
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ],
+                      1
+                    )
+                  ])
+                ]
+              ),
               _vm._v(" "),
               _c(
                 "div",
@@ -69732,7 +69952,7 @@ var render = function() {
                 "div",
                 { staticClass: "authentication-card product-desc-card" },
                 [
-                  _vm._m(7),
+                  _vm._m(11),
                   _vm._v(" "),
                   _vm.alldata.team
                     ? _c(
@@ -69923,110 +70143,93 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "authentication-card product-desc-card" }, [
-      _c("div", { staticClass: "authentication-title" }, [
-        _c("h3", [_c("span", [_vm._v("Have")]), _vm._v("sourse code")])
-      ]),
+    return _c("div", { staticClass: "authentication-title" }, [
+      _c("h3", [_c("span", [_vm._v("Have")]), _vm._v("sourse code")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-6 rate-side" }, [
+      _c("p", [_vm._v("Rating "), _c("span", [_vm._v("(3.0)")])]),
       _vm._v(" "),
-      _c("div", { staticClass: "rating" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-6 rate-side" }, [
-            _c("p", [_vm._v("Rating "), _c("span", [_vm._v("(3.0)")])]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("li", [
-                _c("span", { staticClass: "gold-star" }, [
-                  _c("i", { staticClass: "fas fa-star" })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("span", { staticClass: "gold-star" }, [
-                  _c("i", { staticClass: "fas fa-star" })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("span", { staticClass: "gold-star" }, [
-                  _c("i", { staticClass: "fas fa-star" })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("span", { staticClass: "half-star" }, [
-                  _c("i", { staticClass: "fas fa-star-half-alt" })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("li", [_c("span", [_c("i", { staticClass: "far fa-star" })])])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-6 download" }, [
-            _c("p", [
-              _c("span", [
-                _c("i", { staticClass: "fas fa-arrow-circle-down" })
-              ]),
-              _vm._v(" 25")
-            ]),
-            _vm._v(" "),
-            _c("a", { staticClass: "get-source" }, [_vm._v("Get source code")])
+      _c("ul", [
+        _c("li", [
+          _c("span", { staticClass: "gold-star" }, [
+            _c("i", { staticClass: "fas fa-star" })
           ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "code-advise" }, [
-        _c("div", { staticClass: "benifits" }, [
-          _c("p", { staticClass: "benifits-p" }, [
-            _c("span", [_c("i", { staticClass: "fas fa-check-circle" })]),
-            _vm._v(
-              "Reviewed by\n                                    the Bootstarp team"
-            )
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "benifits-p" }, [
-            _c("span", [_c("i", { staticClass: "fas fa-check-circle" })]),
-            _vm._v(
-              "6 months\n                                    technical support"
-            )
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "benifits-p" }, [
-            _c("span", [_c("i", { staticClass: "fas fa-check-circle" })]),
-            _vm._v(
-              "100% money\n                                    back guarantee"
-            )
-          ]),
-          _vm._v(" "),
-          _c("p")
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "authentication download-button " }, [
-          _c("a", { attrs: { href: "home.html" } }, [
-            _c(
-              "button",
-              { staticClass: "sign-now-button live-preview-button" },
-              [
-                _c("span", [_c("i", { staticClass: "far fa-file-pdf" })]),
-                _vm._v("Live preview")
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("a", { attrs: { href: "download-request.html" } }, [
-            _c(
-              "button",
-              { staticClass: "sign-now-button request-for-code-button" },
-              [
-                _vm._v(
-                  "Request for\n                                        code"
-                )
-              ]
-            )
+        _c("li", [
+          _c("span", { staticClass: "gold-star" }, [
+            _c("i", { staticClass: "fas fa-star" })
           ])
-        ])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("span", { staticClass: "gold-star" }, [
+            _c("i", { staticClass: "fas fa-star" })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("span", { staticClass: "half-star" }, [
+            _c("i", { staticClass: "fas fa-star-half-alt" })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", [_c("span", [_c("i", { staticClass: "far fa-star" })])])
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("span", [_c("i", { staticClass: "fas fa-arrow-circle-down" })])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "benifits" }, [
+      _c("p", { staticClass: "benifits-p" }, [
+        _c("span", [_c("i", { staticClass: "fas fa-check-circle" })]),
+        _vm._v(
+          "Reviewed by\n                                    the Bootstarp team"
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "benifits-p" }, [
+        _c("span", [_c("i", { staticClass: "fas fa-check-circle" })]),
+        _vm._v(
+          "6 months\n                                    technical support"
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "benifits-p" }, [
+        _c("span", [_c("i", { staticClass: "fas fa-check-circle" })]),
+        _vm._v("100% money\n                                    back guarantee")
+      ]),
+      _vm._v(" "),
+      _c("p")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      { staticClass: "sign-now-button live-preview-button" },
+      [
+        _c("span", [_c("i", { staticClass: "far fa-file-pdf" })]),
+        _vm._v("Live preview")
+      ]
+    )
   },
   function() {
     var _vm = this
@@ -89246,15 +89449,17 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _download_request_vue_vue_type_template_id_21b80341___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./download_request.vue?vue&type=template&id=21b80341& */ "./resources/js/pages/download_request.vue?vue&type=template&id=21b80341&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _download_request_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./download_request.vue?vue&type=script&lang=js& */ "./resources/js/pages/download_request.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _download_request_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _download_request_vue_vue_type_template_id_21b80341___WEBPACK_IMPORTED_MODULE_0__["render"],
   _download_request_vue_vue_type_template_id_21b80341___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -89268,6 +89473,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/pages/download_request.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/pages/download_request.vue?vue&type=script&lang=js&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/pages/download_request.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_download_request_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./download_request.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/download_request.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_download_request_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -90201,7 +90420,7 @@ var Admin = ['Admin'];
       title: 'Project Rakho Add Member'
     }
   }, {
-    path: '/download-request',
+    path: '/download-request/:id',
     name: 'download_request',
     component: _pages_download_request_vue__WEBPACK_IMPORTED_MODULE_10__["default"],
     meta: {

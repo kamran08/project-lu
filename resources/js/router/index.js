@@ -216,7 +216,7 @@ export default new Router({
   
       },
     {
-        path: '/download-request',
+        path: '/download-request/:id',
         name: 'download_request',
         component: download_request,
         meta: {
