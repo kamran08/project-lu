@@ -2027,6 +2027,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2081,7 +2082,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 8:
                 _context.next = 10;
-                return this.callApi('post', '/addTeamMember', this.from);
+                return this.callApi('post', 'addTeamMember', this.from);
 
               case 10:
                 res = _context.sent;
@@ -2132,6 +2133,126 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     handleBeforeUpload: function handleBeforeUpload() {}
   },
   created: function created() {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/registration.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/registration.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      from: {
+        name: '',
+        student_id: '',
+        email: '',
+        password: '',
+        batch: ''
+      }
+    };
+  },
+  created: function created() {},
+  methods: {
+    registerUser: function () {
+      var _registerUser = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      function registerUser() {
+        return _registerUser.apply(this, arguments);
+      }
+
+      return registerUser;
+    }()
+  }
 });
 
 /***/ }),
@@ -65354,6 +65475,16 @@ var render = function() {
                     ])
                   ],
                   1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  [
+                    _c("router-link", { attrs: { to: "/games" } }, [
+                      _vm._v("Games")
+                    ])
+                  ],
+                  1
                 )
               ])
             ]),
@@ -65497,6 +65628,60 @@ var render = function() {
                           ])
                         ],
                         1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        { staticClass: "dropdown-item" },
+                        [
+                          _c(
+                            "router-link",
+                            { attrs: { to: "/registration" } },
+                            [
+                              _c("div", { staticClass: "img-drp-down" }, [
+                                _c("img", {
+                                  staticClass: "hachib",
+                                  attrs: {
+                                    src: "/assets/img/sign-out-small.png",
+                                    alt: ""
+                                  }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "prgp-drp-down" }, [
+                                _c("p", [_vm._v("Log In")])
+                              ])
+                            ]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        { staticClass: "dropdown-item" },
+                        [
+                          _c(
+                            "router-link",
+                            { attrs: { to: "/registration" } },
+                            [
+                              _c("div", { staticClass: "img-drp-down" }, [
+                                _c("img", {
+                                  staticClass: "hachib",
+                                  attrs: {
+                                    src: "/assets/img/sign-out-small.png",
+                                    alt: ""
+                                  }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "prgp-drp-down" }, [
+                                _c("p", [_vm._v("Registration")])
+                              ])
+                            ]
+                          )
+                        ],
+                        1
                       )
                     ])
                   ]
@@ -65620,155 +65805,146 @@ var render = function() {
                 _vm._m(1),
                 _vm._v(" "),
                 _c("div", { staticClass: "authentication-log" }, [
-                  _c("form", { attrs: { action: "#" } }, [
-                    _c("div", { staticClass: "authentication-item" }, [
-                      _c("label", { attrs: { for: "input" } }, [
-                        _vm._v("User Name")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.from.name,
-                            expression: "from.name"
-                          }
-                        ],
-                        attrs: { type: "text", placeholder: "User name " },
-                        domProps: { value: _vm.from.name },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(_vm.from, "name", $event.target.value)
-                          }
-                        }
-                      })
+                  _c("div", { staticClass: "authentication-item" }, [
+                    _c("label", { attrs: { for: "input" } }, [
+                      _vm._v("User Name")
                     ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "authentication-item" }, [
-                      _c("label", { attrs: { for: "input" } }, [
-                        _vm._v("Student ID")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.from.student_id,
-                            expression: "from.student_id"
-                          }
-                        ],
-                        attrs: { type: "text", placeholder: "1612020051" },
-                        domProps: { value: _vm.from.student_id },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.from,
-                              "student_id",
-                              $event.target.value
-                            )
-                          }
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.from.name,
+                          expression: "from.name"
                         }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "authentication-item" }, [
-                      _c("label", { attrs: { for: "input" } }, [
-                        _vm._v("Batch")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.from.batch,
-                            expression: "from.batch"
+                      ],
+                      attrs: { type: "text", placeholder: "User name " },
+                      domProps: { value: _vm.from.name },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
                           }
-                        ],
-                        attrs: { type: "text", placeholder: "bach name" },
-                        domProps: { value: _vm.from.batch },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(_vm.from, "batch", $event.target.value)
-                          }
+                          _vm.$set(_vm.from, "name", $event.target.value)
                         }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "authentication-item" }, [
-                      _c("label", { attrs: { for: "input" } }, [
-                        _vm._v("Upload Photo")
-                      ]),
-                      _vm._v(" "),
-                      !_vm.from.image
-                        ? _c(
-                            "div",
-                            { staticClass: "_1upload_upload" },
-                            [
-                              _c(
-                                "Upload",
-                                {
-                                  ref: "upload",
-                                  attrs: {
-                                    name: "img",
-                                    "show-upload-list": false,
-                                    "on-success": _vm.handleSuccess,
-                                    format: ["jpg", "jpeg", "png"],
-                                    "max-size": 2048,
-                                    "on-format-error": _vm.handleFormatError,
-                                    "on-exceeded-size": _vm.handleMaxSize,
-                                    "before-upload": _vm.handleBeforeUpload,
-                                    type: "drag",
-                                    action: "/uploadImages"
-                                  }
-                                },
-                                [
-                                  _c("div", [
-                                    _c(
-                                      "div",
-                                      { staticClass: "_1upload_main" },
-                                      [
-                                        _c(
-                                          "p",
-                                          { staticClass: "_1upload_icon" },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fas fa-camera"
-                                            })
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ])
-                                ]
-                              )
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.from.image
-                        ? _c("div", [
-                            _c("img", {
-                              attrs: { src: _vm.from.image, alt: "" }
-                            })
-                          ])
-                        : _vm._e()
-                    ])
+                      }
+                    })
                   ]),
                   _vm._v(" "),
-                  _vm._m(2)
+                  _c("div", { staticClass: "authentication-item" }, [
+                    _c("label", { attrs: { for: "input" } }, [
+                      _vm._v("Student ID")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.from.student_id,
+                          expression: "from.student_id"
+                        }
+                      ],
+                      attrs: { type: "text", placeholder: "1612020051" },
+                      domProps: { value: _vm.from.student_id },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.from, "student_id", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "authentication-item" }, [
+                    _c("label", { attrs: { for: "input" } }, [_vm._v("Batch")]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.from.batch,
+                          expression: "from.batch"
+                        }
+                      ],
+                      attrs: { type: "text", placeholder: "bach name" },
+                      domProps: { value: _vm.from.batch },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.from, "batch", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "authentication-item" }, [
+                    _c("label", { attrs: { for: "input" } }, [
+                      _vm._v("Upload Photo")
+                    ]),
+                    _vm._v(" "),
+                    !_vm.from.image
+                      ? _c(
+                          "div",
+                          { staticClass: "_1upload_upload" },
+                          [
+                            _c(
+                              "Upload",
+                              {
+                                ref: "upload",
+                                attrs: {
+                                  name: "img",
+                                  "show-upload-list": false,
+                                  "on-success": _vm.handleSuccess,
+                                  format: ["jpg", "jpeg", "png"],
+                                  "max-size": 2048,
+                                  "on-format-error": _vm.handleFormatError,
+                                  "on-exceeded-size": _vm.handleMaxSize,
+                                  "before-upload": _vm.handleBeforeUpload,
+                                  type: "drag",
+                                  action: "/uploadImages"
+                                }
+                              },
+                              [
+                                _c("div", [
+                                  _c("div", { staticClass: "_1upload_main" }, [
+                                    _c("button", [_vm._v("hello")]),
+                                    _vm._v(" "),
+                                    _c("p", { staticClass: "_1upload_icon" }, [
+                                      _c("i", { staticClass: "fas fa-camera" })
+                                    ])
+                                  ])
+                                ])
+                              ]
+                            )
+                          ],
+                          1
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.from.image
+                      ? _c("div", [
+                          _c("img", { attrs: { src: _vm.from.image, alt: "" } })
+                        ])
+                      : _vm._e()
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "authentication" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "add-now-button",
+                        on: { click: _vm.addNewMemeber }
+                      },
+                      [_vm._v("Add now")]
+                    )
+                  ])
                 ])
               ]),
               _vm._v(" "),
@@ -65869,14 +66045,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "authentication-title" }, [
       _c("h3", [_c("span", [_vm._v("Add")]), _vm._v("new member")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "authentication " }, [
-      _c("button", { staticClass: "add-now-button" }, [_vm._v("Add now")])
     ])
   }
 ]
@@ -69449,17 +69617,174 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "authentication-log" }, [
                   _c("form", { attrs: { action: "#" } }, [
-                    _vm._m(2),
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Full Name")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.from.name,
+                            expression: "from.name"
+                          }
+                        ],
+                        attrs: { type: "text", placeholder: "First Name Here" },
+                        domProps: { value: _vm.from.name },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.from, "name", $event.target.value)
+                          }
+                        }
+                      })
+                    ]),
                     _vm._v(" "),
-                    _vm._m(3),
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Student ID")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.from.student_id,
+                            expression: "from.student_id"
+                          }
+                        ],
+                        attrs: { type: "text", placeholder: "1612----56" },
+                        domProps: { value: _vm.from.student_id },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.from,
+                              "student_id",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
                     _vm._v(" "),
-                    _vm._m(4),
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Batch")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.from.batch,
+                            expression: "from.batch"
+                          }
+                        ],
+                        attrs: { type: "text", placeholder: "41" },
+                        domProps: { value: _vm.from.batch },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.from, "batch", $event.target.value)
+                          }
+                        }
+                      })
+                    ]),
                     _vm._v(" "),
-                    _vm._m(5),
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Email Address")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.from.email,
+                            expression: "from.email"
+                          }
+                        ],
+                        attrs: {
+                          type: "text",
+                          placeholder: "your-email@domail.com"
+                        },
+                        domProps: { value: _vm.from.email },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.from, "email", $event.target.value)
+                          }
+                        }
+                      })
+                    ]),
                     _vm._v(" "),
-                    _vm._m(6),
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Password")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.from.password,
+                            expression: "from.password"
+                          }
+                        ],
+                        attrs: { type: "text", placeholder: "" },
+                        domProps: { value: _vm.from.password },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.from, "password", $event.target.value)
+                          }
+                        }
+                      })
+                    ]),
                     _vm._v(" "),
-                    _vm._m(7),
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Confirm Password")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.confirmpassword,
+                            expression: "confirmpassword"
+                          }
+                        ],
+                        attrs: { type: "password", placeholder: "" },
+                        domProps: { value: _vm.confirmpassword },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.confirmpassword = $event.target.value
+                          }
+                        }
+                      })
+                    ]),
                     _vm._v(" "),
                     _c(
                       "p",
@@ -69480,13 +69805,15 @@ var render = function() {
                       "div",
                       { staticClass: "authentication create-account-button" },
                       [
-                        _c("router-link", { attrs: { to: "/" } }, [
-                          _c("button", { staticClass: "sign-now-button" }, [
-                            _vm._v("Sign up")
-                          ])
-                        ])
-                      ],
-                      1
+                        _c(
+                          "button",
+                          {
+                            staticClass: "sign-now-button",
+                            on: { click: _vm.registerUser }
+                          },
+                          [_vm._v("Sign up")]
+                        )
+                      ]
                     )
                   ]),
                   _vm._v(" "),
@@ -69528,68 +69855,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "authentication-title" }, [
       _c("h3", [_c("span", [_vm._v("Sign Up")]), _vm._v("to your Account")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "authentication-item" }, [
-      _c("label", { attrs: { for: "input" } }, [_vm._v("First Name")]),
-      _vm._v(" "),
-      _c("input", { attrs: { type: "text", placeholder: "First Name Here" } })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "authentication-item" }, [
-      _c("label", { attrs: { for: "input" } }, [_vm._v("Student ID")]),
-      _vm._v(" "),
-      _c("input", { attrs: { type: "text", placeholder: "1612----56" } })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "authentication-item" }, [
-      _c("label", { attrs: { for: "input" } }, [_vm._v("Batch")]),
-      _vm._v(" "),
-      _c("input", { attrs: { type: "text", placeholder: "41" } })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "authentication-item" }, [
-      _c("label", { attrs: { for: "input" } }, [_vm._v("Email Address")]),
-      _vm._v(" "),
-      _c("input", {
-        attrs: { type: "text", placeholder: "your-email@domail.com" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "authentication-item" }, [
-      _c("label", { attrs: { for: "input" } }, [_vm._v("Password")]),
-      _vm._v(" "),
-      _c("input", { attrs: { type: "text", placeholder: "" } })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "authentication-item" }, [
-      _c("label", { attrs: { for: "input" } }, [_vm._v("Confirm Password")]),
-      _vm._v(" "),
-      _c("input", { attrs: { type: "password", placeholder: "" } })
     ])
   }
 ]
@@ -87838,15 +88103,17 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _registration_vue_vue_type_template_id_10b74a22___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./registration.vue?vue&type=template&id=10b74a22& */ "./resources/js/pages/registration.vue?vue&type=template&id=10b74a22&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _registration_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./registration.vue?vue&type=script&lang=js& */ "./resources/js/pages/registration.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _registration_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _registration_vue_vue_type_template_id_10b74a22___WEBPACK_IMPORTED_MODULE_0__["render"],
   _registration_vue_vue_type_template_id_10b74a22___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -87860,6 +88127,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/pages/registration.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/pages/registration.vue?vue&type=script&lang=js&":
+/*!**********************************************************************!*\
+  !*** ./resources/js/pages/registration.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_registration_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./registration.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/registration.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_registration_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 

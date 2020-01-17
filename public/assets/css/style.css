@@ -1770,3 +1770,6 @@ input {
 .publish-card label{
 	font-size: 18px;
 }
+.ivu-notice{
+	z-index: 1040 !important;
+}

@@ -43,7 +43,6 @@ class UserController extends Controller
 
     public function upload(Request $request)
     {
-        // \Log::info($request->all());
 
         request()->file('img')->store('uploads');
         $pic = $request->img->hashName();

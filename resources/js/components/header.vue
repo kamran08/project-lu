@@ -16,6 +16,7 @@
 							<li><router-link to="/website">Website</router-link></li>
 							<li><router-link to="/apps">Apps</router-link></li>
 							<li><router-link to="/games">Games</router-link></li>
+							<li><router-link to="/games">Games</router-link></li>
 							
 
 						</ul>
@@ -102,6 +103,38 @@
 
 											<div class="prgp-drp-down">
 												<p>Sign out from website</p>
+											</div>
+
+
+										</router-link>
+
+									</li>
+									<li class="dropdown-item">
+
+										<router-link to="/registration">
+
+											<div class="img-drp-down">
+												<img class="hachib" src="/assets/img/sign-out-small.png" alt="">
+											</div>
+
+											<div class="prgp-drp-down">
+												<p>Log In</p>
+											</div>
+
+
+										</router-link>
+
+									</li>
+									<li class="dropdown-item">
+
+										<router-link to="/registration">
+
+											<div class="img-drp-down">
+												<img class="hachib" src="/assets/img/sign-out-small.png" alt="">
+											</div>
+
+											<div class="prgp-drp-down">
+												<p>Registration</p>
 											</div>
 
 

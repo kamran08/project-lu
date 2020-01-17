@@ -18,7 +18,13 @@ Route::post('/uploadImages', 'UserController@getImage');
 
 // project route
 Route::post('/app/uploadPorject', 'HomeController@uploadPorject');
-Route::post('/app/addTeamMember', 'HomeController@addTeamMember');
+Route::get('/app/getProject', 'HomeController@getProject');
+
+// 
+Route::post('/app/addTeamMember', 'TeamController@addTeamMember');
+Route::get('/app/getTeamMembers', 'TeamController@getTeamMembers');
+
+
 
 
 //logout

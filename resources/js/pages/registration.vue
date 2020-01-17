@@ -17,36 +17,34 @@
                                     <div class="authentication-log">
                                         <form action="#">
                                             <div class="authentication-item">
-                                                <label for="input">First Name</label>
-                                                <input type="text" placeholder="First Name Here">
+                                                <label for="input">Full Name</label>
+                                                <input v-model="from.name" type="text" placeholder="First Name Here">
                                             </div>
                                             <div class="authentication-item">
                                                 <label for="input">Student ID</label>
-                                                <input type="text" placeholder="1612----56">
+                                                <input v-model="from.student_id" type="text" placeholder="1612----56">
                                             </div>
 
                                             <div class="authentication-item">
                                                 <label for="input">Batch</label>
-                                                <input type="text" placeholder="41">
+                                                <input v-model="from.batch" type="text" placeholder="41">
                                             </div>
                                             <div class="authentication-item">
                                                 <label for="input">Email Address</label>
-                                                <input type="text" placeholder="your-email@domail.com">
+                                                <input v-model="from.email" type="text" placeholder="your-email@domail.com">
                                             </div>
                                             <div class="authentication-item">
                                                 <label for="input">Password</label>
-                                                <input type="text" placeholder="">
+                                                <input v-model="from.password" type="text" placeholder="">
                                             </div>
                                             <div class="authentication-item">
                                                 <label for="input">Confirm Password</label>
-                                                <input type="password" placeholder="">
+                                                <input v-model="confirmpassword" type="password" placeholder="">
                                             </div>
                                           
                                             <p class="authentication-p" >Your personal data will be used to support your experience through your websites.to manage access to your account and for other purposes described in our <router-link to="#">privacy policy</router-link>.</p>
                                             <div class="authentication create-account-button">
-                                                <router-link to="/">
-                                                     <button class="sign-now-button">Sign up</button>
-                                                </router-link>
+                                                     <button @click="registerUser" class="sign-now-button">Sign up</button>
                                             </div>
                                         </form>
                                         
@@ -62,3 +60,27 @@
                 </div>
             </div>
 </template>
+
+<script>
+export default {
+    data(){
+        return{
+            from:{
+                name:'',
+                student_id:'',
+                email:'',
+                password:'',
+                batch:'',
+            }
+        }
+    },
+    created(){
+        
+    } ,
+    methods:{
+        async registerUser(){
+            
+        }
+    },
+}
+</script>

@@ -28,18 +28,18 @@ class HomeController extends Controller
         return $project;
        
     }
-    public function addTeamMember(Request $request){
+    public function getProject(Request $request){
+        $type = $request->type;
+         $project = [];
+        if($type){
 
-        if (!Auth::user()) {
-            return response()->json([
-                'msg' => "your are not auth user!!",
-            ], 401);
+            $project = Project::where('type', $type)->get();
         }
-        $id = Auth::user()->id;
-        $data['user_id'] = $id;
-        $data = $request->all();
-        $team = Team::create($data);
-        return $team;
+        else{
+            $project = Project::where('type', 'Website')->get();
+        }
+        return $project;
        
     }
+ 
 }

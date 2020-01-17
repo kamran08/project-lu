@@ -55,7 +55,7 @@
 
                                 </div>
                                 <div class="authentication-log">
-                                    <form action="#">
+                                    <!-- <form action="#"> -->
                                         <div class="authentication-item">
                                             <label for="input">User Name</label>
                                             <input v-model="from.name" type="text" placeholder="User name ">
@@ -87,6 +87,7 @@
                                                                 action="/uploadImages">
                                                             <div>
                                                                 <div class="_1upload_main">
+                                                                    <button>hello</button>
                                                                     <p class="_1upload_icon"><i class="fas fa-camera"></i></p>
                                                                 </div>
                                                             </div>
@@ -99,11 +100,11 @@
                                                     <!-- Upload -->
                                         </div>
 
-                                    </form>
+                                    <!-- </form> -->
 
-                                    <div class="authentication ">
+                                    <div class="authentication" >
                                       
-                                            <button class="add-now-button">Add now</button>
+                                            <button class="add-now-button" @click="addNewMemeber">Add now</button>
                                        
                                     </div>
 
@@ -154,7 +155,7 @@ export default {
             if(!this.from.image){
                 return this.e("upload a Image!!")
             }
-            const res = await this.callApi('post','/addTeamMember', this.from)
+            const res = await this.callApi('post','addTeamMember', this.from)
             if(res.status==200 || res.status==201){
                 this.s("New Member Added!!")
                 this.from = {
