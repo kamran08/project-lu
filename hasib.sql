@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 17, 2020 at 07:28 PM
+-- Generation Time: Jan 22, 2020 at 06:32 AM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.7
 
@@ -60,7 +60,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (4, '2020_01_11_212652_create_teams_table', 1),
 (5, '2020_01_11_212722_create_projects_table', 1),
 (6, '2020_01_11_212742_create_requests_table', 1),
-(7, '2020_01_11_212838_create_reviews_table', 1);
+(7, '2020_01_11_212838_create_reviews_table', 1),
+(8, '2020_01_21_072203_create_user_requests_table', 2);
 
 -- --------------------------------------------------------
 
@@ -101,7 +102,9 @@ CREATE TABLE `projects` (
 
 INSERT INTO `projects` (`id`, `description`, `team_id`, `user_id`, `projectName`, `type`, `category`, `image`, `file`, `link`, `created_at`, `updated_at`) VALUES
 (1, 'asdf afds asfasd', 2, 2, 'dsfaf afds', 'Website', 'sfda dfa', '/uploads/Za815AOGvdMKSqJXTcrxpXa4r5vo09vqkwppNqHO.png', '/uploads/STTPcROvHd79iooWKS8Y02IRZqwDjyJh8rKRanPE.pdf', '', '2020-01-16 14:03:46', '2020-01-16 14:03:46'),
-(2, 'asdf afds asfasd', 2, 2, 'dsfaf afds', 'Website', 'sfda dfa', '/uploads/Za815AOGvdMKSqJXTcrxpXa4r5vo09vqkwppNqHO.png', '/uploads/STTPcROvHd79iooWKS8Y02IRZqwDjyJh8rKRanPE.pdf', '', '2020-01-16 14:03:46', '2020-01-16 14:03:46');
+(2, 'asdf afds asfasd', 2, 1, 'dsfaf afds', 'Website', 'sfda dfa', '/uploads/Za815AOGvdMKSqJXTcrxpXa4r5vo09vqkwppNqHO.png', '/uploads/STTPcROvHd79iooWKS8Y02IRZqwDjyJh8rKRanPE.pdf', '', '2020-01-16 14:03:46', '2020-01-16 14:03:46'),
+(3, 'asdf afds asfasd', 2, 2, 'dsfaf afds', 'Apps', 'sfda dfa', '/uploads/Za815AOGvdMKSqJXTcrxpXa4r5vo09vqkwppNqHO.png', '/uploads/STTPcROvHd79iooWKS8Y02IRZqwDjyJh8rKRanPE.pdf', '', '2020-01-16 14:03:46', '2020-01-16 14:03:46'),
+(4, 'asdf afds asfasd', 2, 2, 'dsfaf afds', 'Game', 'sfda dfa', '/uploads/Za815AOGvdMKSqJXTcrxpXa4r5vo09vqkwppNqHO.png', '/uploads/STTPcROvHd79iooWKS8Y02IRZqwDjyJh8rKRanPE.pdf', '', '2020-01-16 14:03:46', '2020-01-16 14:03:46');
 
 -- --------------------------------------------------------
 
@@ -131,11 +134,20 @@ CREATE TABLE `requests` (
 CREATE TABLE `reviews` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `user_id` int(11) NOT NULL,
+  `project_id` int(11) NOT NULL,
   `rate` int(11) NOT NULL,
-  `message` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `comment` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `reviews`
+--
+
+INSERT INTO `reviews` (`id`, `user_id`, `project_id`, `rate`, `comment`, `created_at`, `updated_at`) VALUES
+(1, 0, 1, 3, 'ksdfkljljkas', '2020-01-21 11:33:58', '2020-01-21 11:33:58'),
+(3, 1, 1, 4, 'hello', '2020-01-21 12:27:09', '2020-01-21 12:27:09');
 
 -- --------------------------------------------------------
 
@@ -159,7 +171,7 @@ CREATE TABLE `teams` (
 --
 
 INSERT INTO `teams` (`id`, `name`, `user_id`, `student_id`, `image`, `batch`, `created_at`, `updated_at`) VALUES
-(1, 'salman', 0, '0', '/uploads/wQ5PLg4mecyoqd2sSkbhaFu91yUKONgyxtq38dfr.png', '38th', '2020-01-17 00:26:02', '2020-01-17 00:26:02'),
+(1, 'salman', 2, '0', '/uploads/wQ5PLg4mecyoqd2sSkbhaFu91yUKONgyxtq38dfr.png', '38th', '2020-01-17 00:26:02', '2020-01-17 00:26:02'),
 (2, 'saf', 1, '150', '/uploads/VEOcNkzvI22ebybUdHiZfacvotrB34wmikB3GbeH.png', '38th', '2020-01-17 00:27:20', '2020-01-17 00:27:20'),
 (3, 'Hachibur Rahman', 1, '1612020051', '/uploads/DwAWfuRe7dq52Ovn5EaFBgh2eZzLnRlfvvjVrYbg.jpeg', '41 st', '2020-01-17 10:48:46', '2020-01-17 10:48:46'),
 (4, 'salman', 1, '151202021', '/uploads/kDqDIu42UqkG3M7vzK86dhOptp0UYbl81CwhUcmE.png', '41th', '2020-01-17 10:59:14', '2020-01-17 10:59:14'),
@@ -174,6 +186,7 @@ INSERT INTO `teams` (`id`, `name`, `user_id`, `student_id`, `image`, `batch`, `c
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `batch` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `student_id` int(11) NOT NULL,
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -188,8 +201,28 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `batch`, `student_id`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, '', NULL, 0, 'salman@gmail.com', NULL, '$2y$10$eFBv2imTtPahSl/PRb1ESe.RYl3iJbSAGdo7sRPhAoFg512OwINMe', NULL, '2020-01-17 10:09:16', '2020-01-17 10:09:16');
+INSERT INTO `users` (`id`, `name`, `image`, `batch`, `student_id`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, '', NULL, NULL, 0, 'salman@gmail.com', NULL, '$2y$10$eFBv2imTtPahSl/PRb1ESe.RYl3iJbSAGdo7sRPhAoFg512OwINMe', NULL, '2020-01-17 10:09:16', '2020-01-17 10:09:16');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_requests`
+--
+
+CREATE TABLE `user_requests` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `from` int(11) DEFAULT NULL,
+  `to` int(11) DEFAULT NULL,
+  `student_id` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `project_id` int(11) DEFAULT NULL,
+  `email` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mobile` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `reason` text COLLATE utf8mb4_unicode_ci,
+  `projectName` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Indexes for dumped tables
@@ -245,6 +278,12 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
+-- Indexes for table `user_requests`
+--
+ALTER TABLE `user_requests`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -258,13 +297,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `requests`
@@ -276,7 +315,7 @@ ALTER TABLE `requests`
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `teams`
@@ -289,6 +328,12 @@ ALTER TABLE `teams`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `user_requests`
+--
+ALTER TABLE `user_requests`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

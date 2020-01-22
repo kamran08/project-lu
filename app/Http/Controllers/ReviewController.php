@@ -3,28 +3,34 @@
 namespace App\Http\Controllers;
 
 use App\Review;
+use App\UserRequest;
+use App\Project;
 use Illuminate\Http\Request;
 
 class ReviewController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function storeRequest(Request $request)
     {
-        //
+        $data = $request->all();
+        $project = Project::where('id', $data['project_id'])->first();
+        if (!$project) {
+            return response()->json([
+                'msg' => "You are trying to input invalid data",
+            ], 422);
+        }
+        $data['to'] = $project['user_id'];
+        return UserRequest::create($data);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function storeReview(Request $request)
     {
-        //
+        $data = $request->all();
+        return Review::create($data);
+    }
+    public function deleteReview(Request $request)
+    {
+        $data = $request->all();
+        return Review::where('id', $data['id'])->delete();
     }
 
     /**

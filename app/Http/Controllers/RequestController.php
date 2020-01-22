@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Request;
+use App\UserRequest;
+use App\Review;
+use App\Project;
 use Illuminate\Http\Request;
 
 class RequestController extends Controller
@@ -12,27 +13,25 @@ class RequestController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function storeRequest(Request $request)
     {
-        //
+        $data = $request->all();
+        $project = Project::where('id', $data['project_id'])->first();
+        if(!$project){
+            return response()->json([
+                'msg' => "You are trying to input invalid data",
+            ], 422);
+        }
+        $data['to'] = $project['user_id'];
+        return UserRequest::create($data);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function storeReview(Request $request)
     {
-        //
+        $data = $request->all();
+        return Review::create($data);
+        
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         //

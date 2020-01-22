@@ -45,7 +45,7 @@
 			</div>
 
 			<div class="second-sec-button">
-				<router-link to="/all-template">
+				<router-link to="/all-template?type=Website">
 					<button class="view-button web-sec-btn">View all websites</button>
 				</router-link>
 			</div>

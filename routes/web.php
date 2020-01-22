@@ -26,6 +26,14 @@ Route::post('/app/addTeamMember', 'TeamController@addTeamMember');
 Route::get('/app/getTeamMembers', 'TeamController@getTeamMembers');
 Route::post('/app/editTeamMemeber', 'TeamController@editTeamMemeber');
 
+// send request 
+Route::get('/app/getProjectFull', 'ReviewController@getProjectFull');
+Route::post('/app/storeRequest', 'ReviewController@storeRequest');
+Route::post('/app/storeReview', 'ReviewController@storeReview');
+Route::post('/app/deleteReview', 'ReviewController@deleteReview');
+
+
+
 
 
 

@@ -25,11 +25,102 @@
 
                         <div class="list ">
                             <ul>
-                                <li><a class="active-m" :href="'product-description/'+alldata.id">Description</a></li>
-                                <li><a href="product-review">Review</a></li>
+                                <li @click="tab=1"><span :class="(tab==1)?'active-m':''">Description </span></li>
+                                <li @click="tab=2"><span :class="(tab==2)?'active-m':''">Review </span></li>
 
 
                             </ul>
+                        </div>
+
+                        
+                        <div class="text-part-left" v-if="tab==2">
+
+                            <div class="features ptb-20">
+                                <h1 class="product-review-h">Review And Comment</h1>
+
+                                <div class="authentication-card person-comment-card">
+
+                                    <div class="person-cmt">
+                                        <div class="comment-items">
+                                            <div class="col-md-1 img">
+                                                <img class="hachib" src="/assets/img/commntor.png" alt="">
+                                            </div>
+
+                                            <div class="col-md-11 customer-rate">
+                                                <Rate v-model="cData.rate" />
+
+                                                <!-- <ul>
+                                                    <li class="rate-l">Rating :</li>
+                                                    <li><a href="#"><span><i class="far fa-star"></i></span></a></li>
+                                                    <li><a href="#"><span><i class="far fa-star"></i></span></a></li>
+                                                    <li><a href="#"><span><i class="far fa-star"></i></span></a></li>
+                                                    <li><a href="#"><span><i class="far fa-star"></i></span></a></li>
+                                                    <li><a href="#"><span><i class="far fa-star"></i></span></a></li>
+
+                                                </ul> -->
+
+                                                <div class="comment-box">
+                                                        <label for="input">Type your comment</label>
+                                                        <textarea class="textarea" v-model="cData.comment">Write your comment</textarea>
+
+                                                    <div>
+                                                        <button class="add-now-button comment-btn" @click="storeReview">Comment</button>
+                                                    </div>
+                                                        
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                     
+
+
+                                <div class="authentication-card done-comment-card" v-for="(item,index) in alldata.reviews" :key="index">
+
+                                        <div class="person-cmt">
+                                            <div class="comment-items">
+                                                <div class="col-md-1 img" v-if="item.user && item.user.image">
+                                                    <img class="commentor" :src="user.image" alt="">
+                                                </div>
+    
+                                                <div class="col-md-5  name-r" v-if="item.user">
+                                                    <p class="name-of-customer" v-if="item.user.name">{{item.user.name}}</p>
+                                                    <p class="opinion-of-customer">{{item.comment}}</p>
+                                                </div>
+    
+                                                <div class="col-md-6 rate-and-date">
+                                                    <div class="rate-and-date-wrap">
+                                                            <ul>
+                                                                    <li class="rate-l">Rating :</li>
+                                                                    <li><span :class="(item.rate>0)?'gold-star':''"><i class="fas fa-star"></i></span></li>
+                                                                    <li><span :class="(item.rate>1)?'gold-star':''"><i class="fas fa-star"></i></span></li>
+                                                                    <li><span :class="(item.rate>2)?'gold-star':''"><i class="fas fa-star"></i></span></li>
+                                                                    <li><span :class="(item.rate>3)?'gold-star':''"><i class="fas fa-star"></i></span></li>
+                                                                    <li><span :class="(item.rate>4)?'gold-star':''"><i class="fas fa-star"></i></span></li>
+                
+                                                                </ul>
+                
+                                                                <div class="date-of-commnet">
+                                                                    <p>{{item.created_at}}</p>
+                                                                </div>
+                                                                <div class="date-of-commnet" v-if="item.user && authInfo">
+                                                                    <button v-if="item.user.id == authInfo.id" @click="deleteReview(item.id ,index)">delete</button>
+                                                                </div>
+                                                    </div>
+                                   
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+
+                            </div>
+
+
                         </div>
 
                         <div class="text-part-left">
@@ -111,16 +202,8 @@
                             <div class="rating">
                                 <div class="row">
                                     <div class="col-md-6 rate-side">
-                                        <p>Rating <span>(3.0)</span></p>
-                                        <ul>
-                                            <li><span class="gold-star"><i class="fas fa-star"></i></span></li>
-                                            <li><span class="gold-star"><i class="fas fa-star"></i></span></li>
-                                            <li><span class="gold-star"><i class="fas fa-star"></i></span></li>
-                                            <li><span class="half-star"><i class="fas fa-star-half-alt"></i></span></li>
-                                            <li><span><i class="far fa-star"></i></span></li>
-
-
-                                        </ul>
+                                        <p>Rating <span><Rate show-text v-model="alldata.avgreview.averageRating" /></span></p>
+                                      
                                     </div>
                                     <div class="col-md-6 download">
                                         <p><span><i class="fas fa-arrow-circle-down"></i></span> </p>
@@ -210,7 +293,14 @@ export default {
     data(){
         return{
         alldata:{},
-            id:''
+            id:'',
+             tab:1,
+             cData:{
+                 rate:0,
+                 comment:'',
+                 user_id:'',
+                 project_id:''
+             }
         }
     },
     created(){
@@ -232,6 +322,45 @@ export default {
             }
             else{
                 window.location = '/'
+            }
+        },
+        async storeReview(){
+            if(!this.authInfo){
+                return this.e("please log in")
+            }
+            if(this.alldata.has_pic){
+               return this.e("You already done this")
+            }
+            this.cData.project_id = this.id
+            this.cData.user_id = this.authInfo.id
+            if(this.cData.comment==''){
+                return this.e("please write your review")
+            }
+            const res = await this.callApi('post','storeReview', this.cData)
+            if(res.status==200 || res.status==201){
+                res.data.user ={}
+                res.data.user = this.authInfo
+                this.alldata.reviews.unshift(res.data)
+                this.alldata.has_pic = {
+                    id:'5'
+                }
+            }
+            else{
+                this.e("please check your network!!")
+            }
+        },
+        async deleteReview(id,index){
+            if(!this.authInfo){
+                return this.e("please login ")
+            }
+            const res = await this.callApi('post', 'deleteReview', {'id':id})
+            if(res.status ==200){
+                this.alldata.reviews.splice(index,1)
+                delete  this.alldata.has_pic
+                this.s("review deleted!!")
+            }
+            else{
+                this.e("please check your network")
             }
         }
     }

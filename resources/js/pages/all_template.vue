@@ -241,3 +241,27 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    data(){
+        return{
+            alldata:{},
+            type:'Website',
+            category:[],
+            rate:[]
+        }
+    },
+    created(){
+        if(this.$route.query.type){
+            this.type = this.$route.query.type
+        }
+        this.getAlldata()
+
+    },
+    methods:{
+        async getAlldata(){
+            const res = await this.callApi('get', `getProjectFull?type=${this.type}&category=${this.category}&rate=${this.rate}`)
+        }
+    }
+}
+</script>

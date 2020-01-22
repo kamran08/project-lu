@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Review;
 use App\Project;
 use App\Team;
+use DB;
 use Auth;
 use Illuminate\Http\Request;
 
@@ -42,9 +43,34 @@ class HomeController extends Controller
         return $project;
        
     }
-    public function getProjectById($key){
+    public function getProjectFull(Request $request){
+        $type = $request->type;
+        $category = $request->category;
+        $rate = $request->rate;
+         $q = Project::with('avgreview');
+        if($type){
 
-        $project = Project::where('id', $key)->with('team')->first();
+            $q->where('type', $type);
+        }
+        else{
+            
+            $q->where('type', 'Website');
+        }
+        if($category){
+            $q->whereIn('category', $category);
+        }
+        if($rate){
+            $q->whereIn('avgreview','<=',$rate);
+        }
+        $project = $q->paginate(8);
+        return $project;
+       
+    }
+    public function getProjectById($key){
+        if (!Auth::user()) {
+            return  Project::where('id', $key)->with('team', 'reviews.user', 'avgreview')->first();
+        }
+        $project = Project::where('id', $key)->with('team', 'reviews.user', 'avgreview', 'hasPic')->first();
         return $project;
        
     }

@@ -48,7 +48,7 @@
 			</div>
 
 			<div class="sixth-sec-button">
-				<router-link to="all-template">
+				<router-link to="all-template?type=Game">
 					<button class="view-button game-sec-btn">View all Games</button>
 				</router-link>
 			</div>

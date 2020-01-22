@@ -8,6 +8,6 @@ class Request extends Model
 {
     //
     protected $fillable = [
-        'first_name', 'last_name', 'email', 'password'
+        'from', 'to', 'student_id', 'project_id', 'email', 'mobile', 'reason'
     ];
 }

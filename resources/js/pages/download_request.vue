@@ -21,6 +21,10 @@
                                             <input v-model="from.name" type="text" placeholder="User name or email">
                                         </div>
                                         <div class="authentication-item">
+                                            <label for="input">Project Name</label>
+                                            <input v-model="from.projectName" type="text" placeholder="1612----56">
+                                        </div>
+                                        <div class="authentication-item">
                                             <label for="input">Student ID</label>
                                             <input v-model="from.student_id" type="text" placeholder="1612----56">
                                         </div>
@@ -54,7 +58,55 @@ export default {
     data(){
         return{
             from:{
-                name:''
+                name:'',
+                email:'',
+                student_id:'',
+                reason:'',
+                projectName:'',
+                from:'',
+                project_id:'',
+            }
+        }
+    },
+    created(){
+
+    },
+    methods:{
+       async sendRequest(){
+           this.from.from = this.authInfo.id
+           this.from.project_id = this.$router.params.id
+            if(this.from.name==''){
+                return this.e("name field can not be empty!!")
+            }
+            if(this.from.email==''){
+                return this.e("name field can not be empty!!")
+            }
+            if(this.from.student_id==''){
+                return this.e("name field can not be empty!!")
+            }
+            if(this.from.reason==''){
+                return this.e("name field can not be empty!!")
+            }
+            if(this.from.projectName==''){
+                return this.e("name field can not be empty!!")
+            }
+            const res = await this.callApi('post', 'storeRequest', this.from)
+            if(res.status==201 || res.status==200){
+                this.s("request has been sent Owner will send you file in you email")
+                this.from={
+                    name:'',
+                    email:'',
+                    student_id:'',
+                    reason:'',
+                    projectName:'',
+                    from:'',
+                }
+            }
+            else{
+                if(res.data.msg){
+                    return this.e(res.data.msg)
+                }
+                this.e("please check your netwrok!!")
             }
         }
     }

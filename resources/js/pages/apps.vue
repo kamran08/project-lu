@@ -68,7 +68,7 @@
 			</div>
 
 			<div class="fourth-sec-button">
-				<router-link to="all-template">
+				<router-link to="all-template?type=Apps">
 					<button class="view-button apps-sec-btn">View all Apps</button>
 				</router-link>
 			</div>
