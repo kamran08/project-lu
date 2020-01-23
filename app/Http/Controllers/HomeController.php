@@ -45,8 +45,11 @@ class HomeController extends Controller
     }
     public function getProjectFull(Request $request){
         $type = $request->type;
-        $category = $request->category;
-        $rate = $request->rate;
+        $rate = json_decode($request->rate);
+        $category = json_decode($request->category);
+        
+        // return $rate;
+        \Log::info($rate);
          $q = Project::with('avgreview');
         if($type){
 
@@ -57,10 +60,15 @@ class HomeController extends Controller
             $q->where('type', 'Website');
         }
         if($category){
+
             $q->whereIn('category', $category);
         }
         if($rate){
-            $q->whereIn('avgreview','<=',$rate);
+            //  $q->whereHas('avgreview' , function($s) use ($rate){
+            //     $s->where('avgreview', $rate);
+                
+            // });
+            $q->whereIn('avgreview',$rate);
         }
         $project = $q->paginate(8);
         return $project;

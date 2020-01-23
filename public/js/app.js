@@ -2319,92 +2319,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       alldata: {},
       type: 'Website',
       category: [],
-      rate: []
+      rate: [1]
     };
   },
   created: function created() {
@@ -2419,18 +2340,26 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       var _getAlldata = _asyncToGenerator(
       /*#__PURE__*/
       _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var res;
+        var rate, category, res;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.next = 2;
-                return this.callApi('get', "getProjectFull?type=".concat(this.type, "&category=").concat(this.category, "&rate=").concat(this.rate));
+                rate = JSON.stringify(this.rate);
+                category = JSON.stringify(this.category);
+                _context.next = 4;
+                return this.callApi('get', "getProjectFull?type=".concat(this.type, "&category=").concat(category, "&rate=").concat(rate));
 
-              case 2:
+              case 4:
                 res = _context.sent;
 
-              case 3:
+                if (res.status == 200) {
+                  this.alldata = res.data;
+                } else {
+                  this.e("please check your network!!");
+                }
+
+              case 6:
               case "end":
                 return _context.stop();
             }
@@ -68397,520 +68326,244 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "second-section-account content-bg ptb-30" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-3 col-sm-3" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _vm._m(2),
+            _vm._v(" "),
+            _vm._m(3),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "rating-card card-all-temp product-desc-card" },
+              [
+                _c("h3", {}, [_vm._v("Rating")]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "form-option-all-temps" },
+                  [
+                    _c(
+                      "CheckboxGroup",
+                      {
+                        on: { "on-change": _vm.getAlldata },
+                        model: {
+                          value: _vm.rate,
+                          callback: function($$v) {
+                            _vm.rate = $$v
+                          },
+                          expression: "rate"
+                        }
+                      },
+                      [
+                        _c(
+                          "Checkbox",
+                          { staticClass: "checkbox", attrs: { label: 1 } },
+                          [_c("span", [_vm._v("1 star")])]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "Checkbox",
+                          { staticClass: "checkbox", attrs: { label: 2 } },
+                          [_c("span", [_vm._v("2 star")])]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "Checkbox",
+                          { staticClass: "checkbox", attrs: { label: 3 } },
+                          [_c("span", [_vm._v("3 star")])]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "Checkbox",
+                          { staticClass: "checkbox", attrs: { label: 4 } },
+                          [_c("span", [_vm._v("4 star ")])]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "Checkbox",
+                          { staticClass: "checkbox", attrs: { label: 5 } },
+                          [_c("span", [_vm._v("5 star ")])]
+                        )
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-9 col-sm-9 " }, [
+            _c("div", { staticClass: "second-section all-templates-card" }, [
+              _c(
+                "div",
+                { staticClass: "flex-section" },
+                _vm._l(_vm.alldata.data, function(item, index) {
+                  return _c(
+                    "div",
+                    {
+                      key: index,
+                      class: index % 2 == 0 ? "card-item mgr-15" : "card-item"
+                    },
+                    [
+                      _c("div", { staticClass: "card-design first-card" }, [
+                        _c(
+                          "a",
+                          { attrs: { to: "product-description" / item.id } },
+                          [
+                            _c("div", { staticClass: "content-overlay" }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "content-image",
+                              attrs: { src: item.image }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "content-details fadeIn-bottom" },
+                              [
+                                _c("h3", { staticClass: "content-title" }, [
+                                  _vm._v(_vm._s(item.projectName))
+                                ]),
+                                _vm._v(" "),
+                                _c("p", { staticClass: "content-text" }, [
+                                  _vm._v(_vm._s(item.category))
+                                ]),
+                                _vm._v(" "),
+                                _c("p", { staticClass: "content-like" })
+                              ]
+                            )
+                          ]
+                        )
+                      ])
+                    ]
+                  )
+                }),
+                0
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticStyle: { "padding-top": "30px", "text-align": "center" }
+              },
+              [
+                _c("Page", {
+                  attrs: {
+                    total: _vm.alldata.total,
+                    current: _vm.alldata.current_page,
+                    "prev-text": "Previous",
+                    "next-text": "Next"
+                  }
+                })
+              ],
+              1
+            )
+          ])
+        ])
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "all-temp-header" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("h1", { staticClass: "Product-Header" }, [
-            _vm._v("Templates and Plugins from $20")
+    return _c("div", { staticClass: "all-temp-header" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("h1", { staticClass: "Product-Header" }, [
+          _vm._v("Templates and Plugins from $20")
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "Product-p" }, [
+          _vm._v(
+            "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just\n                click “Edit Text” or double click me."
+          )
+        ]),
+        _vm._v(" "),
+        _c("img", {
+          staticClass: "all-temp-back-right-up",
+          attrs: { src: "/assets/img/back-design-right-up.png", alt: "" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "authentication download-button " }, [
+      _c("input", {
+        staticClass: "filter-button",
+        attrs: { type: "text", placeholder: "Filter & Refine" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "filter-card card-all-temp" }, [
+      _c("div", { staticClass: "authentication-title" }, [
+        _c("h3", {}, [_vm._v("Categories")]),
+        _vm._v(" "),
+        _c("ul", [
+          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Blogging")])]),
+          _vm._v(" "),
+          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("CMS Theme")])]),
+          _vm._v(" "),
+          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("eCommerce")])]),
+          _vm._v(" "),
+          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("eBusiness")])]),
+          _vm._v(" "),
+          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Forums")])]),
+          _vm._v(" "),
+          _c("li", [
+            _c("a", { attrs: { href: "#" } }, [_vm._v("Marketplace")])
           ]),
           _vm._v(" "),
-          _c("p", { staticClass: "Product-p" }, [
-            _vm._v(
-              "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just\n                click “Edit Text” or double click me."
-            )
-          ]),
-          _vm._v(" "),
-          _c("img", {
-            staticClass: "all-temp-back-right-up",
-            attrs: { src: "/assets/img/back-design-right-up.png", alt: "" }
-          })
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "second-section-account content-bg ptb-30" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-3 col-sm-3" }, [
-              _c("div", { staticClass: "authentication download-button " }, [
-                _c("input", {
-                  staticClass: "filter-button",
-                  attrs: { type: "text", placeholder: "Filter & Refine" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "filter-card card-all-temp" }, [
-                _c("div", { staticClass: "authentication-title" }, [
-                  _c("h3", {}, [_vm._v("Categories")]),
-                  _vm._v(" "),
-                  _c("ul", [
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [_vm._v("Blogging")])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [_vm._v("CMS Theme")])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [_vm._v("eCommerce")])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [_vm._v("eBusiness")])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [_vm._v("Forums")])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [_vm._v("Marketplace")])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [_vm._v("Marketing")])
-                    ])
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "year-card card-all-temp product-desc-card" },
-                [
-                  _c("h3", {}, [_vm._v("Year")]),
-                  _vm._v(" "),
-                  _c("form", { staticClass: "form-option-all-temps" }, [
-                    _c("div", { staticClass: "checkbox" }, [
-                      _c("label", [
-                        _c("input", { attrs: { type: "checkbox", value: "" } }),
-                        _vm._v("3rd year")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "checkbox" }, [
-                      _c("label", [
-                        _c("input", { attrs: { type: "checkbox", value: "" } }),
-                        _vm._v("4th yaer")
-                      ])
-                    ])
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "rating-card card-all-temp product-desc-card" },
-                [
-                  _c("h3", {}, [_vm._v("Rating")]),
-                  _vm._v(" "),
-                  _c("form", { staticClass: "form-option-all-temps" }, [
-                    _c("div", { staticClass: "checkbox" }, [
-                      _c("label", [
-                        _c("input", { attrs: { type: "checkbox", value: "" } }),
-                        _vm._v("Show all")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "checkbox" }, [
-                      _c("label", [
-                        _c("input", { attrs: { type: "checkbox", value: "" } }),
-                        _vm._v("1 star and higher")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "checkbox" }, [
-                      _c("label", [
-                        _c("input", { attrs: { type: "checkbox", value: "" } }),
-                        _vm._v("2 star and higher")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "checkbox" }, [
-                      _c("label", [
-                        _c("input", { attrs: { type: "checkbox", value: "" } }),
-                        _vm._v("3 star and higher")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "checkbox" }, [
-                      _c("label", [
-                        _c("input", { attrs: { type: "checkbox", value: "" } }),
-                        _vm._v("4 star and higher")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "checkbox" }, [
-                      _c("label", [
-                        _c("input", { attrs: { type: "checkbox", value: "" } }),
-                        _vm._v("5 star and higher")
-                      ])
-                    ])
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-9 col-sm-9 " }, [
-              _c("div", { staticClass: "second-section all-templates-card" }, [
-                _c("div", { staticClass: "flex-section" }, [
-                  _c("div", { staticClass: "card-item mgr-15" }, [
-                    _c("div", { staticClass: "card-design first-card" }, [
-                      _c("a", { attrs: { href: "product-description.html" } }, [
-                        _c("div", { staticClass: "content-overlay" }),
-                        _vm._v(" "),
-                        _c("img", {
-                          staticClass: "content-image",
-                          attrs: { src: "/assets/img/webkit-sec-card-img.png" }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "content-details fadeIn-bottom" },
-                          [
-                            _c("h3", { staticClass: "content-title" }, [
-                              _vm._v("Project-Rakho Website UI kit ")
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "content-text" }, [
-                              _vm._v("Ecomarce and Retail")
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "content-like" }, [
-                              _c("span", [
-                                _c("i", { staticClass: "far fa-thumbs-up" })
-                              ]),
-                              _vm._v(
-                                "275\n                                                "
-                              ),
-                              _c("span", [
-                                _c("i", { staticClass: "fas fa-eye" })
-                              ]),
-                              _vm._v("358")
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-item" }, [
-                    _c("div", { staticClass: "card-design first-card" }, [
-                      _c("a", { attrs: { href: "product-description.html" } }, [
-                        _c("div", { staticClass: "content-overlay" }),
-                        _vm._v(" "),
-                        _c("img", {
-                          staticClass: "content-image",
-                          attrs: { src: "/assets/img/webkit-card-2-img.png" }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "content-details fadeIn-bottom" },
-                          [
-                            _c("h3", { staticClass: "content-title" }, [
-                              _vm._v("Project-Rakho Website UI kit ")
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "content-text" }, [
-                              _vm._v("Ecomarce and Retail")
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "content-like" }, [
-                              _c("span", [
-                                _c("i", { staticClass: "far fa-thumbs-up" })
-                              ]),
-                              _vm._v(
-                                "275\n                                                "
-                              ),
-                              _c("span", [
-                                _c("i", { staticClass: "fas fa-eye" })
-                              ]),
-                              _vm._v("358")
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-item mgr-15 mgt-15" }, [
-                    _c("div", { staticClass: "card-design first-card" }, [
-                      _c("a", { attrs: { href: "product-description.html" } }, [
-                        _c("div", { staticClass: "content-overlay" }),
-                        _vm._v(" "),
-                        _c("img", {
-                          staticClass: "content-image",
-                          attrs: { src: "/assets/img/webkit-card-3-img.png" }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "content-details fadeIn-bottom" },
-                          [
-                            _c("h3", { staticClass: "content-title" }, [
-                              _vm._v("Project-Rakho Website UI kit ")
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "content-text" }, [
-                              _vm._v("Ecomarce and Retail")
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "content-like" }, [
-                              _c("span", [
-                                _c("i", { staticClass: "far fa-thumbs-up" })
-                              ]),
-                              _vm._v(
-                                "275\n                                                "
-                              ),
-                              _c("span", [
-                                _c("i", { staticClass: "fas fa-eye" })
-                              ]),
-                              _vm._v("358")
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-item mgt-15" }, [
-                    _c("div", { staticClass: "card-design first-card" }, [
-                      _c("a", { attrs: { href: "product-description.html" } }, [
-                        _c("div", { staticClass: "content-overlay" }),
-                        _vm._v(" "),
-                        _c("img", {
-                          staticClass: "content-image",
-                          attrs: { src: "/assets/img/webkit-card-4-img.png" }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "content-details fadeIn-bottom" },
-                          [
-                            _c("h3", { staticClass: "content-title" }, [
-                              _vm._v("Project-Rakho Website UI kit ")
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "content-text" }, [
-                              _vm._v("Ecomarce and Retail")
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "content-like" }, [
-                              _c("span", [
-                                _c("i", { staticClass: "far fa-thumbs-up" })
-                              ]),
-                              _vm._v(
-                                "275\n                                                "
-                              ),
-                              _c("span", [
-                                _c("i", { staticClass: "fas fa-eye" })
-                              ]),
-                              _vm._v("358")
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-item mgr-15 mgt-15" }, [
-                    _c("div", { staticClass: "card-design first-card" }, [
-                      _c("a", { attrs: { href: "product-description.html" } }, [
-                        _c("div", { staticClass: "content-overlay" }),
-                        _vm._v(" "),
-                        _c("img", {
-                          staticClass: "content-image",
-                          attrs: { src: "/assets/img/webkit-card-3-img.png" }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "content-details fadeIn-bottom" },
-                          [
-                            _c("h3", { staticClass: "content-title" }, [
-                              _vm._v("Project-Rakho Website UI kit ")
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "content-text" }, [
-                              _vm._v("Ecomarce and Retail")
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "content-like" }, [
-                              _c("span", [
-                                _c("i", { staticClass: "far fa-thumbs-up" })
-                              ]),
-                              _vm._v(
-                                "275\n                                                "
-                              ),
-                              _c("span", [
-                                _c("i", { staticClass: "fas fa-eye" })
-                              ]),
-                              _vm._v("358")
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-item mgt-15" }, [
-                    _c("div", { staticClass: "card-design first-card" }, [
-                      _c("a", { attrs: { href: "product-description.html" } }, [
-                        _c("div", { staticClass: "content-overlay" }),
-                        _vm._v(" "),
-                        _c("img", {
-                          staticClass: "content-image",
-                          attrs: { src: "/assets/img/webkit-card-4-img.png" }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "content-details fadeIn-bottom" },
-                          [
-                            _c("h3", { staticClass: "content-title" }, [
-                              _vm._v("Project-Rakho Website UI kit ")
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "content-text" }, [
-                              _vm._v("Ecomarce and Retail")
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "content-like" }, [
-                              _c("span", [
-                                _c("i", { staticClass: "far fa-thumbs-up" })
-                              ]),
-                              _vm._v(
-                                "275\n                                                "
-                              ),
-                              _c("span", [
-                                _c("i", { staticClass: "fas fa-eye" })
-                              ]),
-                              _vm._v("358")
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-item mgr-15 mgt-15" }, [
-                    _c("div", { staticClass: "card-design first-card" }, [
-                      _c("a", { attrs: { href: "product-description.html" } }, [
-                        _c("div", { staticClass: "content-overlay" }),
-                        _vm._v(" "),
-                        _c("img", {
-                          staticClass: "content-image",
-                          attrs: { src: "/assets/img/webkit-card-3-img.png" }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "content-details fadeIn-bottom" },
-                          [
-                            _c("h3", { staticClass: "content-title" }, [
-                              _vm._v("Project-Rakho Website UI kit ")
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "content-text" }, [
-                              _vm._v("Ecomarce and Retail")
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "content-like" }, [
-                              _c("span", [
-                                _c("i", { staticClass: "far fa-thumbs-up" })
-                              ]),
-                              _vm._v(
-                                "275\n                                                "
-                              ),
-                              _c("span", [
-                                _c("i", { staticClass: "fas fa-eye" })
-                              ]),
-                              _vm._v("358")
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-item mgt-15" }, [
-                    _c("div", { staticClass: "card-design first-card" }, [
-                      _c("a", { attrs: { href: "product-description.html" } }, [
-                        _c("div", { staticClass: "content-overlay" }),
-                        _vm._v(" "),
-                        _c("img", {
-                          staticClass: "content-image",
-                          attrs: { src: "/assets/img/webkit-card-4-img.png" }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "content-details fadeIn-bottom" },
-                          [
-                            _c("h3", { staticClass: "content-title" }, [
-                              _vm._v("Project-Rakho Website UI kit ")
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "content-text" }, [
-                              _vm._v("Ecomarce and Retail")
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "content-like" }, [
-                              _c("span", [
-                                _c("i", { staticClass: "far fa-thumbs-up" })
-                              ]),
-                              _vm._v(
-                                "275\n                                                "
-                              ),
-                              _c("span", [
-                                _c("i", { staticClass: "fas fa-eye" })
-                              ]),
-                              _vm._v("358")
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "pagination" }, [
-                _c("ul", { staticClass: "pagination-inner modal-4" }, [
-                  _c("li", [
-                    _c("a", { staticClass: "prev", attrs: { href: "#" } }, [
-                      _vm._v("Previous")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("1")])]),
-                  _vm._v(" "),
-                  _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("2")])]),
-                  _vm._v(" "),
-                  _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("3")])]),
-                  _vm._v(" "),
-                  _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("4")])]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { staticClass: "active", attrs: { href: "#" } }, [
-                      _vm._v("5")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("6")])]),
-                  _vm._v(" "),
-                  _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("7")])]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { staticClass: "next", attrs: { href: "#" } }, [
-                      _vm._v("Next")
-                    ])
-                  ])
-                ])
-              ])
-            ])
-          ])
+          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Marketing")])])
         ])
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "year-card card-all-temp product-desc-card" },
+      [
+        _c("h3", {}, [_vm._v("Year")]),
+        _vm._v(" "),
+        _c("form", { staticClass: "form-option-all-temps" }, [
+          _c("div", { staticClass: "checkbox" }, [
+            _c("label", [
+              _c("input", { attrs: { type: "checkbox", value: "" } }),
+              _vm._v("3rd year")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "checkbox" }, [
+            _c("label", [
+              _c("input", { attrs: { type: "checkbox", value: "" } }),
+              _vm._v("4th yaer")
+            ])
+          ])
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true

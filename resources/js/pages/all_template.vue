@@ -58,7 +58,28 @@
                         <div class="rating-card card-all-temp product-desc-card">
 
                             <h3 class="">Rating</h3>
-                            <form class="form-option-all-temps">
+                            <div class="form-option-all-temps">
+                                <CheckboxGroup v-model="rate" @on-change="getAlldata">
+                                    <Checkbox  class="checkbox" :label="1">
+                                        <span>1 star</span>
+                                    </Checkbox>
+                                    <Checkbox class="checkbox" :label="2">
+                                        <span>2 star</span>
+                                    </Checkbox>
+                                    <Checkbox class="checkbox" :label="3">
+                                        <span>3 star</span>
+                                    </Checkbox>
+                                    <Checkbox class="checkbox" :label="4">
+                                        <span>4 star </span>
+                                    </Checkbox>
+                                    <Checkbox class="checkbox" :label="5">
+                                        <span>5 star </span>
+                                    </Checkbox>
+                                </CheckboxGroup>
+                            </div>
+
+
+                            <!-- <form class="form-option-all-temps">
                                 <div class="checkbox">
                                     <label><input type="checkbox" value="">Show all</label>
                                 </div>
@@ -79,7 +100,7 @@
                                 </div>
                                 
 
-                            </form>
+                            </form> -->
 
                         </div>
 
@@ -88,126 +109,36 @@
                         <div class="second-section all-templates-card">
 
                             <div class="flex-section">
-                                <div class="card-item mgr-15">
+                                <div :class="(index%2==0)?'card-item mgr-15':'card-item'" v-for="(item,index) in alldata.data" :key="index">
                                     <div class="card-design first-card">
-                                        <a href="product-description.html">
+                                        <a :to="'product-description'/item.id">
                                             <div class="content-overlay"></div>
-                                            <img class="content-image" src="/assets/img/webkit-sec-card-img.png">
+                                            <img class="content-image" :src="item.image">
                                             <div class="content-details fadeIn-bottom">
-                                                <h3 class="content-title">Project-Rakho Website UI kit </h3>
-                                                <p class="content-text">Ecomarce and Retail</p>
-                                                <p class="content-like"><span><i class="far fa-thumbs-up"></i></span>275
-                                                    <span><i class="fas fa-eye"></i></span>358</p>
+                                                <h3 class="content-title">{{item.projectName}}</h3>
+                                                <p class="content-text">{{item.category}}</p>
+                                                <p class="content-like">
+                                                    <!-- <span><i class="far fa-thumbs-up"></i></span>275
+                                                    <span><i class="fas fa-eye"></i></span>358 -->
+                                                    </p>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
 
 
-                                <div class="card-item">
-                                    <div class="card-design first-card">
-                                        <a href="product-description.html">
-                                            <div class="content-overlay"></div>
-                                            <img class="content-image" src="/assets/img/webkit-card-2-img.png">
-                                            <div class="content-details fadeIn-bottom">
-                                                <h3 class="content-title">Project-Rakho Website UI kit </h3>
-                                                <p class="content-text">Ecomarce and Retail</p>
-                                                <p class="content-like"><span><i class="far fa-thumbs-up"></i></span>275
-                                                    <span><i class="fas fa-eye"></i></span>358</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
+                         
 
-                                <div class="card-item mgr-15 mgt-15">
-                                    <div class="card-design first-card">
-                                        <a href="product-description.html">
-                                            <div class="content-overlay"></div>
-                                            <img class="content-image" src="/assets/img/webkit-card-3-img.png">
-                                            <div class="content-details fadeIn-bottom">
-                                                <h3 class="content-title">Project-Rakho Website UI kit </h3>
-                                                <p class="content-text">Ecomarce and Retail</p>
-                                                <p class="content-like"><span><i class="far fa-thumbs-up"></i></span>275
-                                                    <span><i class="fas fa-eye"></i></span>358</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
+                             
 
-                                <div class="card-item mgt-15">
-                                    <div class="card-design first-card">
-                                        <a href="product-description.html">
-                                            <div class="content-overlay"></div>
-                                            <img class="content-image" src="/assets/img/webkit-card-4-img.png">
-                                            <div class="content-details fadeIn-bottom">
-                                                <h3 class="content-title">Project-Rakho Website UI kit </h3>
-                                                <p class="content-text">Ecomarce and Retail</p>
-                                                <p class="content-like"><span><i class="far fa-thumbs-up"></i></span>275
-                                                    <span><i class="fas fa-eye"></i></span>358</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
+                         
 
-                                <div class="card-item mgr-15 mgt-15">
-                                    <div class="card-design first-card">
-                                        <a href="product-description.html">
-                                            <div class="content-overlay"></div>
-                                            <img class="content-image" src="/assets/img/webkit-card-3-img.png">
-                                            <div class="content-details fadeIn-bottom">
-                                                <h3 class="content-title">Project-Rakho Website UI kit </h3>
-                                                <p class="content-text">Ecomarce and Retail</p>
-                                                <p class="content-like"><span><i class="far fa-thumbs-up"></i></span>275
-                                                    <span><i class="fas fa-eye"></i></span>358</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
+                  
 
-                                <div class="card-item mgt-15">
-                                    <div class="card-design first-card">
-                                        <a href="product-description.html">
-                                            <div class="content-overlay"></div>
-                                            <img class="content-image" src="/assets/img/webkit-card-4-img.png">
-                                            <div class="content-details fadeIn-bottom">
-                                                <h3 class="content-title">Project-Rakho Website UI kit </h3>
-                                                <p class="content-text">Ecomarce and Retail</p>
-                                                <p class="content-like"><span><i class="far fa-thumbs-up"></i></span>275
-                                                    <span><i class="fas fa-eye"></i></span>358</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
+                     
 
-                                <div class="card-item mgr-15 mgt-15">
-                                    <div class="card-design first-card">
-                                        <a href="product-description.html">
-                                            <div class="content-overlay"></div>
-                                            <img class="content-image" src="/assets/img/webkit-card-3-img.png">
-                                            <div class="content-details fadeIn-bottom">
-                                                <h3 class="content-title">Project-Rakho Website UI kit </h3>
-                                                <p class="content-text">Ecomarce and Retail</p>
-                                                <p class="content-like"><span><i class="far fa-thumbs-up"></i></span>275
-                                                    <span><i class="fas fa-eye"></i></span>358</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
 
-                                <div class="card-item mgt-15">
-                                    <div class="card-design first-card">
-                                        <a href="product-description.html">
-                                            <div class="content-overlay"></div>
-                                            <img class="content-image" src="/assets/img/webkit-card-4-img.png">
-                                            <div class="content-details fadeIn-bottom">
-                                                <h3 class="content-title">Project-Rakho Website UI kit </h3>
-                                                <p class="content-text">Ecomarce and Retail</p>
-                                                <p class="content-like"><span><i class="far fa-thumbs-up"></i></span>275
-                                                    <span><i class="fas fa-eye"></i></span>358</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
+                          
 
                             </div>
 
@@ -220,18 +151,8 @@
 
                         </div>
 
-                        <div class="pagination">
-                            <ul class="pagination-inner modal-4">
-                                <li><a href="#" class="prev">Previous</a></li>
-                                <li><a href="#">1</a></li>
-                                <li> <a href="#">2</a></li>
-                                <li> <a href="#">3</a></li>
-                                <li> <a href="#">4</a></li>
-                                <li> <a href="#" class="active">5</a></li>
-                                <li> <a href="#">6</a></li>
-                                <li> <a href="#">7</a></li>
-                                <li><a href="#" class="next">Next</a></li>
-                              </ul>
+                        <div style="padding-top: 30px;text-align: center;">
+                                 <Page :total="alldata.total" :current="alldata.current_page" prev-text="Previous" next-text="Next"/>
                         </div>
 
                     </div>
@@ -248,7 +169,7 @@ export default {
             alldata:{},
             type:'Website',
             category:[],
-            rate:[]
+            rate:[1]
         }
     },
     created(){
@@ -260,8 +181,16 @@ export default {
     },
     methods:{
         async getAlldata(){
-            const res = await this.callApi('get', `getProjectFull?type=${this.type}&category=${this.category}&rate=${this.rate}`)
-        }
+            let rate =  JSON.stringify(this.rate)
+            let category =  JSON.stringify(this.category)
+            const res = await this.callApi('get', `getProjectFull?type=${this.type}&category=${category}&rate=${rate}`)
+            if(res.status==200){
+                this.alldata = res.data
+            }
+            else{
+                this.e("please check your network!!")
+            }
+       }
     }
 }
 </script>
