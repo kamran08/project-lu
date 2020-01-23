@@ -25,12 +25,35 @@ class ReviewController extends Controller
     public function storeReview(Request $request)
     {
         $data = $request->all();
-        return Review::create($data);
+        $review =  Review::create($data);
+        $temp = Project::where('id',$data['project_id'])->with('avgreview')->first();
+        $ob =[
+            "avg"=>$temp['avgreview']['averageRating']
+        ];
+        Project::where('id', $data['project_id'])->update($ob);
+
+        return $review;
     }
     public function deleteReview(Request $request)
     {
         $data = $request->all();
-        return Review::where('id', $data['id'])->delete();
+
+
+        $review = Review::where('id', $data['id'])->delete();
+        $temp = Project::where('id', $data['project_id'])->with('avgreview')->first();
+        if($temp['avgreview']){
+            $ob = [
+                "avg" => $temp['avgreview']['averageRating']
+            ];
+        }
+        else{
+            $ob = [
+                "avg" => 0
+            ];
+        }
+       
+        Project::where('id', $data['project_id'])->update($ob);
+        return  $review;
     }
 
     /**

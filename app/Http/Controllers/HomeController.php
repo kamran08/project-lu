@@ -43,17 +43,27 @@ class HomeController extends Controller
         return $project;
        
     }
+    public function getallCategory(){
+       return DB::table('projects')->distinct()->get(['category']);
+
+    }
     public function getProjectFull(Request $request){
         $type = $request->type;
+        $year = $request->year;
+        // $rate = $request->rate;
         $rate = json_decode($request->rate);
         $category = json_decode($request->category);
         
         // return $rate;
-        \Log::info($rate);
+        $type = "Apps";
          $q = Project::with('avgreview');
         if($type){
 
             $q->where('type', $type);
+        }
+        if($year){
+
+            $q->where('year', $year);
         }
         else{
             
@@ -64,11 +74,13 @@ class HomeController extends Controller
             $q->whereIn('category', $category);
         }
         if($rate){
-            //  $q->whereHas('avgreview' , function($s) use ($rate){
-            //     $s->where('avgreview', $rate);
-                
-            // });
-            $q->whereIn('avgreview',$rate);
+            $s = sizeof($rate);
+            $q->where('avg', '>=',$rate[0]);
+
+            for($i =1; $i<$s; $i++){
+
+                $q->orWhere('avg', $rate[$i]);
+            }
         }
         $project = $q->paginate(8);
         return $project;

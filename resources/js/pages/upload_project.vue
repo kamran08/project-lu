@@ -44,6 +44,13 @@
                                             <!-- <option value="Thesis">Thesis</option> -->
                                         </select>
                                     </div>
+                                    <div class="authentication-item">
+                                        <label for="input">Select Year</label>
+                                        <select v-model="from.year" class="select-category" id="sel1">
+                                            <option value="3">3rd year</option>
+                                            <option value="4">4th year</option>
+                                        </select>
+                                    </div>
 
                                     <div class="authentication-item">
                                         <label for="input">Project Category</label>
@@ -227,7 +234,8 @@ export default {
                 category:'',
                 description:'',
                 image:false,
-                file:false
+                file:false,
+                year:''
             },
              imageUrl:'',
              imgName: '',
@@ -246,6 +254,9 @@ export default {
         submitMethod1(){
             if(this.from.projectName==''){
                 return this.e("Project Name can not be empty!!")
+            }
+            if(this.from.year==''){
+                return this.e("Select Year !!")
             }
             if(this.from.category==''){
                 return this.e("Project category can not be empty!!")

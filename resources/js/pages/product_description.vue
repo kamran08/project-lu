@@ -201,7 +201,7 @@
                             </div>
                             <div class="rating">
                                 <div class="row">
-                                    <div class="col-md-6 rate-side">
+                                    <div class="col-md-6 rate-side" v-if="alldata.avgreview">
                                         <p>Rating <span><Rate show-text v-model="alldata.avgreview.averageRating" /></span></p>
                                       
                                     </div>

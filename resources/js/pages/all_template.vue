@@ -24,35 +24,28 @@
 
                         </div>
                         <div class="filter-card card-all-temp">
-                            <div class="authentication-title">
-                                <h3 class="">Categories</h3>
-
-                                <ul>
-                                    <li><a href="#">Blogging</a></li>
-                                    <li><a href="#">CMS Theme</a></li>
-                                    <li><a href="#">eCommerce</a></li>
-                                    <li><a href="#">eBusiness</a></li>
-                                    <li><a href="#">Forums</a></li>
-                                    <li><a href="#">Marketplace</a></li>
-                                    <li><a href="#">Marketing</a></li>
-
-                                </ul>
+                            <div class="authentication-title list">
+                                <h3 class="" >Categories</h3>
+                                 <CheckboxGroup  v-model="category" @on-change="getAlldata">
+                                    <Checkbox  class="checkbox" :label="it.category" v-for="(it,index) in allcategory" :key="index">
+                                        <span>{{it.category}}</span>
+                                    </Checkbox>
+                                 </CheckboxGroup>
                             </div>
 
                         </div>
 
                         <div class="year-card card-all-temp product-desc-card">
-
                             <h3 class="">Year</h3>
-                            <form class="form-option-all-temps">
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="">3rd year</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="">4th yaer</label>
-                                </div>
 
-                            </form>
+                             <RadioGroup v-model="year" @on-change="getAlldata" vertical>
+                                <Radio label="3">
+                                    <span>3rd year</span>
+                                </Radio>
+                                <Radio label="4">
+                                    <span>4th yaer</span>
+                                </Radio>
+                             </RadioGroup>
                         </div>
 
                         <div class="rating-card card-all-temp product-desc-card">
@@ -61,19 +54,19 @@
                             <div class="form-option-all-temps">
                                 <CheckboxGroup v-model="rate" @on-change="getAlldata">
                                     <Checkbox  class="checkbox" :label="1">
-                                        <span>1 star</span>
+                                        <span>1 star and higher</span>
                                     </Checkbox>
                                     <Checkbox class="checkbox" :label="2">
-                                        <span>2 star</span>
+                                        <span>2 star and higher</span>
                                     </Checkbox>
                                     <Checkbox class="checkbox" :label="3">
-                                        <span>3 star</span>
+                                        <span>3 star and higher</span>
                                     </Checkbox>
                                     <Checkbox class="checkbox" :label="4">
-                                        <span>4 star </span>
+                                        <span>4 star and higher </span>
                                     </Checkbox>
                                     <Checkbox class="checkbox" :label="5">
-                                        <span>5 star </span>
+                                        <span>5 star and higher </span>
                                     </Checkbox>
                                 </CheckboxGroup>
                             </div>
@@ -169,7 +162,9 @@ export default {
             alldata:{},
             type:'Website',
             category:[],
-            rate:[1]
+            rate:[1],
+            allcategory:{},
+            year:''
         }
     },
     created(){
@@ -177,13 +172,21 @@ export default {
             this.type = this.$route.query.type
         }
         this.getAlldata()
+        this.getAllCategory()
 
     },
     methods:{
+        async getAllCategory(){
+            const res = await this.callApi('get', 'getallCategory')
+            if(res.status==200){
+                this.allcategory = res.data
+            }
+
+        },
         async getAlldata(){
             let rate =  JSON.stringify(this.rate)
             let category =  JSON.stringify(this.category)
-            const res = await this.callApi('get', `getProjectFull?type=${this.type}&category=${category}&rate=${rate}`)
+            const res = await this.callApi('get', `getProjectFull?type=${this.type}&year=${this.year}&category=${category}&rate=${rate}`)
             if(res.status==200){
                 this.alldata = res.data
             }
@@ -194,3 +197,8 @@ export default {
     }
 }
 </script>
+<style>
+.ivu-checkbox-group-item .list{
+     display: list-item !important;
+ }
+</style>
