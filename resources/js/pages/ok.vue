@@ -1,127 +1,11 @@
 <template>
-	<div>
-		<header class="header header-bg">
-		<div class="mobile-menu">
-			<div class="container">
-				<div class="right main-nav-brand">
-					<a href="home.html"><img class="logo" src="assets/img/site-logo-2.png" alt=""></a>
-				</div>
+    <div>
 
 
-				<div class="mobile-toggle">
-					<span><i class="fas fa-bars"></i></span>
-				</div>
-				<div class="mobile-open-container">
-					<div class="main-nav-list">
-						<ul class="nav-content">
-							<li class="active"><a href="#">Home</a></li>
-							<li><a href="#">About</a></li>
-                            <li><a href="#first-section-id">Website</a></li>
-                            <li><a href="#third-section-id">Apps</a></li>
-                            <li><a href="#fifth-section-id">Games</a></li>
-                            <li><a href="#">Contact us</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-<div class="main-nav">
-    <div class="container">
-        <nav class="navigation">
-            <div class="col-md-2">
-                <a href="home.html">
-                    <div class="logo-1">
 
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-8 center">
-                <ul class="nav_list ">
-                    <li><a href="home-first.html">Home</a></li>
-                    <li><a href="#about-section-id">About</a></li>
-                    <li><a href="#first-section-id">Website</a></li>
-                    <li><a href="#third-section-id">Apps</a></li>
-                    <li><a href="#fifth-section-id">Games</a></li>
 
-                </ul>
-            </div>
 
-            <div class="col-md-2">
-                <div class="dropdown">
-                    <button onclick="myFunction()" class="nav-button"> <span><i
-										class="fas fa-user-circle"></i></span>Register</button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <ul class="dropdown-item-wrap">
-                            <li class="dropdown-item">
-                                <a href="account.html">
-
-                                    <div class="img-drp-down ">
-                                        <img class="hachib" src="assets/img/add-mem-small.png" alt="">
-                                    </div>
-
-                                    <div class="prgp-drp-down">
-                                        <p>Create a new account</p>
-                                    </div>
-
-                                </a>
-
-                            </li>
-
-                            <li class="dropdown-item">
-
-                                <a href="login-page.html">
-
-                                    <div class="img-drp-down">
-                                        <img class="hachib" src="assets/img/upload-small.png" alt="">
-                                    </div>
-
-                                    <div class="prgp-drp-down">
-                                        <p>Sign in to your account</p>
-                                    </div>
-
-                                </a>
-
-                            </li>
-
-                        </ul>
-
-                    </div>
-                </div>
-                <!-- </nav>  -->
-
-            </div>
-
-        </nav>
-    </div>
-</div>
-			
-		
-
-		<div class="header-description">
-			<div class="container">
-				<div class="col-md-6">
-					<div class="text-part mt-">
-						<h1 class="first-header">smartly manage your project,and share with other's</h1>
-						<p class="header-p">I'm a paragraph. Click here to add your own text and edit me. It’s easy.
-							Just click “Edit Text” or double click me to add your own content and make changes to the
-							font.</p>
-
-						<a href="account.html">
-							<button class="header-button">Upload project</button>
-						</a>
-
-					</div>
-				</div>
-
-				<div class="col-md-6 header-image">
-					<img src="assets/img/header-desh-img.png" alt="">
-				</div>
-			</div>
-		</div>
-
-	</header>
-
+	<!--========End Header Section========-->
 
 	<!--========First Section========-->
 
@@ -133,13 +17,13 @@
 					click “Edit Text” or double click me to add your own content and make changes to the font. I’m a
 					great place for you to tell a story and let your users know a little more about you.</p>
 				<div class="icon-section">
-					<img src="assets/img/icon-group.png" alt="">
+					<img src="img/icon-group.png" alt="">
 				</div>
 
 			</div>
 
 			<div class="col-md-5 first-sec-image">
-				<img src="assets/img/software-teams.png" alt="">
+				<img src="img/software-teams.png" alt="">
 			</div>
 
 		</div>
@@ -156,7 +40,7 @@
 					<div class="card-design first-card">
 						<a href="product-description.html">
 							<div class="content-overlay"></div>
-							<img class="content-image" src="assets/img/webkit-sec-card-img.png">
+							<img class="content-image" src="img/webkit-sec-card-img.png">
 							<div class="content-details fadeIn-bottom">
 								<h3 class="content-title">Project-Rakho Website UI kit </h3>
 								<p class="content-text">Ecomarce and Retail</p>
@@ -172,7 +56,7 @@
 					<div class="card-design first-card">
 						<a href="product-description.html">
 							<div class="content-overlay"></div>
-							<img class="content-image" src="assets/img/webkit-card-2-img.png">
+							<img class="content-image" src="img/webkit-card-2-img.png">
 							<div class="content-details fadeIn-bottom">
 								<h3 class="content-title">Project-Rakho Website UI kit </h3>
 								<p class="content-text">Ecomarce and Retail</p>
@@ -187,7 +71,7 @@
 					<div class="card-design first-card">
 						<a href="product-description.html">
 							<div class="content-overlay"></div>
-							<img class="content-image" src="assets/img/webkit-card-3-img.png">
+							<img class="content-image" src="img/webkit-card-3-img.png">
 							<div class="content-details fadeIn-bottom">
 								<h3 class="content-title">Project-Rakho Website UI kit </h3>
 								<p class="content-text">Ecomarce and Retail</p>
@@ -202,7 +86,7 @@
 					<div class="card-design first-card">
 						<a href="product-description.html">
 							<div class="content-overlay"></div>
-							<img class="content-image" src="assets/img/webkit-card-4-img.png">
+							<img class="content-image" src="img/webkit-card-4-img.png">
 							<div class="content-details fadeIn-bottom">
 								<h3 class="content-title">Project-Rakho Website UI kit </h3>
 								<p class="content-text">Ecomarce and Retail</p>
@@ -239,7 +123,7 @@
 				<div class="box android-card">
 					<a href="#">
 
-						<div class="icon"><img src="assets/img/ios-apps.png" alt=""></div>
+						<div class="icon"><img src="img/ios-apps.png" alt=""></div>
 						<div class="text-part-mbl-apps">
 							<h4 class="title">Android Application</h4>
 							<p class="description">Mobile Apps Develpment For Any Business</p>
@@ -253,7 +137,7 @@
 				<div class="box ios-card">
 					<a href="#">
 
-						<div class="icon"><img src="assets/img/ios-apps.png" alt=""></div>
+						<div class="icon"><img src="img/ios-apps.png" alt=""></div>
 						<h4 class="title">IOS Application</h4>
 						<p class="description">Mobile Apps Develpment For Any Business</p>
 					</a>
@@ -275,7 +159,7 @@
 					<div class="card-design frst-card">
 						<a href="product-description.html" target="">
 							<div class="content-overlay"></div>
-							<img class="content-image" src="assets/img/apps-sec-card-1.png">
+							<img class="content-image" src="img/apps-sec-card-1.png">
 							<div class="content-details fadeIn-bottom">
 								<h3 class="content-title">Project-Rakho Website UI kit </h3>
 								<p class="content-text">Ecomarce and Retail</p>
@@ -290,7 +174,7 @@
 					<div class="card-design second-card">
 						<a href="product-description.html" target="">
 							<div class="content-overlay"></div>
-							<img class="content-image" src="assets/img/apps-sec-card-2.png">
+							<img class="content-image" src="img/apps-sec-card-2.png">
 							<div class="content-details fadeIn-bottom">
 								<h3 class="content-title">Project-Rakho Website UI kit </h3>
 								<p class="content-text">Ecomarce and Retail</p>
@@ -321,7 +205,7 @@
 		<div class="container">
 
 			<div class="col-md-6 fifth-sec-image">
-				<img src="assets/img/game-img.png" alt="">
+				<img src="img/game-img.png" alt="">
 			</div>
 
 			<div class="col-md-6">
@@ -330,7 +214,7 @@
 					click “Edit Text” or double click me to add your own content and make changes to the font.</p>
 
 					<div class="icon-section">
-						<img src="assets/img/icon-group.png" alt="">
+						<img src="img/icon-group.png" alt="">
 					</div>
 
 			</div>
@@ -350,7 +234,7 @@
 					<div class="card-design first-card">
 						<a href="product-description.html" target="">
 							<div class="content-overlay"></div>
-							<img class="content-image" src="assets/img/game-sec-card-1.png">
+							<img class="content-image" src="img/game-sec-card-1.png">
 							<div class="content-details fadeIn-bottom">
 								<h3 class="content-title">Project-Rakho Website UI kit </h3>
 								<p class="content-text">Ecomarce and Retail</p>
@@ -365,7 +249,7 @@
 					<div class="card-design second-card">
 						<a href="product-description.html" target="">
 							<div class="content-overlay"></div>
-							<img class="content-image" src="assets/img/game-sec-card-2.png">
+							<img class="content-image" src="img/game-sec-card-2.png">
 							<div class="content-details fadeIn-bottom">
 								<h3 class="content-title">Project-Rakho Website UI kit </h3>
 								<p class="content-text">Ecomarce and Retail</p>
@@ -388,44 +272,5 @@
 
 	</div>
 
-	<!--========End Sixth Section========-->
-
-
-	<!--========start Seventh Section========-->
-	<div class="seventh-section">
-		<div class="container">
-			<div class="area">
-				<h1 class="seventh-sec-header">User<span> Expression</span></h1>
-				<div class="col-md-3">
-					<img class="couneter-icon" src="assets/img/couneter-d.png" alt="">
-					<p class="counter-p">Download</p>
-					<h1 class="counter">10K +</h1>
-				</div>
-
-				<div class="col-md-3">
-					<img class="couneter-icon" src="assets/img/couneter-u.png" alt="">
-					<p class="counter-p">Active User</p>
-					<h1 class="counter">8K +</h1>
-				</div>
-
-				<div class="col-md-3">
-					<img class="couneter-icon" src="assets/img/couneter-l.png" alt="">
-					<p class="counter-p">Like</p>
-					<h1 class="counter">16K +</h1>
-				</div>
-
-				<div class="col-md-3">
-					<img class="couneter-icon" src="assets/img/couneter-r.png" alt="">
-					<p class="counter-p">5 Star Rating</p>
-					<h1 class="counter">12K +</h1>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!--========End Seventh Section========-->
-
-
-
-	</div>
+    </div>
 </template>

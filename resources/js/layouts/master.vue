@@ -1,6 +1,6 @@
 <template>
   <div>
-    <headerSection/>
+    <!-- <headerSection/> -->
     <transition name="component-fade" mode="out-in">
         <router-view :key="$route.fullPath"></router-view>
     </transition>

@@ -47,7 +47,7 @@
            })();
        </script>
         </div>
-        <script src="assets/js/jquery-1.12.0.min.js" type="text/javascript"></script>
+      <script src="assets/js/jquery-1.12.0.min.js" type="text/javascript"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<script src="{{ asset('/assets/js/owl.carousel.min.js') }}" type="text/javascript"></script>

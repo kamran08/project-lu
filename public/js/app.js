@@ -68080,8 +68080,6 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("headerSection"),
-      _vm._v(" "),
       _c(
         "transition",
         { attrs: { name: "component-fade", mode: "out-in" } },
@@ -69559,6 +69557,659 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [
+      _c("header", { staticClass: "header header-bg" }, [
+        _c("div", { staticClass: "mobile-menu" }, [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "right main-nav-brand" }, [
+              _c("a", { attrs: { href: "home.html" } }, [
+                _c("img", {
+                  staticClass: "logo",
+                  attrs: { src: "assets/img/site-logo-2.png", alt: "" }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "mobile-toggle" }, [
+              _c("span", [_c("i", { staticClass: "fas fa-bars" })])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "mobile-open-container" }, [
+              _c("div", { staticClass: "main-nav-list" }, [
+                _c("ul", { staticClass: "nav-content" }, [
+                  _c("li", { staticClass: "active" }, [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Home")])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("About")])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#first-section-id" } }, [
+                      _vm._v("Website")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#third-section-id" } }, [
+                      _vm._v("Apps")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#fifth-section-id" } }, [
+                      _vm._v("Games")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Contact us")])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "main-nav" }, [
+          _c("div", { staticClass: "container" }, [
+            _c("nav", { staticClass: "navigation" }, [
+              _c("div", { staticClass: "col-md-2" }, [
+                _c("a", { attrs: { href: "home.html" } }, [
+                  _c("div", { staticClass: "logo-1" })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-8 center" }, [
+                _c("ul", { staticClass: "nav_list " }, [
+                  _c("li", [
+                    _c("a", { attrs: { href: "home-first.html" } }, [
+                      _vm._v("Home")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#about-section-id" } }, [
+                      _vm._v("About")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#first-section-id" } }, [
+                      _vm._v("Website")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#third-section-id" } }, [
+                      _vm._v("Apps")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#fifth-section-id" } }, [
+                      _vm._v("Games")
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-2" }, [
+                _c("div", { staticClass: "dropdown" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "nav-button",
+                      attrs: { onclick: "myFunction()" }
+                    },
+                    [
+                      _c("span", [
+                        _c("i", { staticClass: "fas fa-user-circle" })
+                      ]),
+                      _vm._v("Register")
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "dropdown-content",
+                      attrs: { id: "myDropdown" }
+                    },
+                    [
+                      _c("ul", { staticClass: "dropdown-item-wrap" }, [
+                        _c("li", { staticClass: "dropdown-item" }, [
+                          _c("a", { attrs: { href: "account.html" } }, [
+                            _c("div", { staticClass: "img-drp-down " }, [
+                              _c("img", {
+                                staticClass: "hachib",
+                                attrs: {
+                                  src: "assets/img/add-mem-small.png",
+                                  alt: ""
+                                }
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "prgp-drp-down" }, [
+                              _c("p", [_vm._v("Create a new account")])
+                            ])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", { staticClass: "dropdown-item" }, [
+                          _c("a", { attrs: { href: "login-page.html" } }, [
+                            _c("div", { staticClass: "img-drp-down" }, [
+                              _c("img", {
+                                staticClass: "hachib",
+                                attrs: {
+                                  src: "assets/img/upload-small.png",
+                                  alt: ""
+                                }
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "prgp-drp-down" }, [
+                              _c("p", [_vm._v("Sign in to your account")])
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  )
+                ])
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "header-description" }, [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "col-md-6" }, [
+              _c("div", { staticClass: "text-part mt-" }, [
+                _c("h1", { staticClass: "first-header" }, [
+                  _vm._v("smartly manage your project,and share with other's")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "header-p" }, [
+                  _vm._v(
+                    "I'm a paragraph. Click here to add your own text and edit me. It’s easy.\n\t\t\t\t\t\t\tJust click “Edit Text” or double click me to add your own content and make changes to the\n\t\t\t\t\t\t\tfont."
+                  )
+                ]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "account.html" } }, [
+                  _c("button", { staticClass: "header-button" }, [
+                    _vm._v("Upload project")
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6 header-image" }, [
+              _c("img", {
+                attrs: { src: "assets/img/header-desh-img.png", alt: "" }
+              })
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "first-section", attrs: { id: "first-section-id" } },
+        [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "col-md-7" }, [
+              _c("h1", { staticClass: "first-sec-header" }, [
+                _c("span", [_vm._v("Website")]),
+                _vm._v("design and development")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "first-sec-p" }, [
+                _vm._v(
+                  "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just\n\t\t\t\t\tclick “Edit Text” or double click me to add your own content and make changes to the font. I’m a\n\t\t\t\t\tgreat place for you to tell a story and let your users know a little more about you."
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "icon-section" }, [
+                _c("img", {
+                  attrs: { src: "assets/img/icon-group.png", alt: "" }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-5 first-sec-image" }, [
+              _c("img", {
+                attrs: { src: "assets/img/software-teams.png", alt: "" }
+              })
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "second-section" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "flex-section" }, [
+            _c("div", { staticClass: "card-item mgr-15" }, [
+              _c("div", { staticClass: "card-design first-card" }, [
+                _c("a", { attrs: { href: "product-description.html" } }, [
+                  _c("div", { staticClass: "content-overlay" }),
+                  _vm._v(" "),
+                  _c("img", {
+                    staticClass: "content-image",
+                    attrs: { src: "assets/img/webkit-sec-card-img.png" }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "content-details fadeIn-bottom" }, [
+                    _c("h3", { staticClass: "content-title" }, [
+                      _vm._v("Project-Rakho Website UI kit ")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "content-text" }, [
+                      _vm._v("Ecomarce and Retail")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "content-like" }, [
+                      _c("span", [
+                        _c("i", { staticClass: "far fa-thumbs-up" })
+                      ]),
+                      _c("span", [_vm._v("275")]),
+                      _vm._v(" "),
+                      _c("span", [_c("i", { staticClass: "fas fa-eye" })]),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("358")])
+                    ])
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-item" }, [
+              _c("div", { staticClass: "card-design first-card" }, [
+                _c("a", { attrs: { href: "product-description.html" } }, [
+                  _c("div", { staticClass: "content-overlay" }),
+                  _vm._v(" "),
+                  _c("img", {
+                    staticClass: "content-image",
+                    attrs: { src: "assets/img/webkit-card-2-img.png" }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "content-details fadeIn-bottom" }, [
+                    _c("h3", { staticClass: "content-title" }, [
+                      _vm._v("Project-Rakho Website UI kit ")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "content-text" }, [
+                      _vm._v("Ecomarce and Retail")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "content-like" }, [
+                      _c("span", [
+                        _c("i", { staticClass: "far fa-thumbs-up" })
+                      ]),
+                      _vm._v("275 "),
+                      _c("span", [_c("i", { staticClass: "fas fa-eye" })]),
+                      _vm._v("358")
+                    ])
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-item mgr-15 mgt-15" }, [
+              _c("div", { staticClass: "card-design first-card" }, [
+                _c("a", { attrs: { href: "product-description.html" } }, [
+                  _c("div", { staticClass: "content-overlay" }),
+                  _vm._v(" "),
+                  _c("img", {
+                    staticClass: "content-image",
+                    attrs: { src: "assets/img/webkit-card-3-img.png" }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "content-details fadeIn-bottom" }, [
+                    _c("h3", { staticClass: "content-title" }, [
+                      _vm._v("Project-Rakho Website UI kit ")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "content-text" }, [
+                      _vm._v("Ecomarce and Retail")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "content-like" }, [
+                      _c("span", [
+                        _c("i", { staticClass: "far fa-thumbs-up" })
+                      ]),
+                      _vm._v("275 "),
+                      _c("span", [_c("i", { staticClass: "fas fa-eye" })]),
+                      _vm._v("358")
+                    ])
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-item mgt-15" }, [
+              _c("div", { staticClass: "card-design first-card" }, [
+                _c("a", { attrs: { href: "product-description.html" } }, [
+                  _c("div", { staticClass: "content-overlay" }),
+                  _vm._v(" "),
+                  _c("img", {
+                    staticClass: "content-image",
+                    attrs: { src: "assets/img/webkit-card-4-img.png" }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "content-details fadeIn-bottom" }, [
+                    _c("h3", { staticClass: "content-title" }, [
+                      _vm._v("Project-Rakho Website UI kit ")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "content-text" }, [
+                      _vm._v("Ecomarce and Retail")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "content-like" }, [
+                      _c("span", [
+                        _c("i", { staticClass: "far fa-thumbs-up" })
+                      ]),
+                      _vm._v("275 "),
+                      _c("span", [_c("i", { staticClass: "fas fa-eye" })]),
+                      _vm._v("358")
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "second-sec-button" }, [
+            _c("a", { attrs: { href: "all-template.html" } }, [
+              _c("button", { staticClass: "view-button web-sec-btn" }, [
+                _vm._v("View all websites")
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "third-section", attrs: { id: "third-section-id" } },
+        [
+          _c("div", { staticClass: "container" }, [
+            _c("h1", { staticClass: "third-sec-h" }, [
+              _c("span", [_vm._v("Mobile")]),
+              _vm._v("Application Project")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "third-sec-p" }, [
+              _vm._v(
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n\t\t\t\tIpsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a\n\t\t\t\tgalley of type and scrambled it to make a type specimen book."
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-5 col-md-offset-1 box-wrap" }, [
+              _c("div", { staticClass: "box android-card" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("div", { staticClass: "icon" }, [
+                    _c("img", {
+                      attrs: { src: "assets/img/ios-apps.png", alt: "" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "text-part-mbl-apps" }, [
+                    _c("h4", { staticClass: "title" }, [
+                      _vm._v("Android Application")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "description" }, [
+                      _vm._v("Mobile Apps Develpment For Any Business")
+                    ])
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-5 box-wrap" }, [
+              _c("div", { staticClass: "box ios-card" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("div", { staticClass: "icon" }, [
+                    _c("img", {
+                      attrs: { src: "assets/img/ios-apps.png", alt: "" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("h4", { staticClass: "title" }, [
+                    _vm._v("IOS Application")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "description" }, [
+                    _vm._v("Mobile Apps Develpment For Any Business")
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "fourth-section" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "flex-section" }, [
+            _c("div", { staticClass: "card-item mgr-15" }, [
+              _c("div", { staticClass: "card-design frst-card" }, [
+                _c(
+                  "a",
+                  { attrs: { href: "product-description.html", target: "" } },
+                  [
+                    _c("div", { staticClass: "content-overlay" }),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass: "content-image",
+                      attrs: { src: "assets/img/apps-sec-card-1.png" }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "content-details fadeIn-bottom" },
+                      [
+                        _c("h3", { staticClass: "content-title" }, [
+                          _vm._v("Project-Rakho Website UI kit ")
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "content-text" }, [
+                          _vm._v("Ecomarce and Retail")
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "content-like" }, [
+                          _c("span", [
+                            _c("i", { staticClass: "far fa-thumbs-up" })
+                          ]),
+                          _vm._v("275 "),
+                          _c("span", [_c("i", { staticClass: "fas fa-eye" })]),
+                          _vm._v("358")
+                        ])
+                      ]
+                    )
+                  ]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-item" }, [
+              _c("div", { staticClass: "card-design second-card" }, [
+                _c(
+                  "a",
+                  { attrs: { href: "product-description.html", target: "" } },
+                  [
+                    _c("div", { staticClass: "content-overlay" }),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass: "content-image",
+                      attrs: { src: "assets/img/apps-sec-card-2.png" }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "content-details fadeIn-bottom" },
+                      [
+                        _c("h3", { staticClass: "content-title" }, [
+                          _vm._v("Project-Rakho Website UI kit ")
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "content-text" }, [
+                          _vm._v("Ecomarce and Retail")
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "content-like" }, [
+                          _c("span", [
+                            _c("i", { staticClass: "far fa-thumbs-up" })
+                          ]),
+                          _vm._v("275 "),
+                          _c("span", [_c("i", { staticClass: "fas fa-eye" })]),
+                          _vm._v("358")
+                        ])
+                      ]
+                    )
+                  ]
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "fourth-sec-button" }, [
+            _c("a", { attrs: { href: "all-template.html" } }, [
+              _c("button", { staticClass: "view-button apps-sec-btn" }, [
+                _vm._v("View all Apps")
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "fifth-section", attrs: { id: "fifth-section-id" } },
+        [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "col-md-6 fifth-sec-image" }, [
+              _c("img", { attrs: { src: "assets/img/game-img.png", alt: "" } })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6" }, [
+              _c("h1", { staticClass: "fifth-sec-header" }, [
+                _c("span", [_vm._v("Game")]),
+                _vm._v("Development")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "fifth-sec-p" }, [
+                _vm._v(
+                  "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just\n\t\t\t\t\tclick “Edit Text” or double click me to add your own content and make changes to the font."
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "icon-section" }, [
+                _c("img", {
+                  attrs: { src: "assets/img/icon-group.png", alt: "" }
+                })
+              ])
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "sixth-section" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "flex-section" }, [
+            _c("div", { staticClass: "card-item mgr-15" }, [
+              _c("div", { staticClass: "card-design first-card" }, [
+                _c(
+                  "a",
+                  { attrs: { href: "product-description.html", target: "" } },
+                  [
+                    _c("div", { staticClass: "content-overlay" }),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass: "content-image",
+                      attrs: { src: "assets/img/game-sec-card-1.png" }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "content-details fadeIn-bottom" },
+                      [
+                        _c("h3", { staticClass: "content-title" }, [
+                          _vm._v("Project-Rakho Website UI kit ")
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "content-text" }, [
+                          _vm._v("Ecomarce and Retail")
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "content-like" }, [
+                          _c("span", [
+                            _c("i", { staticClass: "far fa-thumbs-up" })
+                          ]),
+                          _vm._v("275 "),
+                          _c("span", [_c("i", { staticClass: "fas fa-eye" })]),
+                          _vm._v("358")
+                        ])
+                      ]
+                    )
+                  ]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-item" }, [
+              _c("div", { staticClass: "card-design second-card" }, [
+                _c(
+                  "a",
+                  { attrs: { href: "product-description.html", target: "" } },
+                  [
+                    _c("div", { staticClass: "content-overlay" }),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass: "content-image",
+                      attrs: { src: "assets/img/game-sec-card-2.png" }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "content-details fadeIn-bottom" },
+                      [
+                        _c("h3", { staticClass: "content-title" }, [
+                          _vm._v("Project-Rakho Website UI kit ")
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "content-text" }, [
+                          _vm._v("Ecomarce and Retail")
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "content-like" }, [
+                          _c("span", [
+                            _c("i", { staticClass: "far fa-thumbs-up" })
+                          ]),
+                          _vm._v("275 "),
+                          _c("span", [_c("i", { staticClass: "fas fa-eye" })]),
+                          _vm._v("358")
+                        ])
+                      ]
+                    )
+                  ]
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "sixth-sec-button" }, [
+            _c("a", { attrs: { href: "all-template.html" } }, [
+              _c("button", { staticClass: "view-button game-sec-btn" }, [
+                _vm._v("View all Games")
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
       _c("div", { staticClass: "seventh-section" }, [
         _c("div", { staticClass: "container" }, [
           _c("div", { staticClass: "area" }, [
@@ -69570,7 +70221,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "col-md-3" }, [
               _c("img", {
                 staticClass: "couneter-icon",
-                attrs: { src: "/assets/img/couneter-d.png", alt: "" }
+                attrs: { src: "assets/img/couneter-d.png", alt: "" }
               }),
               _vm._v(" "),
               _c("p", { staticClass: "counter-p" }, [_vm._v("Download")]),
@@ -69581,7 +70232,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "col-md-3" }, [
               _c("img", {
                 staticClass: "couneter-icon",
-                attrs: { src: "/assets/img/couneter-u.png", alt: "" }
+                attrs: { src: "assets/img/couneter-u.png", alt: "" }
               }),
               _vm._v(" "),
               _c("p", { staticClass: "counter-p" }, [_vm._v("Active User")]),
@@ -69592,7 +70243,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "col-md-3" }, [
               _c("img", {
                 staticClass: "couneter-icon",
-                attrs: { src: "/assets/img/couneter-l.png", alt: "" }
+                attrs: { src: "assets/img/couneter-l.png", alt: "" }
               }),
               _vm._v(" "),
               _c("p", { staticClass: "counter-p" }, [_vm._v("Like")]),
@@ -69603,7 +70254,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "col-md-3" }, [
               _c("img", {
                 staticClass: "couneter-icon",
-                attrs: { src: "/assets/img/couneter-r.png", alt: "" }
+                attrs: { src: "assets/img/couneter-r.png", alt: "" }
               }),
               _vm._v(" "),
               _c("p", { staticClass: "counter-p" }, [_vm._v("5 Star Rating")]),
