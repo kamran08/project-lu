@@ -35,11 +35,11 @@ class HomeController extends Controller
          $project = [];
         if($type){
 
-            $project = Project::where('type', $type)->get();
+            $project = Project::where('type', $type)->orderBy('id','desc')->limit(4)->get();
         }
-        else{
-            $project = Project::where('type', 'Website')->get();
-        }
+        // else{
+        //     $project = Project::where('type', 'Website')->orderBy('id', 'desc')->limit(4);
+        // }
         return $project;
        
     }
@@ -55,25 +55,27 @@ class HomeController extends Controller
         $category = json_decode($request->category);
         
         // return $rate;
-        $type = "Apps";
+        // $type = "Apps";
          $q = Project::with('avgreview');
         if($type){
 
             $q->where('type', $type);
         }
-        if($year){
-
-            $q->where('year', $year);
-        }
         else{
             
-            $q->where('type', 'Website');
+                $q->where('type', 'Website');
+            }
+        if($year){
+            
+            $q->where('year', $year);
         }
-        if($category){
-
+        
+            if($category){
+                
+                
             $q->whereIn('category', $category);
         }
-        if($rate){
+        if(sizeof($rate) > 0){
             $s = sizeof($rate);
             $q->where('avg', '>=',$rate[0]);
 

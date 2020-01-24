@@ -162,9 +162,9 @@ export default {
             alldata:{},
             type:'Website',
             category:[],
-            rate:[1],
+            rate:[],
             allcategory:{},
-            year:''
+            year:""
         }
     },
     created(){
@@ -186,6 +186,9 @@ export default {
         async getAlldata(){
             let rate =  JSON.stringify(this.rate)
             let category =  JSON.stringify(this.category)
+            if(this.year==''){
+                this.year = ''
+            }
             const res = await this.callApi('get', `getProjectFull?type=${this.type}&year=${this.year}&category=${category}&rate=${rate}`)
             if(res.status==200){
                 this.alldata = res.data

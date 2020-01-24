@@ -23,6 +23,7 @@ import upload_project from '../pages/upload_project.vue'
 import website from '../pages/website.vue'
 import apps from '../pages/apps.vue'
 import games from '../pages/games.vue'
+import allrequest from '../pages/allrequest.vue'
 
 
 
@@ -234,6 +235,17 @@ export default new Router({
            // guest: true,
            // allowedUserType: ['All'],
             title: 'Project Rakho Login',
+        }
+  
+      },
+    {
+        path: '/allrequest',
+        name: 'allrequest',
+        component: allrequest,
+        meta: {
+           // guest: true,
+           // allowedUserType: ['All'],
+            title: 'Project Rakho allrequest',
         }
   
       },

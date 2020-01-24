@@ -1,5 +1,6 @@
 <template>
     <div>
+        <headerSection/>
          <div class="back-right-up">
             <div class="container">
 
@@ -26,7 +27,9 @@
                                                     class="fas fa-angle-double-right"></i></span></li>
                                     <li :class="(tab==2)?'active_1':''" @click="submitMethod1">Cover & Image<span><i
                                                     class="fas fa-angle-double-right"></i></span></li>
-                                    <li :class="(tab==3)?'active_1':''" @click="submitFrom">Publishing</li>
+                                    <li :class="(tab==3)?'active_1':''" @click="tab=4">upload book<span><i
+                                                    class="fas fa-angle-double-right"></i></span></li>
+                                    <li :class="(tab==4)?'active_1':''" @click="submitFrom">Publishing</li>
 
                                 </ul>
                             </div>
@@ -129,10 +132,70 @@
                         </div>
                                             
                             <!-- project image -->
+                            <!-- project image -->
+                            <div class="authentication-log" v-if="tab==3">
+
+                            <div class="authentication-item">
+
+                                <div class="file-upload">
+
+                                    <div class="col-12 col-md-6 col-lg-6">
+                                        <div class="_1input_group">
+                                            <div class="_1upload">
+                                                <div class="_image_upload_pic">
+                                                    <!-- Image -->
+                                                    <div class="_upload_image" v-if="from.book">
+                                                        <img class="_image_upload_img" :src="from.book" alt="" title="">
+
+                                                        <p class="_1upload_edit" @click="from.book=false"><i class="fas fa-pen"></i></p>
+                                                    </div>
+                                                    <!-- Image -->
+
+                                                    <!-- Upload -->
+                                                    <div class="_1upload_upload">
+
+                                                        <!-- :headers="crfObj" -->
+                                                        <Upload name='img' 
+                                                                ref="upload" :show-upload-list="false" 
+                                                                :on-success="handleSuccess1Book" 
+                                                                :on-format-error="handleFormatErrorBook" 
+                                                                :on-exceeded-size="handleMaxSizeBook" 
+                                                                :before-upload="handleBeforeUploadBook" 
+                                                                type="drag" 
+                                                                action="/uploadImages">
+                                                            <div>
+                                                                <div class="_1upload_main">
+                                                                    <p class="_1upload_icon"><i class="fas fa-camera"></i></p>
+                                                                </div>
+                                                            </div>
+                                                        </Upload>
+
+                                                    </div>
+                                                    <!-- Upload -->
+
+                                                    <p class="_upload_text">Upload your Picture</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="authentication next-button" @click="tab=4">
+
+                                <button class="sign-now-button next-btn">Next</button>
+
+                            </div>
+
+                        </div>
+                                            
+                            <!-- project image -->
 
                             <!-- publish project -->
 
-                            <div class="authentication-log publish-card" v-if="tab==3">
+                            <div class="authentication-log publish-card" v-if="tab==4">
                                 <form action="#">
                                     <div class="authentication-item ">
                                         <label  for="input">Upload source file</label>
@@ -159,7 +222,6 @@
                                                         <Upload name='img' 
                                                                 ref="upload" :show-upload-list="false" 
                                                                 :on-success="handleSuccess1" 
-                                                                :max-size="2048" 
                                                                 :on-format-error="handleFormatError" 
                                                                 :on-exceeded-size="handleMaxSize" 
                                                                 :before-upload="handleBeforeUpload" 
@@ -219,7 +281,11 @@
 </template>
 
 <script>
+import headerSection from '../components/header.vue'
 export default {
+    components:{
+      headerSection,
+        },
     data(){
         return{
             uploads:[],
@@ -235,6 +301,7 @@ export default {
                 description:'',
                 image:false,
                 file:false,
+                book:false,
                 year:''
             },
              imageUrl:'',
@@ -310,7 +377,19 @@ export default {
 				// this.uploadList.push({link:res.imageUrl})
 				// console.log(this.uploadList);
         },
+        handleSuccess1Book(res, file){
+            console.log(res)
+            this.from.book = res
+				// this.uploadList.push({link:res.imageUrl})
+				// console.log(this.uploadList);
+        },
          handleFormatError (file) {
+            this.$Notice.warning({
+                title: 'The file format is incorrect',
+                desc: 'File format of ' + file.name + ' is incorrect, please select jpg or png.'
+            });
+        },
+         handleFormatErrorBook (file) {
             this.$Notice.warning({
                 title: 'The file format is incorrect',
                 desc: 'File format of ' + file.name + ' is incorrect, please select jpg or png.'
@@ -324,6 +403,15 @@ export default {
             });
         },
           handleBeforeUpload () {
+            // const check = this.uploadList.length < 6;
+            // if (!check) {
+            //     this.$Notice.warning({
+            //         title: 'Up to five pictures can be uploaded.'
+            //     });
+            // }
+            // return check;
+        },
+          handleBeforeUploadBook () {
             // const check = this.uploadList.length < 6;
             // if (!check) {
             //     this.$Notice.warning({

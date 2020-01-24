@@ -4,7 +4,7 @@
 		<div class="mobile-menu">
 			<div class="container">
 				<div class="right main-nav-brand">
-					<a href="home.html"><img class="logo" src="assets/img/site-logo-2.png" alt=""></a>
+					<router-link href="/"><img class="logo" src="assets/img/site-logo-2.png" alt=""></router-link>
 				</div>
 
 
@@ -14,7 +14,9 @@
 				<div class="mobile-open-container">
 					<div class="main-nav-list">
 						<ul class="nav-content">
-							<li class="active"><a href="#">Home</a></li>
+							<li class="active">
+								<router-link to="/">Home</router-link>
+							</li>
 							<li><a href="#">About</a></li>
                             <li><a href="#first-section-id">Website</a></li>
                             <li><a href="#third-section-id">Apps</a></li>
@@ -30,15 +32,15 @@
     <div class="container">
         <nav class="navigation">
             <div class="col-md-2">
-                <a href="home.html">
+                <router-link to="/">
                     <div class="logo-1">
 
                     </div>
-                </a>
+                </router-link>
             </div>
             <div class="col-md-8 center">
                 <ul class="nav_list ">
-                    <li><a href="home-first.html">Home</a></li>
+                    <li><router-link to="/">Home</router-link></li>
                     <li><a href="#about-section-id">About</a></li>
                     <li><a href="#first-section-id">Website</a></li>
                     <li><a href="#third-section-id">Apps</a></li>
@@ -47,50 +49,140 @@
                 </ul>
             </div>
 
-            <div class="col-md-2">
-                <div class="dropdown">
-                    <button onclick="myFunction()" class="nav-button"> <span><i
-										class="fas fa-user-circle"></i></span>Register</button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <ul class="dropdown-item-wrap">
-                            <li class="dropdown-item">
-                                <a href="account.html">
+            
+					<div class="col-md-2">
+						<div class="dropdown">
+							<button onclick="myFunction()" class="nav-button"> <span><i
+										class="fas fa-user-circle"></i></span> My Account</button>
+							<div id="myDropdown" class="dropdown-content">
+								<ul class="dropdown-item-wrap">
 
-                                    <div class="img-drp-down ">
-                                        <img class="hachib" src="assets/img/add-mem-small.png" alt="">
-                                    </div>
+								<template v-if="authInfo">
+									<li class="dropdown-item">
+										<router-link to="add-member">
 
-                                    <div class="prgp-drp-down">
-                                        <p>Create a new account</p>
-                                    </div>
+											<div class="img-drp-down ">
+												<img class="hachib" src="/assets/img/add-mem-small.png" alt="">
+											</div>
 
-                                </a>
+											<div class="prgp-drp-down">
+												<p> Add your team member</p>
+											</div>
 
-                            </li>
+										</router-link>
 
-                            <li class="dropdown-item">
+									</li>
 
-                                <a href="login-page.html">
+									<li class="dropdown-item">
 
-                                    <div class="img-drp-down">
-                                        <img class="hachib" src="assets/img/upload-small.png" alt="">
-                                    </div>
+										<router-link to="upload-project">
 
-                                    <div class="prgp-drp-down">
-                                        <p>Sign in to your account</p>
-                                    </div>
+											<div class="img-drp-down">
+												<img class="hachib" src="/assets/img/upload-small.png" alt="">
+											</div>
 
-                                </a>
+											<div class="prgp-drp-down">
+												<p>Upload your project</p>
+											</div>
 
-                            </li>
+										</router-link>
 
-                        </ul>
 
-                    </div>
-                </div>
-                <!-- </nav>  -->
+									</li>
 
-            </div>
+									<li class="dropdown-item">
+
+										<router-link to="team-profile">
+
+											<div class="img-drp-down">
+												<img class="hachib" src="/assets/img/team-pro.png" alt="">
+											</div>
+
+											<div class="prgp-drp-down">
+												<p>See your team
+													profile</p>
+											</div>
+
+										</router-link>
+
+
+									</li>
+									<li class="dropdown-item">
+
+										<router-link to="/allrequest">
+											<div class="img-drp-down">
+												<img class="hachib" src="/assets/img/notification-small.png" alt="">
+											</div>
+
+											<div class="prgp-drp-down">
+												<p>See All requests</p>
+											</div>
+
+										</router-link>
+
+
+									</li>
+
+									<li class="dropdown-item">
+
+										<a href="/logout">
+
+											<div class="img-drp-down">
+												<img class="hachib" src="/assets/img/sign-out-small.png" alt="">
+											</div>
+
+											<div class="prgp-drp-down">
+												<p>Sign out from website</p>
+											</div>
+
+
+										</a>
+
+									</li>
+									</template>
+									<template v-else>
+
+									
+									<li class="dropdown-item">
+
+										<router-link to="/login">
+
+											<div class="img-drp-down">
+												<img class="hachib" src="/assets/img/sign-out-small.png" alt="">
+											</div>
+
+											<div class="prgp-drp-down">
+												<p>Log In</p>
+											</div>
+
+
+										</router-link>
+
+									</li>
+									<li class="dropdown-item">
+
+										<router-link to="/registration">
+
+											<div class="img-drp-down">
+												<img class="hachib" src="/assets/img/sign-out-small.png" alt="">
+											</div>
+
+											<div class="prgp-drp-down">
+												<p>Registration</p>
+											</div>
+
+
+										</router-link>
+
+									</li>
+									</template>
+
+								</ul>
+
+							</div>
+						</div>
+
+					</div>
 
         </nav>
     </div>
@@ -107,9 +199,9 @@
 							Just click “Edit Text” or double click me to add your own content and make changes to the
 							font.</p>
 
-						<a href="account.html">
+						<router-link to="upload-project">
 							<button class="header-button">Upload project</button>
-						</a>
+						</router-link>
 
 					</div>
 				</div>
@@ -152,73 +244,27 @@
 	<div class="second-section">
 		<div class="container">
 			<div class="flex-section">
-				<div class="card-item mgr-15">
+				<div class="card-item" :class="((index%2==0))?'mgt-15':''" v-for="(item,index) in allwebsite" :key="index">
 					<div class="card-design first-card">
-						<a href="product-description.html">
+						<router-link :to="'/product-description/'+item.id">
 							<div class="content-overlay"></div>
-							<img class="content-image" src="assets/img/webkit-sec-card-img.png">
+							<img class="content-image" :src="item.image">
 							<div class="content-details fadeIn-bottom">
-								<h3 class="content-title">Project-Rakho Website UI kit </h3>
-								<p class="content-text">Ecomarce and Retail</p>
-								<p class="content-like"><span><i class="far fa-thumbs-up"></i></span><span>275</span>
-									<span><i class="fas fa-eye"></i></span> <span>358</span> </p>
+								<h3 class="content-title">{{item.projectName}}</h3>
+								<p class="content-text">{{item.category}}</p>
+								<!-- <p class="content-like"><span><i class="far fa-thumbs-up"></i></span>275 <span><i
+											class="fas fa-eye"></i></span>358</p> -->
 							</div>
-						</a>
-					</div>
-				</div>
-
-
-				<div class="card-item">
-					<div class="card-design first-card">
-						<a href="product-description.html">
-							<div class="content-overlay"></div>
-							<img class="content-image" src="assets/img/webkit-card-2-img.png">
-							<div class="content-details fadeIn-bottom">
-								<h3 class="content-title">Project-Rakho Website UI kit </h3>
-								<p class="content-text">Ecomarce and Retail</p>
-								<p class="content-like"><span><i class="far fa-thumbs-up"></i></span>275 <span><i
-											class="fas fa-eye"></i></span>358</p>
-							</div>
-						</a>
-					</div>
-				</div>
-
-				<div class="card-item mgr-15 mgt-15">
-					<div class="card-design first-card">
-						<a href="product-description.html">
-							<div class="content-overlay"></div>
-							<img class="content-image" src="assets/img/webkit-card-3-img.png">
-							<div class="content-details fadeIn-bottom">
-								<h3 class="content-title">Project-Rakho Website UI kit </h3>
-								<p class="content-text">Ecomarce and Retail</p>
-								<p class="content-like"><span><i class="far fa-thumbs-up"></i></span>275 <span><i
-											class="fas fa-eye"></i></span>358</p>
-							</div>
-						</a>
-					</div>
-				</div>
-
-				<div class="card-item mgt-15">
-					<div class="card-design first-card">
-						<a href="product-description.html">
-							<div class="content-overlay"></div>
-							<img class="content-image" src="assets/img/webkit-card-4-img.png">
-							<div class="content-details fadeIn-bottom">
-								<h3 class="content-title">Project-Rakho Website UI kit </h3>
-								<p class="content-text">Ecomarce and Retail</p>
-								<p class="content-like"><span><i class="far fa-thumbs-up"></i></span>275 <span><i
-											class="fas fa-eye"></i></span>358</p>
-							</div>
-						</a>
+						</router-link>
 					</div>
 				</div>
 
 			</div>
 
-			<div class="second-sec-button">
-				<a href="all-template.html">
+			<div class="second-sec-button textAlign">
+				<router-link to="/all-template?type=Website">
 					<button class="view-button web-sec-btn">View all websites</button>
-				</a>
+				</router-link>
 			</div>
 		</div>
 
@@ -271,44 +317,26 @@
 	<div class="fourth-section">
 		<div class="container">
 			<div class="flex-section">
-				<div class="card-item mgr-15">
-					<div class="card-design frst-card">
-						<a href="product-description.html" target="">
+				<div class="card-item" :class="((index%2==0))?'mgt-15':''" v-for="(item,index) in allApps" :key="index">
+					<div class="card-design first-card">
+						<router-link :to="'/product-description/'+item.id">
 							<div class="content-overlay"></div>
-							<img class="content-image" src="assets/img/apps-sec-card-1.png">
+							<img class="content-image" :src="item.image">
 							<div class="content-details fadeIn-bottom">
-								<h3 class="content-title">Project-Rakho Website UI kit </h3>
-								<p class="content-text">Ecomarce and Retail</p>
-								<p class="content-like"><span><i class="far fa-thumbs-up"></i></span>275 <span><i
-											class="fas fa-eye"></i></span>358</p>
+								<h3 class="content-title">{{item.projectName}}</h3>
+								<p class="content-text">{{item.category}}</p>
+								<!-- <p class="content-like"><span><i class="far fa-thumbs-up"></i></span>275 <span><i
+											class="fas fa-eye"></i></span>358</p> -->
 							</div>
-						</a>
+						</router-link>
 					</div>
 				</div>
-
-				<div class="card-item">
-					<div class="card-design second-card">
-						<a href="product-description.html" target="">
-							<div class="content-overlay"></div>
-							<img class="content-image" src="assets/img/apps-sec-card-2.png">
-							<div class="content-details fadeIn-bottom">
-								<h3 class="content-title">Project-Rakho Website UI kit </h3>
-								<p class="content-text">Ecomarce and Retail</p>
-								<p class="content-like"><span><i class="far fa-thumbs-up"></i></span>275 <span><i
-											class="fas fa-eye"></i></span>358</p>
-							</div>
-						</a>
-					</div>
-				</div>
-
-
-
 			</div>
 
-			<div class="fourth-sec-button">
-				<a href="all-template.html">
-					<button class="view-button apps-sec-btn">View all Apps</button>
-				</a>
+			<div class="second-sec-button textAlign">
+				<router-link to="/all-template?type=Apps">
+					<button class="view-button web-sec-btn">View all Apps</button>
+				</router-link>
 			</div>
 		</div>
 	</div>
@@ -346,43 +374,26 @@
 	<div class="sixth-section">
 		<div class="container">
 			<div class="flex-section">
-				<div class="card-item mgr-15">
+				<div class="card-item" :class="((index%2==0))?'mgt-15':''" v-for="(item,index) in allGames" :key="index">
 					<div class="card-design first-card">
-						<a href="product-description.html" target="">
+						<router-link :to="'/product-description/'+item.id">
 							<div class="content-overlay"></div>
-							<img class="content-image" src="assets/img/game-sec-card-1.png">
+							<img class="content-image" :src="item.image">
 							<div class="content-details fadeIn-bottom">
-								<h3 class="content-title">Project-Rakho Website UI kit </h3>
-								<p class="content-text">Ecomarce and Retail</p>
-								<p class="content-like"><span><i class="far fa-thumbs-up"></i></span>275 <span><i
-											class="fas fa-eye"></i></span>358</p>
+								<h3 class="content-title">{{item.projectName}}</h3>
+								<p class="content-text">{{item.category}}</p>
+								<!-- <p class="content-like"><span><i class="far fa-thumbs-up"></i></span>275 <span><i
+											class="fas fa-eye"></i></span>358</p> -->
 							</div>
-						</a>
+						</router-link>
 					</div>
 				</div>
-
-				<div class="card-item">
-					<div class="card-design second-card">
-						<a href="product-description.html" target="">
-							<div class="content-overlay"></div>
-							<img class="content-image" src="assets/img/game-sec-card-2.png">
-							<div class="content-details fadeIn-bottom">
-								<h3 class="content-title">Project-Rakho Website UI kit </h3>
-								<p class="content-text">Ecomarce and Retail</p>
-								<p class="content-like"><span><i class="far fa-thumbs-up"></i></span>275 <span><i
-											class="fas fa-eye"></i></span>358</p>
-							</div>
-						</a>
-					</div>
-				</div>
-
-
 			</div>
 
-			<div class="sixth-sec-button">
-				<a href="all-template.html">
-					<button class="view-button game-sec-btn">View all Games</button>
-				</a>
+			<div class="second-sec-button textAlign">
+				<router-link to="/all-template?type=Games">
+					<button class="view-button web-sec-btn">View all Games</button>
+				</router-link>
 			</div>
 		</div>
 
@@ -392,7 +403,7 @@
 
 
 	<!--========start Seventh Section========-->
-	<div class="seventh-section">
+	<!-- <div class="seventh-section">
 		<div class="container">
 			<div class="area">
 				<h1 class="seventh-sec-header">User<span> Expression</span></h1>
@@ -421,7 +432,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<!--========End Seventh Section========-->
 
@@ -429,3 +440,37 @@
 
 	</div>
 </template>
+
+<script>
+export default {
+	data(){
+		return{
+			allwebsite:{},
+			allApps:{},
+			allGames:{},
+		}
+	},
+	async created(){
+		this.allwebsite =await this.getProject('Website')
+		this.allApps =await this.getProject('Apps')
+		this.allGames = await this.getProject('Games')
+
+	},
+	methods:{
+		  async getProject(type){
+            const res = await this.callApi('get',`getProject?type=${type}`)
+            if(res.status == 200){
+              return res.data
+            }
+            else{
+                this.$router.push('/')
+            }
+        },
+	}
+}
+</script>
+<style>
+.textAlign{
+	text-align: center;
+}
+</style>

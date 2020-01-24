@@ -25,11 +25,15 @@ Route::get('/app/getProject/{key}', 'HomeController@getProjectById');
 Route::post('/app/addTeamMember', 'TeamController@addTeamMember');
 Route::get('/app/getTeamMembers', 'TeamController@getTeamMembers');
 Route::post('/app/editTeamMemeber', 'TeamController@editTeamMemeber');
+Route::post('/app/editUser', 'TeamController@editUser');
+Route::post('/app/changePassword', 'TeamController@changePassword');
 
 // send request 
 Route::get('/app/getallCategory', 'HomeController@getallCategory');
 Route::get('/app/getProjectFull', 'HomeController@getProjectFull');
+Route::post('/app/deleteRequest', 'ReviewController@deleteRequest');
 Route::post('/app/storeRequest', 'ReviewController@storeRequest');
+Route::get('/app/getallrequest', 'ReviewController@getallrequest');
 Route::post('/app/storeReview', 'ReviewController@storeReview');
 Route::post('/app/deleteReview', 'ReviewController@deleteReview');
 

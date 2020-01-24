@@ -6,6 +6,7 @@ use App\Review;
 use App\UserRequest;
 use App\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReviewController extends Controller
 {
@@ -21,7 +22,27 @@ class ReviewController extends Controller
         $data['to'] = $project['user_id'];
         return UserRequest::create($data);
     }
+    public function deleteRequest(Request $request)
+    {
+        $data = $request->all();
+        if (!Auth::user()) {
+            return response()->json([
+                'msg' => "your are not auth user!!",
+            ], 401);
+        }
+        return UserRequest::where('id',$data['id'])->delete();
+    }
 
+    public function getallrequest(Request $request)
+    {
+        if (!Auth::user()) {
+            return response()->json([
+                'msg' => "your are not auth user!!",
+            ], 401);
+        }
+        $id = Auth::user()->id;
+        return UserRequest::where('to',$id)->with('user')->orderBy('id','desc')->get();
+    }
     public function storeReview(Request $request)
     {
         $data = $request->all();
