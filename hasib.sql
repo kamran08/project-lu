@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 22, 2020 at 06:32 AM
+-- Generation Time: Jan 25, 2020 at 05:52 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.7
 
@@ -83,7 +83,9 @@ CREATE TABLE `password_resets` (
 
 CREATE TABLE `projects` (
   `id` bigint(20) UNSIGNED NOT NULL,
+  `year` int(11) DEFAULT '1',
   `description` text COLLATE utf8mb4_unicode_ci,
+  `avg` float DEFAULT '0',
   `team_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `projectName` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -100,11 +102,11 @@ CREATE TABLE `projects` (
 -- Dumping data for table `projects`
 --
 
-INSERT INTO `projects` (`id`, `description`, `team_id`, `user_id`, `projectName`, `type`, `category`, `image`, `file`, `link`, `created_at`, `updated_at`) VALUES
-(1, 'asdf afds asfasd', 2, 2, 'dsfaf afds', 'Website', 'sfda dfa', '/uploads/Za815AOGvdMKSqJXTcrxpXa4r5vo09vqkwppNqHO.png', '/uploads/STTPcROvHd79iooWKS8Y02IRZqwDjyJh8rKRanPE.pdf', '', '2020-01-16 14:03:46', '2020-01-16 14:03:46'),
-(2, 'asdf afds asfasd', 2, 1, 'dsfaf afds', 'Website', 'sfda dfa', '/uploads/Za815AOGvdMKSqJXTcrxpXa4r5vo09vqkwppNqHO.png', '/uploads/STTPcROvHd79iooWKS8Y02IRZqwDjyJh8rKRanPE.pdf', '', '2020-01-16 14:03:46', '2020-01-16 14:03:46'),
-(3, 'asdf afds asfasd', 2, 2, 'dsfaf afds', 'Apps', 'sfda dfa', '/uploads/Za815AOGvdMKSqJXTcrxpXa4r5vo09vqkwppNqHO.png', '/uploads/STTPcROvHd79iooWKS8Y02IRZqwDjyJh8rKRanPE.pdf', '', '2020-01-16 14:03:46', '2020-01-16 14:03:46'),
-(4, 'asdf afds asfasd', 2, 2, 'dsfaf afds', 'Game', 'sfda dfa', '/uploads/Za815AOGvdMKSqJXTcrxpXa4r5vo09vqkwppNqHO.png', '/uploads/STTPcROvHd79iooWKS8Y02IRZqwDjyJh8rKRanPE.pdf', '', '2020-01-16 14:03:46', '2020-01-16 14:03:46');
+INSERT INTO `projects` (`id`, `year`, `description`, `avg`, `team_id`, `user_id`, `projectName`, `type`, `category`, `image`, `file`, `link`, `created_at`, `updated_at`) VALUES
+(1, 1, 'asdf afds asfasd', NULL, 2, 2, 'dsfaf afds', 'Website', 'sfda dfa', '/uploads/Za815AOGvdMKSqJXTcrxpXa4r5vo09vqkwppNqHO.png', '/uploads/STTPcROvHd79iooWKS8Y02IRZqwDjyJh8rKRanPE.pdf', '', '2020-01-16 14:03:46', '2020-01-16 14:03:46'),
+(2, 1, 'asdf afds asfasd', 3, 2, 1, 'dsfaf afds', 'Website', 'A', '/uploads/Za815AOGvdMKSqJXTcrxpXa4r5vo09vqkwppNqHO.png', '/uploads/STTPcROvHd79iooWKS8Y02IRZqwDjyJh8rKRanPE.pdf', '', '2020-01-16 14:03:46', '2020-01-22 21:44:36'),
+(3, 1, 'asdf afds asfasd', NULL, 2, 2, 'dsfaf afds', 'Apps', 'sfda dfa', '/uploads/Za815AOGvdMKSqJXTcrxpXa4r5vo09vqkwppNqHO.png', '/uploads/STTPcROvHd79iooWKS8Y02IRZqwDjyJh8rKRanPE.pdf', '', '2020-01-16 14:03:46', '2020-01-16 14:03:46'),
+(4, 1, 'asdf afds asfasd', NULL, 2, 2, 'dsfaf afds', 'Game', 'sfda dfa', '/uploads/Za815AOGvdMKSqJXTcrxpXa4r5vo09vqkwppNqHO.png', '/uploads/STTPcROvHd79iooWKS8Y02IRZqwDjyJh8rKRanPE.pdf', '', '2020-01-16 14:03:46', '2020-01-16 14:03:46');
 
 -- --------------------------------------------------------
 
@@ -147,7 +149,9 @@ CREATE TABLE `reviews` (
 
 INSERT INTO `reviews` (`id`, `user_id`, `project_id`, `rate`, `comment`, `created_at`, `updated_at`) VALUES
 (1, 0, 1, 3, 'ksdfkljljkas', '2020-01-21 11:33:58', '2020-01-21 11:33:58'),
-(3, 1, 1, 4, 'hello', '2020-01-21 12:27:09', '2020-01-21 12:27:09');
+(3, 1, 3, 4, 'hello', '2020-01-21 12:27:09', '2020-01-21 12:27:09'),
+(4, 1, 2, 3, 'hekko', '2020-01-22 21:44:36', '2020-01-22 21:44:36'),
+(5, 1, 2, 3, 'hekkodd', '2020-01-22 21:44:36', '2020-01-22 21:44:36');
 
 -- --------------------------------------------------------
 
@@ -202,7 +206,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `image`, `batch`, `student_id`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, '', NULL, NULL, 0, 'salman@gmail.com', NULL, '$2y$10$eFBv2imTtPahSl/PRb1ESe.RYl3iJbSAGdo7sRPhAoFg512OwINMe', NULL, '2020-01-17 10:09:16', '2020-01-17 10:09:16');
+(1, 'kamran', '/uploads/FOMS9czs5TYXXcj494J2JIwij8i2BLQHFl5UfVD2.png', '38th', 1512020199, 'salman@gmail.com', NULL, '$2y$10$UUfz3EoxvSnIuM0yI9jGJe0rz7/cxspVhssrfkz1I0fqTdl0dH71e', NULL, '2020-01-17 10:09:16', '2020-01-24 13:35:25');
 
 -- --------------------------------------------------------
 
@@ -223,6 +227,13 @@ CREATE TABLE `user_requests` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `user_requests`
+--
+
+INSERT INTO `user_requests` (`id`, `from`, `to`, `student_id`, `project_id`, `email`, `mobile`, `reason`, `projectName`, `created_at`, `updated_at`) VALUES
+(2, 1, 1, '1512020199', 1, 'ahmedkamran@gmail.com', '01554545', 'for my some of my proejcet ', 'pdkjfkajdljfafd fdsajfdls ', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -315,7 +326,7 @@ ALTER TABLE `requests`
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `teams`
@@ -333,7 +344,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `user_requests`
 --
 ALTER TABLE `user_requests`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
