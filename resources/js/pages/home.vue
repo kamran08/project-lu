@@ -19,6 +19,7 @@
 							</li>
 							<li><a href="#">About</a></li>
                             <li><a href="#first-section-id">Website</a></li>
+							<li v-if="authInfo"><router-link to="/team-profile">Team Profile</router-link></li>
                             <li><a href="#third-section-id">Apps</a></li>
                             <li><a href="#fifth-section-id">Games</a></li>
                             <li><a href="#">Contact us</a></li>
@@ -41,6 +42,7 @@
             <div class="col-md-8 center">
                 <ul class="nav_list ">
                     <li><router-link to="/">Home</router-link></li>
+					<li v-if="authInfo"><router-link to="/team-profile">Team Profile</router-link></li>
                     <li><a href="#about-section-id">About</a></li>
                     <li><a href="#first-section-id">Website</a></li>
                     <li><a href="#third-section-id">Apps</a></li>
@@ -83,6 +85,22 @@
 
 											<div class="prgp-drp-down">
 												<p>Upload your project</p>
+											</div>
+
+										</router-link>
+
+
+									</li>
+									<li class="dropdown-item">
+
+										<router-link to="/myProject">
+
+											<div class="img-drp-down">
+												<img class="hachib" src="/assets/img/upload-small.png" alt="">
+											</div>
+
+											<div class="prgp-drp-down">
+												<p>My Projects</p>
 											</div>
 
 										</router-link>

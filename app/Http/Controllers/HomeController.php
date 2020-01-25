@@ -30,6 +30,22 @@ class HomeController extends Controller
         return $project;
        
     }
+    public function getAllMyProject(){
+        if (!Auth::user()) {
+            return response()->json([
+                'msg' => "your are not auth user!!",
+            ], 401);
+        }
+         $project = [];
+         $id = Auth::user()->id;
+
+        $project = Project::where('user_id', $id )->orderBy('id','desc')->limit(3)->get();
+        // else{
+        //     $project = Project::where('type', 'Website')->orderBy('id', 'desc')->limit(4);
+        // }
+        return $project;
+       
+    }
     public function getProject(Request $request){
         $type = $request->type;
          $project = [];

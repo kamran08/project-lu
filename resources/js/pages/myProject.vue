@@ -60,16 +60,15 @@
                         <div class="col-md-12 col-sm-12">
                             <div class="authentication-name">
                                 <div class="name-item for-notification" v-for="(item,index) in alldata" :key="index">
-                                    <div class="image" v-if="item.user && item.user.image">
-                                        <img class="hachib" :src="item.user.image" alt="">
+                                    <div class="image" v-if="item && item.image">
+                                        <img class="hachib" :src="item.image" alt="">
                                     </div>
 
-                                    <div class="describe" >
+                                    <div class="describe">
 
-                                        <h3 class="member-name" v-if="item.user"><span>{{item.user.name}}</span>sent you a download request</h3>
-                                        <h3 class="member-name" v-if="item.email"><span>Email:</span>{{item.email}}</h3>
-                                        <p class="describe-p" v-if="item.user.student_id">{{item.user.student_id}}</p>
-                                        <p class="describe-p">{{item.reason}}</p>
+                                        <h3 class="member-name"><span>Mehedi Rahman</span>sent you a download request</h3>
+                                        <p class="describe-p">Student ID: 1612020051</p>
+                                        <p class="describe-p">He wants source code for learn how to apply code properly</p>
                                     </div>
                                     <div class="authentication save-and-exit-button ">
 
@@ -112,7 +111,7 @@ export default {
     },
     methods:{
         async getallRequest(){
-            const res = await this.callApi('get','getallrequest')
+            const res = await this.callApi('get','getAllMyProject')
             if(res.status==200){
                 this.alldata = res.data
             }
@@ -124,11 +123,25 @@ export default {
                 window.location = '/'
             }
         },
-        async deleteRequest(item,index){
+        async deleteMyProject(item,index){
             if (!confirm("Are you sure to delete this")) {
                 return;
             }
-            const res = await this.callApi('post', 'deleteRequest',item)
+            const res = await this.callApi('post', 'deleteMyProject',item)
+            if(res.status==200){
+                this.s("request has been deleted!!")
+                this.alldata.splice(index,1)
+            }
+            else if(res.status===401){
+                this.e(res.data.msg)
+            }
+            else{this.swr()}
+        },
+        async editMyProject(item,index){
+            if (!confirm("Are you sure to delete this")) {
+                return;
+            }
+            const res = await this.callApi('post', 'editMyProject',item)
             if(res.status==200){
                 this.s("request has been deleted!!")
                 this.alldata.splice(index,1)

@@ -38,6 +38,11 @@ Route::post('/app/storeReview', 'ReviewController@storeReview');
 Route::post('/app/deleteReview', 'ReviewController@deleteReview');
 
 
+// my project
+Route::get('/app/getAllMyProject', 'HomeController@getAllMyProject');
+Route::post('/app/getAllMyProject', 'HomeController@getAllMyProject');
+
+
 
 
 
