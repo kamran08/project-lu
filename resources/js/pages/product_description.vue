@@ -42,8 +42,8 @@
 
                                     <div class="person-cmt">
                                         <div class="comment-items">
-                                            <div class="col-md-1 img">
-                                                <img class="hachib" src="/assets/img/commntor.png" alt="">
+                                            <div class="col-md-1 img" v-if="authInfo.image">
+                                                <img class="hachib" :src="authInfo.image" alt="">
                                             </div>
 
                                             <div class="col-md-11 customer-rate">
@@ -84,7 +84,7 @@
                                         <div class="person-cmt">
                                             <div class="comment-items">
                                                 <div class="col-md-1 img" v-if="item.user && item.user.image">
-                                                    <img class="commentor" :src="user.image" alt="">
+                                                    <img class="commentor" :src="item.user.image" alt="">
                                                 </div>
     
                                                 <div class="col-md-5  name-r" v-if="item.user">
@@ -228,11 +228,18 @@
                                 </div>
                                 <div class="authentication download-button ">
 
-                                    <a :href="alldata.link" v-if="alldata.link">
+                                   
+
+                                    <a :href="alldata.link"  v-if="alldata.link">
                                         <button class="sign-now-button live-preview-button"><span><i
                                                     class="far fa-file-pdf"></i></span>Live preview</button>
                                     </a>
-                                    <router-link :to="'/download-request/'+alldata.id">
+
+                                    <a :href="alldata.book" :download="alldata.book" v-if="alldata.book" >
+                                        <button class="sign-now-button live-preview-button"><span><i
+                                                    class="far fa-file-pdf"></i></span>download book</button>
+                                    </a>
+                                    <router-link :to="'/download-request/'+alldata.id" v-if="!alldata.file">
                                         <button class="sign-now-button request-for-code-button">Request for
                                             code</button>
                                     </router-link>

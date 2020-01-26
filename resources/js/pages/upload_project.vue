@@ -145,8 +145,7 @@
                                                 <div class="_image_upload_pic">
                                                     <!-- Image -->
                                                     <div class="_upload_image" v-if="from.book">
-                                                        <img class="_image_upload_img" :src="from.book" alt="" title="">
-
+                                                        <span>{{from.book}}</span>
                                                         <p class="_1upload_edit" @click="from.book=false"><i class="fas fa-pen"></i></p>
                                                     </div>
                                                     <!-- Image -->

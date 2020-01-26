@@ -290,6 +290,7 @@
       </div>
 
       <div slot="footer">
+        <button class="add-now-button" @click="editModal=false">Cancel</button>
         <button class="add-now-button" @click="updateProject">Update</button>
       </div>
     </Modal>

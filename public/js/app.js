@@ -4341,6 +4341,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -4642,6 +4643,13 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -5894,7 +5902,6 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-//
 //
 //
 //
@@ -73144,6 +73151,19 @@ var render = function() {
               "button",
               {
                 staticClass: "add-now-button",
+                on: {
+                  click: function($event) {
+                    _vm.editModal = false
+                  }
+                }
+              },
+              [_vm._v("Cancel")]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "add-now-button",
                 on: { click: _vm.updateProject }
               },
               [_vm._v("Update")]
@@ -73688,7 +73708,17 @@ var render = function() {
                           [
                             _c("div", { staticClass: "person-cmt" }, [
                               _c("div", { staticClass: "comment-items" }, [
-                                _vm._m(1),
+                                _vm.authInfo.image
+                                  ? _c("div", { staticClass: "col-md-1 img" }, [
+                                      _c("img", {
+                                        staticClass: "hachib",
+                                        attrs: {
+                                          src: _vm.authInfo.image,
+                                          alt: ""
+                                        }
+                                      })
+                                    ])
+                                  : _vm._e(),
                                 _vm._v(" "),
                                 _c(
                                   "div",
@@ -73779,7 +73809,7 @@ var render = function() {
                                           _c("img", {
                                             staticClass: "commentor",
                                             attrs: {
-                                              src: _vm.user.image,
+                                              src: item.user.image,
                                               alt: ""
                                             }
                                           })
@@ -73984,13 +74014,13 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
+                _vm._m(1),
+                _vm._v(" "),
                 _vm._m(2),
                 _vm._v(" "),
                 _vm._m(3),
                 _vm._v(" "),
-                _vm._m(4),
-                _vm._v(" "),
-                _vm._m(5)
+                _vm._m(4)
               ])
             ]),
             _vm._v(" "),
@@ -73999,7 +74029,7 @@ var render = function() {
                 "div",
                 { staticClass: "authentication-card product-desc-card" },
                 [
-                  _vm._m(6),
+                  _vm._m(5),
                   _vm._v(" "),
                   _c("div", { staticClass: "rating" }, [
                     _c("div", { staticClass: "row" }, [
@@ -74034,7 +74064,7 @@ var render = function() {
                         : _vm._e(),
                       _vm._v(" "),
                       _c("div", { staticClass: "col-md-6 download" }, [
-                        _vm._m(7),
+                        _vm._m(6),
                         _vm._v(" "),
                         _c(
                           "a",
@@ -74052,7 +74082,7 @@ var render = function() {
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "code-advise" }, [
-                    _vm._m(8),
+                    _vm._m(7),
                     _vm._v(" "),
                     _c(
                       "div",
@@ -74060,30 +74090,47 @@ var render = function() {
                       [
                         _vm.alldata.link
                           ? _c("a", { attrs: { href: _vm.alldata.link } }, [
-                              _vm._m(9)
+                              _vm._m(8)
                             ])
                           : _vm._e(),
                         _vm._v(" "),
-                        _c(
-                          "router-link",
-                          {
-                            attrs: { to: "/download-request/" + _vm.alldata.id }
-                          },
-                          [
-                            _c(
-                              "button",
+                        _vm.alldata.book
+                          ? _c(
+                              "a",
                               {
-                                staticClass:
-                                  "sign-now-button request-for-code-button"
+                                attrs: {
+                                  href: _vm.alldata.book,
+                                  download: _vm.alldata.book
+                                }
+                              },
+                              [_vm._m(9)]
+                            )
+                          : _vm._e(),
+                        _vm._v(" "),
+                        !_vm.alldata.file
+                          ? _c(
+                              "router-link",
+                              {
+                                attrs: {
+                                  to: "/download-request/" + _vm.alldata.id
+                                }
                               },
                               [
-                                _vm._v(
-                                  "Request for\n                                        code"
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass:
+                                      "sign-now-button request-for-code-button"
+                                  },
+                                  [
+                                    _vm._v(
+                                      "Request for\n                                        code"
+                                    )
+                                  ]
                                 )
                               ]
                             )
-                          ]
-                        )
+                          : _vm._e()
                       ],
                       1
                     )
@@ -74193,17 +74240,6 @@ var staticRenderFns = [
           attrs: { src: "/assets/img/back-design-right-up.png", alt: "" }
         })
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-1 img" }, [
-      _c("img", {
-        staticClass: "hachib",
-        attrs: { src: "/assets/img/commntor.png", alt: "" }
-      })
     ])
   },
   function() {
@@ -74368,6 +74404,19 @@ var staticRenderFns = [
       [
         _c("span", [_c("i", { staticClass: "far fa-file-pdf" })]),
         _vm._v("Live preview")
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      { staticClass: "sign-now-button live-preview-button" },
+      [
+        _c("span", [_c("i", { staticClass: "far fa-file-pdf" })]),
+        _vm._v("download book")
       ]
     )
   },
@@ -76786,15 +76835,9 @@ var render = function() {
                                             "div",
                                             { staticClass: "_upload_image" },
                                             [
-                                              _c("img", {
-                                                staticClass:
-                                                  "_image_upload_img",
-                                                attrs: {
-                                                  src: _vm.from.book,
-                                                  alt: "",
-                                                  title: ""
-                                                }
-                                              }),
+                                              _c("span", [
+                                                _vm._v(_vm._s(_vm.from.book))
+                                              ]),
                                               _vm._v(" "),
                                               _c(
                                                 "p",
@@ -95439,8 +95482,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! G:\project-rakho\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! G:\project-rakho\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\project-lu\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\project-lu\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
