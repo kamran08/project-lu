@@ -1893,6 +1893,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_header_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/header.vue */ "./resources/js/components/header.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -2029,180 +2030,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    headerSection: _components_header_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
   data: function data() {
     return {
       from: {
@@ -2489,7 +2321,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  omponents: {
+  components: {
     headerSection: _components_header_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
@@ -3016,6 +2848,122 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/change_password.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/change_password.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_header_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/header.vue */ "./resources/js/components/header.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    headerSection: _components_header_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/download_request.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/download_request.vue?vue&type=script&lang=js& ***!
@@ -3027,6 +2975,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_header_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/header.vue */ "./resources/js/components/header.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -3088,7 +3037,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    headerSection: _components_header_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
   data: function data() {
     return {
       from: {
@@ -4025,6 +3980,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_header_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/header.vue */ "./resources/js/components/header.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -4086,7 +4042,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    headerSection: _components_header_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
   data: function data() {
     return {
       from: {
@@ -4212,6 +4173,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_header_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/header.vue */ "./resources/js/components/header.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -4454,69 +4416,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    headerSection: _components_header_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
   data: function data() {
     return {
       alldata: {},
@@ -4811,6 +4715,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_header_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/header.vue */ "./resources/js/components/header.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -5114,7 +5019,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    headerSection: _components_header_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
   data: function data() {
     return {
       alldata: {},
@@ -5302,6 +5212,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_header_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/header.vue */ "./resources/js/components/header.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -5369,7 +5280,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    headerSection: _components_header_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
   data: function data() {
     return {
       from: {
@@ -69645,14 +69564,16 @@ var render = function() {
       _c("div", { staticClass: "main-nav" }, [
         _c("div", { staticClass: "container" }, [
           _c("nav", { staticClass: "navigation" }, [
-            _c("div", { staticClass: "col-md-2" }, [
-              _c(
-                "div",
-                { staticClass: "logo-2" },
-                [_c("router-link", { attrs: { to: "home" } })],
-                1
-              )
-            ]),
+            _c(
+              "div",
+              { staticClass: "col-md-2" },
+              [
+                _c("router-link", { attrs: { to: "/" } }, [
+                  _c("div", { staticClass: "logo-1" })
+                ])
+              ],
+              1
+            ),
             _vm._v(" "),
             _c("div", { staticClass: "col-md-7 center" }, [
               _c("ul", { staticClass: "nav_list " }, [
@@ -69677,9 +69598,11 @@ var render = function() {
                 _c(
                   "li",
                   [
-                    _c("router-link", { attrs: { to: "/website" } }, [
-                      _vm._v("Website")
-                    ])
+                    _c(
+                      "router-link",
+                      { attrs: { to: "/all-template?type=Website" } },
+                      [_vm._v("Website")]
+                    )
                   ],
                   1
                 ),
@@ -69687,9 +69610,11 @@ var render = function() {
                 _c(
                   "li",
                   [
-                    _c("router-link", { attrs: { to: "/apps" } }, [
-                      _vm._v("Apps")
-                    ])
+                    _c(
+                      "router-link",
+                      { attrs: { to: "/all-template?type=Apps" } },
+                      [_vm._v("Apps")]
+                    )
                   ],
                   1
                 ),
@@ -69697,16 +69622,18 @@ var render = function() {
                 _c(
                   "li",
                   [
-                    _c("router-link", { attrs: { to: "/games" } }, [
-                      _vm._v("Games")
-                    ])
+                    _c(
+                      "router-link",
+                      { attrs: { to: "/all-template?type=Games" } },
+                      [_vm._v("Games")]
+                    )
                   ],
                   1
                 )
               ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-md-3" }, [
+            _c("div", { staticClass: "col-md-2" }, [
               _c("div", { staticClass: "dropdown" }, [
                 _vm._m(0),
                 _vm._v(" "),
@@ -69805,6 +69732,40 @@ var render = function() {
                                 [
                                   _c(
                                     "router-link",
+                                    { attrs: { to: "/myProject" } },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "img-drp-down" },
+                                        [
+                                          _c("img", {
+                                            staticClass: "hachib",
+                                            attrs: {
+                                              src:
+                                                "/assets/img/upload-small.png",
+                                              alt: ""
+                                            }
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "prgp-drp-down" },
+                                        [_c("p", [_vm._v("My Projects")])]
+                                      )
+                                    ]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "li",
+                                { staticClass: "dropdown-item" },
+                                [
+                                  _c(
+                                    "router-link",
                                     { attrs: { to: "team-profile" } },
                                     [
                                       _c(
@@ -69844,7 +69805,7 @@ var render = function() {
                                 [
                                   _c(
                                     "router-link",
-                                    { attrs: { to: "download-request" } },
+                                    { attrs: { to: "/allrequest" } },
                                     [
                                       _c(
                                         "div",
@@ -69864,13 +69825,7 @@ var render = function() {
                                       _c(
                                         "div",
                                         { staticClass: "prgp-drp-down" },
-                                        [
-                                          _c("p", [
-                                            _vm._v(
-                                              "See notification and request"
-                                            )
-                                          ])
-                                        ]
+                                        [_c("p", [_vm._v("See All requests")])]
                                       )
                                     ]
                                   )
@@ -70078,518 +70033,194 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "main-nav" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("nav", { staticClass: "navigation" }, [
-          _c(
-            "div",
-            { staticClass: "col-md-2" },
-            [
-              _c("router-link", { attrs: { to: "/" } }, [
-                _c("div", { staticClass: "logo-1" })
-              ])
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-8 center" }, [
-            _c("ul", { staticClass: "nav_list " }, [
-              _c(
-                "li",
-                [_c("router-link", { attrs: { to: "/" } }, [_vm._v("Home")])],
-                1
-              ),
-              _vm._v(" "),
-              _vm.authInfo
-                ? _c(
-                    "li",
-                    [
-                      _c("router-link", { attrs: { to: "/team-profile" } }, [
-                        _vm._v("Team Profile")
-                      ])
-                    ],
-                    1
-                  )
-                : _vm._e(),
-              _vm._v(" "),
-              _vm._m(0),
-              _vm._v(" "),
-              _vm._m(1),
-              _vm._v(" "),
-              _vm._m(2),
-              _vm._v(" "),
-              _vm._m(3)
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-2" }, [
-            _c("div", { staticClass: "dropdown" }, [
-              _vm._m(4),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "dropdown-content",
-                  attrs: { id: "myDropdown" }
-                },
-                [
-                  _c(
-                    "ul",
-                    { staticClass: "dropdown-item-wrap" },
-                    [
-                      _vm.authInfo
-                        ? [
-                            _c(
-                              "li",
-                              { staticClass: "dropdown-item" },
-                              [
-                                _c(
-                                  "router-link",
-                                  { attrs: { to: "add-member" } },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "img-drp-down " },
-                                      [
-                                        _c("img", {
-                                          staticClass: "hachib",
-                                          attrs: {
-                                            src:
-                                              "/assets/img/add-mem-small.png",
-                                            alt: ""
-                                          }
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "prgp-drp-down" },
-                                      [
-                                        _c("p", [
-                                          _vm._v(" Add your team member")
-                                        ])
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "li",
-                              { staticClass: "dropdown-item" },
-                              [
-                                _c(
-                                  "router-link",
-                                  { attrs: { to: "upload-project" } },
-                                  [
-                                    _c("div", { staticClass: "img-drp-down" }, [
-                                      _c("img", {
-                                        staticClass: "hachib",
-                                        attrs: {
-                                          src: "/assets/img/upload-small.png",
-                                          alt: ""
-                                        }
-                                      })
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "prgp-drp-down" },
-                                      [_c("p", [_vm._v("Upload your project")])]
-                                    )
-                                  ]
-                                )
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "li",
-                              { staticClass: "dropdown-item" },
-                              [
-                                _c(
-                                  "router-link",
-                                  { attrs: { to: "/myProject" } },
-                                  [
-                                    _c("div", { staticClass: "img-drp-down" }, [
-                                      _c("img", {
-                                        staticClass: "hachib",
-                                        attrs: {
-                                          src: "/assets/img/upload-small.png",
-                                          alt: ""
-                                        }
-                                      })
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "prgp-drp-down" },
-                                      [_c("p", [_vm._v("My Projects")])]
-                                    )
-                                  ]
-                                )
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "li",
-                              { staticClass: "dropdown-item" },
-                              [
-                                _c(
-                                  "router-link",
-                                  { attrs: { to: "team-profile" } },
-                                  [
-                                    _c("div", { staticClass: "img-drp-down" }, [
-                                      _c("img", {
-                                        staticClass: "hachib",
-                                        attrs: {
-                                          src: "/assets/img/team-pro.png",
-                                          alt: ""
-                                        }
-                                      })
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "prgp-drp-down" },
-                                      [
-                                        _c("p", [
-                                          _vm._v(
-                                            "See your team\n\t\t\t\t\t\t\t\t\t\t\t\t\tprofile"
-                                          )
-                                        ])
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "li",
-                              { staticClass: "dropdown-item" },
-                              [
-                                _c(
-                                  "router-link",
-                                  { attrs: { to: "/allrequest" } },
-                                  [
-                                    _c("div", { staticClass: "img-drp-down" }, [
-                                      _c("img", {
-                                        staticClass: "hachib",
-                                        attrs: {
-                                          src:
-                                            "/assets/img/notification-small.png",
-                                          alt: ""
-                                        }
-                                      })
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "prgp-drp-down" },
-                                      [_c("p", [_vm._v("See All requests")])]
-                                    )
-                                  ]
-                                )
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _vm._m(5)
-                          ]
-                        : [
-                            _c(
-                              "li",
-                              { staticClass: "dropdown-item" },
-                              [
-                                _c("router-link", { attrs: { to: "/login" } }, [
-                                  _c("div", { staticClass: "img-drp-down" }, [
-                                    _c("img", {
-                                      staticClass: "hachib",
-                                      attrs: {
-                                        src: "/assets/img/sign-out-small.png",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "prgp-drp-down" }, [
-                                    _c("p", [_vm._v("Log In")])
-                                  ])
-                                ])
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "li",
-                              { staticClass: "dropdown-item" },
-                              [
-                                _c(
-                                  "router-link",
-                                  { attrs: { to: "/registration" } },
-                                  [
-                                    _c("div", { staticClass: "img-drp-down" }, [
-                                      _c("img", {
-                                        staticClass: "hachib",
-                                        attrs: {
-                                          src: "/assets/img/sign-out-small.png",
-                                          alt: ""
-                                        }
-                                      })
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "prgp-drp-down" },
-                                      [_c("p", [_vm._v("Registration")])]
-                                    )
-                                  ]
-                                )
-                              ],
-                              1
-                            )
-                          ]
-                    ],
-                    2
-                  )
-                ]
-              )
-            ])
-          ])
-        ])
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "second-section-add-member content-bg ptb-30" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "section-content" }, [
-          _c("div", { staticClass: "authentication-row full-card" }, [
-            _vm._m(6),
-            _vm._v(" "),
-            _c("div", { staticClass: " col-sm-12 col-md-5" }, [
-              _c("div", { staticClass: "authentication-card auth-back" }, [
-                _vm._m(7),
+  return _c(
+    "div",
+    [
+      _c("headerSection"),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "second-section-add-member content-bg ptb-30" },
+        [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "section-content" }, [
+              _c("div", { staticClass: "authentication-row full-card" }, [
+                _vm._m(0),
                 _vm._v(" "),
-                _c("div", { staticClass: "authentication-log" }, [
-                  _c("div", { staticClass: "authentication-item" }, [
-                    _c("label", { attrs: { for: "input" } }, [
-                      _vm._v("User Name")
-                    ]),
+                _c("div", { staticClass: " col-sm-12 col-md-5" }, [
+                  _c("div", { staticClass: "authentication-card auth-back" }, [
+                    _vm._m(1),
                     _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.from.name,
-                          expression: "from.name"
-                        }
-                      ],
-                      attrs: { type: "text", placeholder: "User name " },
-                      domProps: { value: _vm.from.name },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.from, "name", $event.target.value)
-                        }
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "authentication-item" }, [
-                    _c("label", { attrs: { for: "input" } }, [
-                      _vm._v("Student ID")
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.from.student_id,
-                          expression: "from.student_id"
-                        }
-                      ],
-                      attrs: { type: "text", placeholder: "1612020051" },
-                      domProps: { value: _vm.from.student_id },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.from, "student_id", $event.target.value)
-                        }
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "authentication-item" }, [
-                    _c("label", { attrs: { for: "input" } }, [_vm._v("Batch")]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.from.batch,
-                          expression: "from.batch"
-                        }
-                      ],
-                      attrs: { type: "text", placeholder: "bach name" },
-                      domProps: { value: _vm.from.batch },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.from, "batch", $event.target.value)
-                        }
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "authentication-item" }, [
-                    _c("label", { attrs: { for: "input" } }, [
-                      _vm._v("Upload Photo")
-                    ]),
-                    _vm._v(" "),
-                    !_vm.from.image
-                      ? _c(
-                          "div",
-                          { staticClass: "_1upload_upload" },
-                          [
-                            _c(
-                              "Upload",
-                              {
-                                ref: "upload",
-                                attrs: {
-                                  name: "img",
-                                  "show-upload-list": false,
-                                  "on-success": _vm.handleSuccess,
-                                  format: ["jpg", "jpeg", "png"],
-                                  "max-size": 2048,
-                                  "on-format-error": _vm.handleFormatError,
-                                  "on-exceeded-size": _vm.handleMaxSize,
-                                  "before-upload": _vm.handleBeforeUpload,
-                                  type: "drag",
-                                  action: "/uploadImages"
-                                }
-                              },
-                              [
-                                _c("div", [
-                                  _c("div", { staticClass: "_1upload_main" }, [
-                                    _c("p", { staticClass: "_1upload_icon" }, [
-                                      _c("i", { staticClass: "fas fa-camera" })
-                                    ])
-                                  ])
-                                ])
-                              ]
-                            )
+                    _c("div", { staticClass: "authentication-log" }, [
+                      _c("div", { staticClass: "authentication-item" }, [
+                        _c("label", { attrs: { for: "input" } }, [
+                          _vm._v("User Name")
+                        ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.from.name,
+                              expression: "from.name"
+                            }
                           ],
-                          1
+                          attrs: { type: "text", placeholder: "User name " },
+                          domProps: { value: _vm.from.name },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(_vm.from, "name", $event.target.value)
+                            }
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "authentication-item" }, [
+                        _c("label", { attrs: { for: "input" } }, [
+                          _vm._v("Student ID")
+                        ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.from.student_id,
+                              expression: "from.student_id"
+                            }
+                          ],
+                          attrs: { type: "text", placeholder: "1612020051" },
+                          domProps: { value: _vm.from.student_id },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.from,
+                                "student_id",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "authentication-item" }, [
+                        _c("label", { attrs: { for: "input" } }, [
+                          _vm._v("Batch")
+                        ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.from.batch,
+                              expression: "from.batch"
+                            }
+                          ],
+                          attrs: { type: "text", placeholder: "bach name" },
+                          domProps: { value: _vm.from.batch },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(_vm.from, "batch", $event.target.value)
+                            }
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "authentication-item" }, [
+                        _c("label", { attrs: { for: "input" } }, [
+                          _vm._v("Upload Photo")
+                        ]),
+                        _vm._v(" "),
+                        !_vm.from.image
+                          ? _c(
+                              "div",
+                              { staticClass: "_1upload_upload" },
+                              [
+                                _c(
+                                  "Upload",
+                                  {
+                                    ref: "upload",
+                                    attrs: {
+                                      name: "img",
+                                      "show-upload-list": false,
+                                      "on-success": _vm.handleSuccess,
+                                      format: ["jpg", "jpeg", "png"],
+                                      "max-size": 2048,
+                                      "on-format-error": _vm.handleFormatError,
+                                      "on-exceeded-size": _vm.handleMaxSize,
+                                      "before-upload": _vm.handleBeforeUpload,
+                                      type: "drag",
+                                      action: "/uploadImages"
+                                    }
+                                  },
+                                  [
+                                    _c("div", [
+                                      _c(
+                                        "div",
+                                        { staticClass: "_1upload_main" },
+                                        [
+                                          _c(
+                                            "p",
+                                            { staticClass: "_1upload_icon" },
+                                            [
+                                              _c("i", {
+                                                staticClass: "fas fa-camera"
+                                              })
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ]
+                                )
+                              ],
+                              1
+                            )
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _vm.from.image
+                          ? _c("div", [
+                              _c("img", {
+                                attrs: { src: _vm.from.image, alt: "" }
+                              })
+                            ])
+                          : _vm._e()
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "authentication" }, [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "add-now-button",
+                            on: { click: _vm.addNewMemeber }
+                          },
+                          [_vm._v("Add now")]
                         )
-                      : _vm._e(),
-                    _vm._v(" "),
-                    _vm.from.image
-                      ? _c("div", [
-                          _c("img", { attrs: { src: _vm.from.image, alt: "" } })
-                        ])
-                      : _vm._e()
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "authentication" }, [
-                    _c(
-                      "button",
-                      {
-                        staticClass: "add-now-button",
-                        on: { click: _vm.addNewMemeber }
-                      },
-                      [_vm._v("Add now")]
-                    )
+                      ])
+                    ])
                   ])
                 ])
               ])
             ])
           ])
-        ])
-      ])
-    ])
-  ])
+        ]
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [
-      _c("a", { attrs: { href: "#about-section-id" } }, [_vm._v("About")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [
-      _c("a", { attrs: { href: "#first-section-id" } }, [_vm._v("Website")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [
-      _c("a", { attrs: { href: "#third-section-id" } }, [_vm._v("Apps")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [
-      _c("a", { attrs: { href: "#fifth-section-id" } }, [_vm._v("Games")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "button",
-      { staticClass: "nav-button", attrs: { onclick: "myFunction()" } },
-      [
-        _c("span", [_c("i", { staticClass: "fas fa-user-circle" })]),
-        _vm._v(" My Account")
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "dropdown-item" }, [
-      _c("a", { attrs: { href: "/logout" } }, [
-        _c("div", { staticClass: "img-drp-down" }, [
-          _c("img", {
-            staticClass: "hachib",
-            attrs: { src: "/assets/img/sign-out-small.png", alt: "" }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "prgp-drp-down" }, [
-          _c("p", [_vm._v("Sign out from website")])
-        ])
-      ])
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -71277,156 +70908,154 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [_c("headerSection"), _vm._v(" "), _vm._m(0)], 1)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c(
-        "div",
-        { staticClass: "second-section-add-member content-bg ptb-30" },
-        [
-          _c("div", { staticClass: "container" }, [
-            _c("div", { staticClass: "section-content" }, [
-              _c("div", { staticClass: "authentication-row full-card" }, [
-                _c("div", { staticClass: "col-md-7 col-sm-7" }, [
-                  _c("div", { staticClass: "authentication-name" }, [
-                    _c("div", { staticClass: "name-item" }, [
-                      _c("div", { staticClass: "image" }, [
-                        _c("img", {
-                          staticClass: "hachib",
-                          attrs: { src: "/assets/img/hachib.png", alt: "" }
+    return _c(
+      "div",
+      { staticClass: "second-section-add-member content-bg ptb-30" },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "section-content" }, [
+            _c("div", { staticClass: "authentication-row full-card" }, [
+              _c("div", { staticClass: "col-md-7 col-sm-7" }, [
+                _c("div", { staticClass: "authentication-name" }, [
+                  _c("div", { staticClass: "name-item" }, [
+                    _c("div", { staticClass: "image" }, [
+                      _c("img", {
+                        staticClass: "hachib",
+                        attrs: { src: "/assets/img/hachib.png", alt: "" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "describe" }, [
+                      _c("h3", { staticClass: "member-name" }, [
+                        _vm._v("Hachibur Rahaman")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "describe-p" }, [
+                        _vm._v("Student ID: 1612020051")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "describe-p" }, [
+                        _vm._v("Batch: 41'st")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "name-item" }, [
+                    _c("div", { staticClass: "image" }, [
+                      _c("img", {
+                        staticClass: "hachib",
+                        attrs: { src: "/assets/img/suhas.png", alt: "" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "describe" }, [
+                      _c("h3", { staticClass: "member-name" }, [
+                        _vm._v("Suhas Chowdhury")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "describe-p" }, [
+                        _vm._v("Student ID: 1612020053")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "describe-p" }, [
+                        _vm._v("Batch: 41'st")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "name-item" }, [
+                    _c("div", { staticClass: "image" }, [
+                      _c("img", {
+                        staticClass: "hachib",
+                        attrs: { src: "/assets/img/3rd-member.png", alt: "" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "describe" }, [
+                      _c("h3", { staticClass: "member-name" }, [
+                        _vm._v("Al Juned")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "describe-p" }, [
+                        _vm._v("Student ID: 1612020090")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "describe-p" }, [
+                        _vm._v("Batch: 41'st")
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-5 col-sm-5" }, [
+                _c("div", { staticClass: "authentication-card auth-back" }, [
+                  _c("div", { staticClass: "authentication-title" }, [
+                    _c("h3", [
+                      _c("span", [_vm._v("Change")]),
+                      _vm._v("password")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "authentication-log" }, [
+                    _c("form", { attrs: { action: "#" } }, [
+                      _c("div", { staticClass: "authentication-item" }, [
+                        _c("label", { attrs: { for: "input" } }, [
+                          _vm._v("Current password")
+                        ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          attrs: { type: "text", placeholder: "************" }
                         })
                       ]),
                       _vm._v(" "),
-                      _c("div", { staticClass: "describe" }, [
-                        _c("h3", { staticClass: "member-name" }, [
-                          _vm._v("Hachibur Rahaman")
+                      _c("div", { staticClass: "authentication-item" }, [
+                        _c("label", { attrs: { for: "input" } }, [
+                          _vm._v("New Password")
                         ]),
                         _vm._v(" "),
-                        _c("p", { staticClass: "describe-p" }, [
-                          _vm._v("Student ID: 1612020051")
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "describe-p" }, [
-                          _vm._v("Batch: 41'st")
-                        ])
+                        _c("input", {
+                          attrs: { type: "text", placeholder: "************" }
+                        })
                       ])
                     ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "name-item" }, [
-                      _c("div", { staticClass: "image" }, [
-                        _c("img", {
-                          staticClass: "hachib",
-                          attrs: { src: "/assets/img/suhas.png", alt: "" }
-                        })
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "describe" }, [
-                        _c("h3", { staticClass: "member-name" }, [
-                          _vm._v("Suhas Chowdhury")
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "describe-p" }, [
-                          _vm._v("Student ID: 1612020053")
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "describe-p" }, [
-                          _vm._v("Batch: 41'st")
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name-item" }, [
-                      _c("div", { staticClass: "image" }, [
-                        _c("img", {
-                          staticClass: "hachib",
-                          attrs: { src: "/assets/img/3rd-member.png", alt: "" }
-                        })
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "describe" }, [
-                        _c("h3", { staticClass: "member-name" }, [
-                          _vm._v("Al Juned")
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "describe-p" }, [
-                          _vm._v("Student ID: 1612020090")
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "describe-p" }, [
-                          _vm._v("Batch: 41'st")
+                    _c("div", { staticClass: "authentication " }, [
+                      _c("a", { attrs: { href: "home.html" } }, [
+                        _c("button", { staticClass: "add-now-button" }, [
+                          _vm._v("Add now")
                         ])
                       ])
                     ])
                   ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "col-md-5 col-sm-5" }, [
-                  _c("div", { staticClass: "authentication-card auth-back" }, [
-                    _c("div", { staticClass: "authentication-title" }, [
-                      _c("h3", [
-                        _c("span", [_vm._v("Change")]),
-                        _vm._v("password")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "authentication-log" }, [
-                      _c("form", { attrs: { action: "#" } }, [
-                        _c("div", { staticClass: "authentication-item" }, [
-                          _c("label", { attrs: { for: "input" } }, [
-                            _vm._v("Current password")
-                          ]),
-                          _vm._v(" "),
-                          _c("input", {
-                            attrs: { type: "text", placeholder: "************" }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "authentication-item" }, [
-                          _c("label", { attrs: { for: "input" } }, [
-                            _vm._v("New Password")
-                          ]),
-                          _vm._v(" "),
-                          _c("input", {
-                            attrs: { type: "text", placeholder: "************" }
-                          })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "authentication " }, [
-                        _c("a", { attrs: { href: "home.html" } }, [
-                          _c("button", { staticClass: "add-now-button" }, [
-                            _vm._v("Add now")
-                          ])
-                        ])
-                      ])
+                _c(
+                  "div",
+                  { staticClass: "authentication save-and-exit-button " },
+                  [
+                    _c("a", { attrs: { href: "home.html" } }, [
+                      _c(
+                        "button",
+                        { staticClass: "save-now-button change-pass-button" },
+                        [_vm._v("Save and exit")]
+                      )
                     ])
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "authentication save-and-exit-button " },
-                    [
-                      _c("a", { attrs: { href: "home.html" } }, [
-                        _c(
-                          "button",
-                          { staticClass: "save-now-button change-pass-button" },
-                          [_vm._v("Save and exit")]
-                        )
-                      ])
-                    ]
-                  )
-                ])
+                  ]
+                )
               ])
             ])
           ])
-        ]
-      )
-    ])
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -71628,166 +71257,188 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "second-section-account content-bg ptb-30" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "section-content" }, [
-          _c("div", { staticClass: "authentication-row full-card" }, [
-            _vm._m(0),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-7 col-sm-7" }, [
-              _c("div", { staticClass: "authentication-card auth-back" }, [
-                _vm._m(1),
-                _vm._v(" "),
-                _c("div", { staticClass: "authentication-log" }, [
-                  _c("div", { staticClass: "authentication-item" }, [
-                    _c("label", { attrs: { for: "input" } }, [
-                      _vm._v("User Name")
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.from.name,
-                          expression: "from.name"
-                        }
-                      ],
-                      attrs: {
-                        type: "text",
-                        placeholder: "User name or email"
-                      },
-                      domProps: { value: _vm.from.name },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.from, "name", $event.target.value)
-                        }
-                      }
-                    })
-                  ]),
+  return _c(
+    "div",
+    [
+      _c("headerSection"),
+      _vm._v(" "),
+      _c("div", { staticClass: "second-section-account content-bg ptb-30" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "section-content" }, [
+            _c("div", { staticClass: "authentication-row full-card" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-7 col-sm-7" }, [
+                _c("div", { staticClass: "authentication-card auth-back" }, [
+                  _vm._m(1),
                   _vm._v(" "),
-                  _c("div", { staticClass: "authentication-item" }, [
-                    _c("label", { attrs: { for: "input" } }, [
-                      _vm._v("Project Name")
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.from.projectName,
-                          expression: "from.projectName"
-                        }
-                      ],
-                      attrs: { type: "text", placeholder: "1612----56" },
-                      domProps: { value: _vm.from.projectName },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.from, "projectName", $event.target.value)
-                        }
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "authentication-item" }, [
-                    _c("label", { attrs: { for: "input" } }, [
-                      _vm._v("Student ID")
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.from.student_id,
-                          expression: "from.student_id"
-                        }
-                      ],
-                      attrs: { type: "text", placeholder: "1612----56" },
-                      domProps: { value: _vm.from.student_id },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.from, "student_id", $event.target.value)
-                        }
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "authentication-item" }, [
-                    _c("label", { attrs: { for: "input" } }, [
-                      _vm._v("Reason")
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "textarea",
-                      {
+                  _c("div", { staticClass: "authentication-log" }, [
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("User Name")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
                         directives: [
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.from.reason,
-                            expression: "from.reason"
+                            value: _vm.from.name,
+                            expression: "from.name"
                           }
                         ],
-                        staticClass: "textarea",
-                        domProps: { value: _vm.from.reason },
+                        attrs: {
+                          type: "text",
+                          placeholder: "User name or email"
+                        },
+                        domProps: { value: _vm.from.name },
                         on: {
                           input: function($event) {
                             if ($event.target.composing) {
                               return
                             }
-                            _vm.$set(_vm.from, "reason", $event.target.value)
+                            _vm.$set(_vm.from, "name", $event.target.value)
                           }
                         }
-                      },
-                      [_vm._v("Why you want source file? ")]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "authentication-item" }, [
-                    _c("label", { attrs: { for: "input" } }, [_vm._v("Email")]),
+                      })
+                    ]),
                     _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.from.email,
-                          expression: "from.email"
-                        }
-                      ],
-                      attrs: { type: "text", placeholder: "writer your email" },
-                      domProps: { value: _vm.from.email },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Project Name")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.from.projectName,
+                            expression: "from.projectName"
                           }
-                          _vm.$set(_vm.from, "email", $event.target.value)
+                        ],
+                        attrs: { type: "text", placeholder: "1612----56" },
+                        domProps: { value: _vm.from.projectName },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.from,
+                              "projectName",
+                              $event.target.value
+                            )
+                          }
                         }
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "authentication download-button" }, [
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Student ID")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.from.student_id,
+                            expression: "from.student_id"
+                          }
+                        ],
+                        attrs: { type: "text", placeholder: "1612----56" },
+                        domProps: { value: _vm.from.student_id },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.from,
+                              "student_id",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Reason")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "textarea",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.from.reason,
+                              expression: "from.reason"
+                            }
+                          ],
+                          staticClass: "textarea",
+                          domProps: { value: _vm.from.reason },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(_vm.from, "reason", $event.target.value)
+                            }
+                          }
+                        },
+                        [_vm._v("Why you want source file? ")]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Email")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.from.email,
+                            expression: "from.email"
+                          }
+                        ],
+                        attrs: {
+                          type: "text",
+                          placeholder: "writer your email"
+                        },
+                        domProps: { value: _vm.from.email },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.from, "email", $event.target.value)
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
                     _c(
-                      "button",
-                      {
-                        staticClass: "save-now-button",
-                        on: { click: _vm.sendRequest }
-                      },
-                      [_vm._v("Send a request")]
+                      "div",
+                      { staticClass: "authentication download-button" },
+                      [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "save-now-button",
+                            on: { click: _vm.sendRequest }
+                          },
+                          [_vm._v("Send a request")]
+                        )
+                      ]
                     )
                   ])
                 ])
@@ -71796,8 +71447,9 @@ var render = function() {
           ])
         ])
       ])
-    ])
-  ])
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
@@ -72870,104 +72522,113 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "second-section-account content-bg ptb-30 " }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "section-content" }, [
-          _c("div", { staticClass: "authentication-row" }, [
-            _vm._m(0),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-6 col-sm-6" }, [
-              _c("div", { staticClass: "authentication-card" }, [
-                _vm._m(1),
-                _vm._v(" "),
-                _c("div", { staticClass: "authentication-log" }, [
-                  _c("div", { staticClass: "authentication-item" }, [
-                    _c("label", { attrs: { for: "input" } }, [_vm._v("Email")]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.from.email,
-                          expression: "from.email"
-                        }
-                      ],
-                      attrs: { type: "text", placeholder: "User email" },
-                      domProps: { value: _vm.from.email },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.from, "email", $event.target.value)
-                        }
-                      }
-                    })
-                  ]),
+  return _c(
+    "div",
+    [
+      _c("headerSection"),
+      _vm._v(" "),
+      _c("div", { staticClass: "second-section-account content-bg ptb-30 " }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "section-content" }, [
+            _c("div", { staticClass: "authentication-row" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-6 col-sm-6" }, [
+                _c("div", { staticClass: "authentication-card" }, [
+                  _vm._m(1),
                   _vm._v(" "),
-                  _c("div", { staticClass: "authentication-item" }, [
-                    _c("label", { attrs: { for: "input" } }, [
-                      _vm._v("password")
+                  _c("div", { staticClass: "authentication-log" }, [
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Email")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.from.email,
+                            expression: "from.email"
+                          }
+                        ],
+                        attrs: { type: "text", placeholder: "User email" },
+                        domProps: { value: _vm.from.email },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.from, "email", $event.target.value)
+                          }
+                        }
+                      })
                     ]),
                     _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.from.password,
-                          expression: "from.password"
-                        }
-                      ],
-                      attrs: {
-                        type: "password",
-                        placeholder: "Enter password"
-                      },
-                      domProps: { value: _vm.from.password },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("password")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.from.password,
+                            expression: "from.password"
                           }
-                          _vm.$set(_vm.from, "password", $event.target.value)
-                        }
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _vm._m(2),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "authentication create-account-button" },
-                    [
-                      _c(
-                        "button",
-                        {
-                          staticClass: "sign-now-button",
-                          on: { click: _vm.login }
+                        ],
+                        attrs: {
+                          type: "password",
+                          placeholder: "Enter password"
                         },
-                        [_vm._v("Log in")]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "authentication-info" }, [
+                        domProps: { value: _vm.from.password },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.from, "password", $event.target.value)
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(2),
+                    _vm._v(" "),
                     _c(
-                      "p",
-                      { staticClass: "login-p" },
+                      "div",
+                      { staticClass: "authentication create-account-button" },
                       [
-                        _vm._v(
-                          "Don't use Project Rakho? \n                                            "
-                        ),
-                        _c("router-link", { attrs: { to: "/registration" } }, [
-                          _vm._v("Sign Up Now")
-                        ])
-                      ],
-                      1
-                    )
+                        _c(
+                          "button",
+                          {
+                            staticClass: "sign-now-button",
+                            on: { click: _vm.login }
+                          },
+                          [_vm._v("Log in")]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "authentication-info" }, [
+                      _c(
+                        "p",
+                        { staticClass: "login-p" },
+                        [
+                          _vm._v(
+                            "Don't use Project Rakho? \n                                            "
+                          ),
+                          _c(
+                            "router-link",
+                            { attrs: { to: "/registration" } },
+                            [_vm._v("Sign Up Now")]
+                          )
+                        ],
+                        1
+                      )
+                    ])
                   ])
                 ])
               ])
@@ -72975,8 +72636,9 @@ var render = function() {
           ])
         ])
       ])
-    ])
-  ])
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
@@ -73033,111 +72695,7 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("div", { staticClass: "mobile-menu" }, [
-        _c("div", { staticClass: "container" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _vm._m(1),
-          _vm._v(" "),
-          _c("div", { staticClass: "mobile-open-container" }, [
-            _c("div", { staticClass: "main-nav-list" }, [
-              _c("ul", { staticClass: "nav-content" }, [
-                _c(
-                  "li",
-                  [_c("router-link", { attrs: { to: "/" } }, [_vm._v("Home")])],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c("router-link", { attrs: { to: "/about" } }, [
-                      _vm._v("About")
-                    ])
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c("router-link", { attrs: { to: "/" } }, [
-                      _vm._v("Website")
-                    ])
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [_c("router-link", { attrs: { to: "/" } }, [_vm._v("Apps")])],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c("router-link", { attrs: { to: "/" } }, [_vm._v("Games")])
-                  ],
-                  1
-                )
-              ])
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "main-nav" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("nav", { staticClass: "navigation" }, [
-            _vm._m(2),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-8 center" }, [
-              _c("ul", { staticClass: "nav_list nav-exept-home" }, [
-                _c(
-                  "li",
-                  [_c("router-link", { attrs: { to: "/" } }, [_vm._v("Home")])],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c("router-link", { attrs: { to: "/about" } }, [
-                      _vm._v("About")
-                    ])
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c("router-link", { attrs: { to: "/" } }, [
-                      _vm._v("Website")
-                    ])
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [_c("router-link", { attrs: { to: "/" } }, [_vm._v("Apps")])],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c("router-link", { attrs: { to: "/" } }, [_vm._v("Games")])
-                  ],
-                  1
-                )
-              ])
-            ])
-          ])
-        ])
-      ]),
+      _c("headerSection"),
       _vm._v(" "),
       _c(
         "div",
@@ -73684,36 +73242,7 @@ var render = function() {
     1
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "right main-nav-brand" }, [
-      _c("a", { attrs: { href: "home.html" } }, [
-        _c("img", { attrs: { src: "assets/img/sitelogo.png", alt: "" } })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mobile-toggle" }, [
-      _c("span", [_c("i", { staticClass: "fas fa-bars" })])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-2" }, [
-      _c("a", { attrs: { href: "home.html" } }, [
-        _c("div", { staticClass: "logo-2" })
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -74141,184 +73670,96 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _vm._m(0),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass: "second-section-account content-bg product-desc-all ptb-30"
-      },
-      [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-8 col-sm-8 " }, [
-              _vm.alldata.image
-                ? _c("div", { staticClass: "image-part-left" }, [
-                    _c("img", {
-                      staticClass: "content-image",
-                      attrs: { src: _vm.alldata.image }
-                    })
-                  ])
-                : _vm._e(),
-              _vm._v(" "),
-              _c("div", { staticClass: "list " }, [
-                _c("ul", [
-                  _c(
-                    "li",
-                    {
-                      on: {
-                        click: function($event) {
-                          _vm.tab = 1
-                        }
-                      }
-                    },
-                    [
-                      _c("span", { class: _vm.tab == 1 ? "active-m" : "" }, [
-                        _vm._v("Description ")
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "li",
-                    {
-                      on: {
-                        click: function($event) {
-                          _vm.tab = 2
-                        }
-                      }
-                    },
-                    [
-                      _c("span", { class: _vm.tab == 2 ? "active-m" : "" }, [
-                        _vm._v("Review ")
-                      ])
-                    ]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _vm.tab == 2
-                ? _c("div", { staticClass: "text-part-left" }, [
+  return _c(
+    "div",
+    [
+      _c("headerSection"),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "second-section-account content-bg product-desc-all ptb-30"
+        },
+        [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8 col-sm-8 " }, [
+                _vm.alldata.image
+                  ? _c("div", { staticClass: "image-part-left" }, [
+                      _c("img", {
+                        staticClass: "content-image",
+                        attrs: { src: _vm.alldata.image }
+                      })
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
+                _c("div", { staticClass: "list " }, [
+                  _c("ul", [
                     _c(
-                      "div",
-                      { staticClass: "features ptb-20" },
+                      "li",
+                      {
+                        on: {
+                          click: function($event) {
+                            _vm.tab = 1
+                          }
+                        }
+                      },
                       [
-                        _c("h1", { staticClass: "product-review-h" }, [
-                          _vm._v("Review And Comment")
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "authentication-card person-comment-card"
-                          },
-                          [
-                            _c("div", { staticClass: "person-cmt" }, [
-                              _c("div", { staticClass: "comment-items" }, [
-                                _vm.authInfo.image
-                                  ? _c("div", { staticClass: "col-md-1 img" }, [
-                                      _c("img", {
-                                        staticClass: "hachib",
-                                        attrs: {
-                                          src: _vm.authInfo.image,
-                                          alt: ""
-                                        }
-                                      })
-                                    ])
-                                  : _vm._e(),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  { staticClass: "col-md-11 customer-rate" },
-                                  [
-                                    _c("Rate", {
-                                      model: {
-                                        value: _vm.cData.rate,
-                                        callback: function($$v) {
-                                          _vm.$set(_vm.cData, "rate", $$v)
-                                        },
-                                        expression: "cData.rate"
-                                      }
-                                    }),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "comment-box" }, [
-                                      _c("label", { attrs: { for: "input" } }, [
-                                        _vm._v("Type your comment")
-                                      ]),
-                                      _vm._v(" "),
-                                      _c(
-                                        "textarea",
-                                        {
-                                          directives: [
-                                            {
-                                              name: "model",
-                                              rawName: "v-model",
-                                              value: _vm.cData.comment,
-                                              expression: "cData.comment"
-                                            }
-                                          ],
-                                          staticClass: "textarea",
-                                          domProps: {
-                                            value: _vm.cData.comment
-                                          },
-                                          on: {
-                                            input: function($event) {
-                                              if ($event.target.composing) {
-                                                return
-                                              }
-                                              _vm.$set(
-                                                _vm.cData,
-                                                "comment",
-                                                $event.target.value
-                                              )
-                                            }
-                                          }
-                                        },
-                                        [_vm._v("Write your comment")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c("div", [
-                                        _c(
-                                          "button",
-                                          {
-                                            staticClass:
-                                              "add-now-button comment-btn",
-                                            on: { click: _vm.storeReview }
-                                          },
-                                          [_vm._v("Comment")]
-                                        )
-                                      ])
-                                    ])
-                                  ],
-                                  1
-                                )
-                              ])
-                            ])
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _vm._l(_vm.alldata.reviews, function(item, index) {
-                          return _c(
+                        _c("span", { class: _vm.tab == 1 ? "active-m" : "" }, [
+                          _vm._v("Description ")
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      {
+                        on: {
+                          click: function($event) {
+                            _vm.tab = 2
+                          }
+                        }
+                      },
+                      [
+                        _c("span", { class: _vm.tab == 2 ? "active-m" : "" }, [
+                          _vm._v("Review ")
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm.tab == 2
+                  ? _c("div", { staticClass: "text-part-left" }, [
+                      _c(
+                        "div",
+                        { staticClass: "features ptb-20" },
+                        [
+                          _c("h1", { staticClass: "product-review-h" }, [
+                            _vm._v("Review And Comment")
+                          ]),
+                          _vm._v(" "),
+                          _c(
                             "div",
                             {
-                              key: index,
                               staticClass:
-                                "authentication-card done-comment-card"
+                                "authentication-card person-comment-card"
                             },
                             [
                               _c("div", { staticClass: "person-cmt" }, [
                                 _c("div", { staticClass: "comment-items" }, [
-                                  item.user && item.user.image
+                                  _vm.authInfo.image
                                     ? _c(
                                         "div",
                                         { staticClass: "col-md-1 img" },
                                         [
                                           _c("img", {
-                                            staticClass: "commentor",
+                                            staticClass: "hachib",
                                             attrs: {
-                                              src: item.user.image,
+                                              src: _vm.authInfo.image,
                                               alt: ""
                                             }
                                           })
@@ -74326,406 +73767,527 @@ var render = function() {
                                       )
                                     : _vm._e(),
                                   _vm._v(" "),
-                                  item.user
-                                    ? _c(
-                                        "div",
-                                        { staticClass: "col-md-5  name-r" },
-                                        [
-                                          item.user.name
-                                            ? _c(
-                                                "p",
-                                                {
-                                                  staticClass:
-                                                    "name-of-customer"
-                                                },
-                                                [_vm._v(_vm._s(item.user.name))]
-                                              )
-                                            : _vm._e(),
-                                          _vm._v(" "),
-                                          _c(
-                                            "p",
-                                            {
-                                              staticClass: "opinion-of-customer"
-                                            },
-                                            [_vm._v(_vm._s(item.comment))]
-                                          )
-                                        ]
-                                      )
-                                    : _vm._e(),
-                                  _vm._v(" "),
                                   _c(
                                     "div",
-                                    { staticClass: "col-md-6 rate-and-date" },
+                                    { staticClass: "col-md-11 customer-rate" },
                                     [
+                                      _c("Rate", {
+                                        model: {
+                                          value: _vm.cData.rate,
+                                          callback: function($$v) {
+                                            _vm.$set(_vm.cData, "rate", $$v)
+                                          },
+                                          expression: "cData.rate"
+                                        }
+                                      }),
+                                      _vm._v(" "),
                                       _c(
                                         "div",
-                                        { staticClass: "rate-and-date-wrap" },
+                                        { staticClass: "comment-box" },
                                         [
-                                          _c("ul", [
-                                            _c(
-                                              "li",
-                                              { staticClass: "rate-l" },
-                                              [_vm._v("Rating :")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c("li", [
-                                              _c(
-                                                "span",
-                                                {
-                                                  class:
-                                                    item.rate > 0
-                                                      ? "gold-star"
-                                                      : ""
-                                                },
-                                                [
-                                                  _c("i", {
-                                                    staticClass: "fas fa-star"
-                                                  })
-                                                ]
-                                              )
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("li", [
-                                              _c(
-                                                "span",
-                                                {
-                                                  class:
-                                                    item.rate > 1
-                                                      ? "gold-star"
-                                                      : ""
-                                                },
-                                                [
-                                                  _c("i", {
-                                                    staticClass: "fas fa-star"
-                                                  })
-                                                ]
-                                              )
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("li", [
-                                              _c(
-                                                "span",
-                                                {
-                                                  class:
-                                                    item.rate > 2
-                                                      ? "gold-star"
-                                                      : ""
-                                                },
-                                                [
-                                                  _c("i", {
-                                                    staticClass: "fas fa-star"
-                                                  })
-                                                ]
-                                              )
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("li", [
-                                              _c(
-                                                "span",
-                                                {
-                                                  class:
-                                                    item.rate > 3
-                                                      ? "gold-star"
-                                                      : ""
-                                                },
-                                                [
-                                                  _c("i", {
-                                                    staticClass: "fas fa-star"
-                                                  })
-                                                ]
-                                              )
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("li", [
-                                              _c(
-                                                "span",
-                                                {
-                                                  class:
-                                                    item.rate > 4
-                                                      ? "gold-star"
-                                                      : ""
-                                                },
-                                                [
-                                                  _c("i", {
-                                                    staticClass: "fas fa-star"
-                                                  })
-                                                ]
-                                              )
-                                            ])
-                                          ]),
-                                          _vm._v(" "),
                                           _c(
-                                            "div",
-                                            { staticClass: "date-of-commnet" },
-                                            [
-                                              _c("p", [
-                                                _vm._v(_vm._s(item.created_at))
-                                              ])
-                                            ]
+                                            "label",
+                                            { attrs: { for: "input" } },
+                                            [_vm._v("Type your comment")]
                                           ),
                                           _vm._v(" "),
-                                          item.user && _vm.authInfo
-                                            ? _c(
-                                                "div",
+                                          _c(
+                                            "textarea",
+                                            {
+                                              directives: [
                                                 {
-                                                  staticClass: "date-of-commnet"
-                                                },
-                                                [
-                                                  item.user.id ==
-                                                  _vm.authInfo.id
-                                                    ? _c(
-                                                        "button",
-                                                        {
-                                                          on: {
-                                                            click: function(
-                                                              $event
-                                                            ) {
-                                                              return _vm.deleteReview(
-                                                                item.id,
-                                                                index
-                                                              )
-                                                            }
-                                                          }
-                                                        },
-                                                        [_vm._v("delete")]
-                                                      )
-                                                    : _vm._e()
-                                                ]
-                                              )
-                                            : _vm._e()
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value: _vm.cData.comment,
+                                                  expression: "cData.comment"
+                                                }
+                                              ],
+                                              staticClass: "textarea",
+                                              domProps: {
+                                                value: _vm.cData.comment
+                                              },
+                                              on: {
+                                                input: function($event) {
+                                                  if ($event.target.composing) {
+                                                    return
+                                                  }
+                                                  _vm.$set(
+                                                    _vm.cData,
+                                                    "comment",
+                                                    $event.target.value
+                                                  )
+                                                }
+                                              }
+                                            },
+                                            [_vm._v("Write your comment")]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("div", [
+                                            _c(
+                                              "button",
+                                              {
+                                                staticClass:
+                                                  "add-now-button comment-btn",
+                                                on: { click: _vm.storeReview }
+                                              },
+                                              [_vm._v("Comment")]
+                                            )
+                                          ])
                                         ]
                                       )
-                                    ]
+                                    ],
+                                    1
                                   )
                                 ])
                               ])
                             ]
-                          )
-                        })
-                      ],
-                      2
-                    )
-                  ])
-                : _vm._e(),
-              _vm._v(" "),
-              _c("div", { staticClass: "text-part-left" }, [
-                _c("div", { staticClass: "about-product border-b ptb-20" }, [
-                  _c("h1", { staticClass: "product-desc-h" }, [
-                    _vm._v("About this product")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      " \n                                " +
-                        _vm._s(_vm.alldata.description) +
-                        "\n                            "
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _vm._m(1),
-                _vm._v(" "),
-                _vm._m(2),
-                _vm._v(" "),
-                _vm._m(3),
-                _vm._v(" "),
-                _vm._m(4)
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-4 col-sm-4" }, [
-              _c(
-                "div",
-                { staticClass: "authentication-card product-desc-card" },
-                [
-                  _vm._m(5),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "rating" }, [
-                    _c("div", { staticClass: "row" }, [
-                      _vm.alldata.avgreview
-                        ? _c("div", { staticClass: "col-md-6 rate-side" }, [
-                            _c("p", [
-                              _vm._v("Rating "),
-                              _c(
-                                "span",
-                                [
-                                  _c("Rate", {
-                                    attrs: { "show-text": "" },
-                                    model: {
-                                      value:
-                                        _vm.alldata.avgreview.averageRating,
-                                      callback: function($$v) {
-                                        _vm.$set(
-                                          _vm.alldata.avgreview,
-                                          "averageRating",
-                                          $$v
-                                        )
-                                      },
-                                      expression:
-                                        "alldata.avgreview.averageRating"
-                                    }
-                                  })
-                                ],
-                                1
-                              )
-                            ])
-                          ])
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-md-6 download" }, [
-                        _vm._m(6),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "get-source",
-                            attrs: {
-                              href: _vm.alldata.file,
-                              download: _vm.alldata.file
-                            }
-                          },
-                          [_vm._v("Get source code")]
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "code-advise" }, [
-                    _vm._m(7),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "authentication download-button " },
-                      [
-                        _vm.alldata.link
-                          ? _c("a", { attrs: { href: _vm.alldata.link } }, [
-                              _vm._m(8)
-                            ])
-                          : _vm._e(),
-                        _vm._v(" "),
-                        _vm.alldata.book
-                          ? _c(
-                              "a",
+                          ),
+                          _vm._v(" "),
+                          _vm._l(_vm.alldata.reviews, function(item, index) {
+                            return _c(
+                              "div",
                               {
-                                attrs: {
-                                  href: _vm.alldata.book,
-                                  download: _vm.alldata.book
-                                }
-                              },
-                              [_vm._m(9)]
-                            )
-                          : _vm._e(),
-                        _vm._v(" "),
-                        !_vm.alldata.file
-                          ? _c(
-                              "router-link",
-                              {
-                                attrs: {
-                                  to: "/download-request/" + _vm.alldata.id
-                                }
+                                key: index,
+                                staticClass:
+                                  "authentication-card done-comment-card"
                               },
                               [
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass:
-                                      "sign-now-button request-for-code-button"
-                                  },
-                                  [
-                                    _vm._v(
-                                      "Request for\n                                        code"
+                                _c("div", { staticClass: "person-cmt" }, [
+                                  _c("div", { staticClass: "comment-items" }, [
+                                    item.user && item.user.image
+                                      ? _c(
+                                          "div",
+                                          { staticClass: "col-md-1 img" },
+                                          [
+                                            _c("img", {
+                                              staticClass: "commentor",
+                                              attrs: {
+                                                src: item.user.image,
+                                                alt: ""
+                                              }
+                                            })
+                                          ]
+                                        )
+                                      : _vm._e(),
+                                    _vm._v(" "),
+                                    item.user
+                                      ? _c(
+                                          "div",
+                                          { staticClass: "col-md-5  name-r" },
+                                          [
+                                            item.user.name
+                                              ? _c(
+                                                  "p",
+                                                  {
+                                                    staticClass:
+                                                      "name-of-customer"
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      _vm._s(item.user.name)
+                                                    )
+                                                  ]
+                                                )
+                                              : _vm._e(),
+                                            _vm._v(" "),
+                                            _c(
+                                              "p",
+                                              {
+                                                staticClass:
+                                                  "opinion-of-customer"
+                                              },
+                                              [_vm._v(_vm._s(item.comment))]
+                                            )
+                                          ]
+                                        )
+                                      : _vm._e(),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "col-md-6 rate-and-date" },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "rate-and-date-wrap" },
+                                          [
+                                            _c("ul", [
+                                              _c(
+                                                "li",
+                                                { staticClass: "rate-l" },
+                                                [_vm._v("Rating :")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("li", [
+                                                _c(
+                                                  "span",
+                                                  {
+                                                    class:
+                                                      item.rate > 0
+                                                        ? "gold-star"
+                                                        : ""
+                                                  },
+                                                  [
+                                                    _c("i", {
+                                                      staticClass: "fas fa-star"
+                                                    })
+                                                  ]
+                                                )
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("li", [
+                                                _c(
+                                                  "span",
+                                                  {
+                                                    class:
+                                                      item.rate > 1
+                                                        ? "gold-star"
+                                                        : ""
+                                                  },
+                                                  [
+                                                    _c("i", {
+                                                      staticClass: "fas fa-star"
+                                                    })
+                                                  ]
+                                                )
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("li", [
+                                                _c(
+                                                  "span",
+                                                  {
+                                                    class:
+                                                      item.rate > 2
+                                                        ? "gold-star"
+                                                        : ""
+                                                  },
+                                                  [
+                                                    _c("i", {
+                                                      staticClass: "fas fa-star"
+                                                    })
+                                                  ]
+                                                )
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("li", [
+                                                _c(
+                                                  "span",
+                                                  {
+                                                    class:
+                                                      item.rate > 3
+                                                        ? "gold-star"
+                                                        : ""
+                                                  },
+                                                  [
+                                                    _c("i", {
+                                                      staticClass: "fas fa-star"
+                                                    })
+                                                  ]
+                                                )
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("li", [
+                                                _c(
+                                                  "span",
+                                                  {
+                                                    class:
+                                                      item.rate > 4
+                                                        ? "gold-star"
+                                                        : ""
+                                                  },
+                                                  [
+                                                    _c("i", {
+                                                      staticClass: "fas fa-star"
+                                                    })
+                                                  ]
+                                                )
+                                              ])
+                                            ]),
+                                            _vm._v(" "),
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass: "date-of-commnet"
+                                              },
+                                              [
+                                                _c("p", [
+                                                  _vm._v(
+                                                    _vm._s(item.created_at)
+                                                  )
+                                                ])
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            item.user && _vm.authInfo
+                                              ? _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "date-of-commnet"
+                                                  },
+                                                  [
+                                                    item.user.id ==
+                                                    _vm.authInfo.id
+                                                      ? _c(
+                                                          "button",
+                                                          {
+                                                            on: {
+                                                              click: function(
+                                                                $event
+                                                              ) {
+                                                                return _vm.deleteReview(
+                                                                  item.id,
+                                                                  index
+                                                                )
+                                                              }
+                                                            }
+                                                          },
+                                                          [_vm._v("delete")]
+                                                        )
+                                                      : _vm._e()
+                                                  ]
+                                                )
+                                              : _vm._e()
+                                          ]
+                                        )
+                                      ]
                                     )
-                                  ]
-                                )
+                                  ])
+                                ])
                               ]
                             )
-                          : _vm._e()
-                      ],
-                      1
-                    )
-                  ])
-                ]
-              ),
+                          })
+                        ],
+                        2
+                      )
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
+                _c("div", { staticClass: "text-part-left" }, [
+                  _c("div", { staticClass: "about-product border-b ptb-20" }, [
+                    _c("h1", { staticClass: "product-desc-h" }, [
+                      _vm._v("About this product")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        " \n                                " +
+                          _vm._s(_vm.alldata.description) +
+                          "\n                            "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(1),
+                  _vm._v(" "),
+                  _vm._m(2),
+                  _vm._v(" "),
+                  _vm._m(3),
+                  _vm._v(" "),
+                  _vm._m(4)
+                ])
+              ]),
               _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "authentication-card product-desc-card" },
-                [
-                  _c("div", { staticClass: "advertisement" }, [
-                    _c("p", [
-                      _c("span", [_vm._v("Upload")]),
+              _c("div", { staticClass: "col-md-4 col-sm-4" }, [
+                _c(
+                  "div",
+                  { staticClass: "authentication-card product-desc-card" },
+                  [
+                    _vm._m(5),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "rating" }, [
+                      _c("div", { staticClass: "row" }, [
+                        _vm.alldata.avgreview
+                          ? _c("div", { staticClass: "col-md-6 rate-side" }, [
+                              _c("p", [
+                                _vm._v("Rating "),
+                                _c(
+                                  "span",
+                                  [
+                                    _c("Rate", {
+                                      attrs: { "show-text": "" },
+                                      model: {
+                                        value:
+                                          _vm.alldata.avgreview.averageRating,
+                                        callback: function($$v) {
+                                          _vm.$set(
+                                            _vm.alldata.avgreview,
+                                            "averageRating",
+                                            $$v
+                                          )
+                                        },
+                                        expression:
+                                          "alldata.avgreview.averageRating"
+                                      }
+                                    })
+                                  ],
+                                  1
+                                )
+                              ])
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-md-6 download" }, [
+                          _vm._m(6),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass: "get-source",
+                              attrs: {
+                                href: _vm.alldata.file,
+                                download: _vm.alldata.file
+                              }
+                            },
+                            [_vm._v("Get source code")]
+                          )
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "code-advise" }, [
+                      _vm._m(7),
                       _vm._v(" "),
-                      _c("span", { staticClass: "flt-right" }, [
-                        _vm._v(_vm._s(_vm.alldata.created_at.substring(0, 10)))
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _c("span", [_vm._v("Last Update")]),
-                      _c("span", { staticClass: "flt-right" }, [
-                        _vm._v(_vm._s(_vm.alldata.updated_at.substring(0, 10)))
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _c("span", [_vm._v("Catagories")]),
-                      _c("span", { staticClass: "flt-right" }, [
-                        _vm._v(_vm._s(_vm.alldata.category))
+                      _c(
+                        "div",
+                        { staticClass: "authentication download-button " },
+                        [
+                          _vm.alldata.link
+                            ? _c("a", { attrs: { href: _vm.alldata.link } }, [
+                                _vm._m(8)
+                              ])
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm.alldata.book
+                            ? _c(
+                                "a",
+                                {
+                                  attrs: {
+                                    href: _vm.alldata.book,
+                                    download: _vm.alldata.book
+                                  }
+                                },
+                                [_vm._m(9)]
+                              )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          !_vm.alldata.file
+                            ? _c(
+                                "router-link",
+                                {
+                                  attrs: {
+                                    to: "/download-request/" + _vm.alldata.id
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "sign-now-button request-for-code-button"
+                                    },
+                                    [
+                                      _vm._v(
+                                        "Request for\n                                        code"
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            : _vm._e()
+                        ],
+                        1
+                      )
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "authentication-card product-desc-card" },
+                  [
+                    _c("div", { staticClass: "advertisement" }, [
+                      _c("p", [
+                        _c("span", [_vm._v("Upload")]),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "flt-right" }, [
+                          _vm._v(
+                            _vm._s(_vm.alldata.created_at.substring(0, 10))
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("span", [_vm._v("Last Update")]),
+                        _c("span", { staticClass: "flt-right" }, [
+                          _vm._v(
+                            _vm._s(_vm.alldata.updated_at.substring(0, 10))
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("span", [_vm._v("Catagories")]),
+                        _c("span", { staticClass: "flt-right" }, [
+                          _vm._v(_vm._s(_vm.alldata.category))
+                        ])
                       ])
                     ])
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "authentication-card product-desc-card" },
-                [
-                  _vm._m(10),
-                  _vm._v(" "),
-                  _vm.alldata.team
-                    ? _c(
-                        "div",
-                        { staticClass: "member-name" },
-                        _vm._l(_vm.alldata.team, function(item, index) {
-                          return _c(
-                            "div",
-                            { key: index, staticClass: "name-item" },
-                            [
-                              item.image
-                                ? _c("div", { staticClass: "image" }, [
-                                    _c("img", {
-                                      staticClass: "hachib",
-                                      attrs: { src: item.image, alt: "" }
-                                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "authentication-card product-desc-card" },
+                  [
+                    _vm._m(10),
+                    _vm._v(" "),
+                    _vm.alldata.team
+                      ? _c(
+                          "div",
+                          { staticClass: "member-name" },
+                          _vm._l(_vm.alldata.team, function(item, index) {
+                            return _c(
+                              "div",
+                              { key: index, staticClass: "name-item" },
+                              [
+                                item.image
+                                  ? _c("div", { staticClass: "image" }, [
+                                      _c("img", {
+                                        staticClass: "hachib",
+                                        attrs: { src: item.image, alt: "" }
+                                      })
+                                    ])
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "name" }, [
+                                  _c("h3", [_vm._v(_vm._s(item.name))]),
+                                  _vm._v(" "),
+                                  _c("p", { staticClass: "describe-p" }, [
+                                    _vm._v(
+                                      "Student Id: " + _vm._s(item.user_id)
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("p", { staticClass: "describe-p" }, [
+                                    _vm._v("Batch: " + _vm._s(item.batch))
                                   ])
-                                : _vm._e(),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "name" }, [
-                                _c("h3", [_vm._v(_vm._s(item.name))]),
-                                _vm._v(" "),
-                                _c("p", { staticClass: "describe-p" }, [
-                                  _vm._v("Student Id: " + _vm._s(item.user_id))
-                                ]),
-                                _vm._v(" "),
-                                _c("p", { staticClass: "describe-p" }, [
-                                  _vm._v("Batch: " + _vm._s(item.batch))
                                 ])
-                              ])
-                            ]
-                          )
-                        }),
-                        0
-                      )
-                    : _vm._e()
-                ]
-              )
+                              ]
+                            )
+                          }),
+                          0
+                        )
+                      : _vm._e()
+                  ]
+                )
+              ])
             ])
           ])
-        ])
-      ]
-    )
-  ])
+        ]
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
@@ -76007,222 +75569,231 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "second-section-account content-bg ptb-30" },
     [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "section-content" }, [
-          _c("div", { staticClass: "authentication-row" }, [
-            _vm._m(0),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-6 col-12" }, [
-              _c("div", { staticClass: "authentication-card" }, [
-                _vm._m(1),
-                _vm._v(" "),
-                _c("div", { staticClass: "authentication-log" }, [
-                  _c("div", { staticClass: "authentication-item" }, [
-                    _c("label", { attrs: { for: "input" } }, [
-                      _vm._v("Full Name")
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.from.name,
-                          expression: "from.name"
-                        }
-                      ],
-                      attrs: { type: "text", placeholder: "First Name Here" },
-                      domProps: { value: _vm.from.name },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.from, "name", $event.target.value)
-                        }
-                      }
-                    })
-                  ]),
+      _c("headerSection"),
+      _vm._v(" "),
+      _c("div", { staticClass: "second-section-account content-bg ptb-30" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "section-content" }, [
+            _c("div", { staticClass: "authentication-row" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-6 col-12" }, [
+                _c("div", { staticClass: "authentication-card" }, [
+                  _vm._m(1),
                   _vm._v(" "),
-                  _c("div", { staticClass: "authentication-item" }, [
-                    _c("label", { attrs: { for: "input" } }, [
-                      _vm._v("Student ID")
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.from.student_id,
-                          expression: "from.student_id"
-                        }
-                      ],
-                      attrs: { type: "text", placeholder: "1612----56" },
-                      domProps: { value: _vm.from.student_id },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.from, "student_id", $event.target.value)
-                        }
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "authentication-item" }, [
-                    _c("label", { attrs: { for: "input" } }, [_vm._v("Batch")]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.from.batch,
-                          expression: "from.batch"
-                        }
-                      ],
-                      attrs: { type: "text", placeholder: "41" },
-                      domProps: { value: _vm.from.batch },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.from, "batch", $event.target.value)
-                        }
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "authentication-item" }, [
-                    _c("label", { attrs: { for: "input" } }, [
-                      _vm._v("Email Address")
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.from.email,
-                          expression: "from.email"
-                        }
-                      ],
-                      attrs: {
-                        type: "text",
-                        placeholder: "your-email@domail.com"
-                      },
-                      domProps: { value: _vm.from.email },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.from, "email", $event.target.value)
-                        }
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "authentication-item" }, [
-                    _c("label", { attrs: { for: "input" } }, [
-                      _vm._v("Password")
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.from.password,
-                          expression: "from.password"
-                        }
-                      ],
-                      attrs: { type: "text", placeholder: "" },
-                      domProps: { value: _vm.from.password },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.from, "password", $event.target.value)
-                        }
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "authentication-item" }, [
-                    _c("label", { attrs: { for: "input" } }, [
-                      _vm._v("Confirm Password")
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.confirmpassword,
-                          expression: "confirmpassword"
-                        }
-                      ],
-                      attrs: { type: "password", placeholder: "" },
-                      domProps: { value: _vm.confirmpassword },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.confirmpassword = $event.target.value
-                        }
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "p",
-                    { staticClass: "authentication-p" },
-                    [
-                      _vm._v(
-                        "Your personal data will be used to support your experience through your websites.to manage access to your account and for other purposes described in our "
-                      ),
-                      _c("router-link", { attrs: { to: "#" } }, [
-                        _vm._v("privacy policy")
+                  _c("div", { staticClass: "authentication-log" }, [
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Full Name")
                       ]),
-                      _vm._v(".")
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "authentication create-account-button" },
-                    [
-                      _c(
-                        "button",
-                        {
-                          staticClass: "sign-now-button",
-                          on: { click: _vm.registerUser }
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.from.name,
+                            expression: "from.name"
+                          }
+                        ],
+                        attrs: { type: "text", placeholder: "First Name Here" },
+                        domProps: { value: _vm.from.name },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.from, "name", $event.target.value)
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Student ID")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.from.student_id,
+                            expression: "from.student_id"
+                          }
+                        ],
+                        attrs: { type: "text", placeholder: "1612----56" },
+                        domProps: { value: _vm.from.student_id },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.from,
+                              "student_id",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Batch")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.from.batch,
+                            expression: "from.batch"
+                          }
+                        ],
+                        attrs: { type: "text", placeholder: "41" },
+                        domProps: { value: _vm.from.batch },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.from, "batch", $event.target.value)
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Email Address")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.from.email,
+                            expression: "from.email"
+                          }
+                        ],
+                        attrs: {
+                          type: "text",
+                          placeholder: "your-email@domail.com"
                         },
-                        [_vm._v("Sign up")]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "authentication-info" }, [
+                        domProps: { value: _vm.from.email },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.from, "email", $event.target.value)
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Password")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.from.password,
+                            expression: "from.password"
+                          }
+                        ],
+                        attrs: { type: "text", placeholder: "" },
+                        domProps: { value: _vm.from.password },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.from, "password", $event.target.value)
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "authentication-item" }, [
+                      _c("label", { attrs: { for: "input" } }, [
+                        _vm._v("Confirm Password")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.confirmpassword,
+                            expression: "confirmpassword"
+                          }
+                        ],
+                        attrs: { type: "password", placeholder: "" },
+                        domProps: { value: _vm.confirmpassword },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.confirmpassword = $event.target.value
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
                     _c(
                       "p",
+                      { staticClass: "authentication-p" },
                       [
-                        _vm._v("Already have an account? "),
-                        _c("router-link", { attrs: { to: "/login" } }, [
-                          _vm._v("Log in Now")
-                        ])
+                        _vm._v(
+                          "Your personal data will be used to support your experience through your websites.to manage access to your account and for other purposes described in our "
+                        ),
+                        _c("router-link", { attrs: { to: "#" } }, [
+                          _vm._v("privacy policy")
+                        ]),
+                        _vm._v(".")
                       ],
                       1
-                    )
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "authentication create-account-button" },
+                      [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "sign-now-button",
+                            on: { click: _vm.registerUser }
+                          },
+                          [_vm._v("Sign up")]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "authentication-info" }, [
+                      _c(
+                        "p",
+                        [
+                          _vm._v("Already have an account? "),
+                          _c("router-link", { attrs: { to: "/login" } }, [
+                            _vm._v("Log in Now")
+                          ])
+                        ],
+                        1
+                      )
+                    ])
                   ])
                 ])
               ])
@@ -76230,7 +75801,8 @@ var render = function() {
           ])
         ])
       ])
-    ]
+    ],
+    1
   )
 }
 var staticRenderFns = [
@@ -94708,15 +94280,17 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _change_password_vue_vue_type_template_id_3017baf1___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./change_password.vue?vue&type=template&id=3017baf1& */ "./resources/js/pages/change_password.vue?vue&type=template&id=3017baf1&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _change_password_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./change_password.vue?vue&type=script&lang=js& */ "./resources/js/pages/change_password.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _change_password_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _change_password_vue_vue_type_template_id_3017baf1___WEBPACK_IMPORTED_MODULE_0__["render"],
   _change_password_vue_vue_type_template_id_3017baf1___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -94730,6 +94304,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/pages/change_password.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/pages/change_password.vue?vue&type=script&lang=js&":
+/*!*************************************************************************!*\
+  !*** ./resources/js/pages/change_password.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_change_password_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./change_password.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/change_password.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_change_password_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -95991,8 +95579,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\project-lu\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\project-lu\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! G:\project-rakho\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! G:\project-rakho\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -4,24 +4,26 @@
 		<div class="main-nav">
 			<div class="container">
 				<nav class="navigation">
-					<div class="col-md-2">
-						<div class="logo-2">
-							<router-link to="home"></router-link>
-						</div>
-					</div>
+					 <div class="col-md-2">
+                <router-link to="/">
+                    <div class="logo-1">
+
+                    </div>
+                </router-link>
+            </div>
 					<div class="col-md-7 center">
 						<ul class="nav_list ">
 							<li><router-link to="/">Home</router-link></li>
 							<li v-if="authInfo"><router-link to="/team-profile">Team Profile</router-link></li>
-							<li><router-link to="/website">Website</router-link></li>
-							<li><router-link to="/apps">Apps</router-link></li>
-							<li><router-link to="/games">Games</router-link></li>
+							<li><router-link to="/all-template?type=Website">Website</router-link></li>
+							<li><router-link to="/all-template?type=Apps">Apps</router-link></li>
+							<li><router-link to="/all-template?type=Games">Games</router-link></li>
 							
 
 						</ul>
 					</div>
 
-					<div class="col-md-3">
+									<div class="col-md-2">
 						<div class="dropdown">
 							<button onclick="myFunction()" class="nav-button"> <span><i
 										class="fas fa-user-circle"></i></span> My Account</button>
@@ -60,6 +62,22 @@
 
 
 									</li>
+									<li class="dropdown-item">
+
+										<router-link to="/myProject">
+
+											<div class="img-drp-down">
+												<img class="hachib" src="/assets/img/upload-small.png" alt="">
+											</div>
+
+											<div class="prgp-drp-down">
+												<p>My Projects</p>
+											</div>
+
+										</router-link>
+
+
+									</li>
 
 									<li class="dropdown-item">
 
@@ -80,13 +98,13 @@
 									</li>
 									<li class="dropdown-item">
 
-										<router-link to="download-request">
+										<router-link to="/allrequest">
 											<div class="img-drp-down">
 												<img class="hachib" src="/assets/img/notification-small.png" alt="">
 											</div>
 
 											<div class="prgp-drp-down">
-												<p>See notification and request</p>
+												<p>See All requests</p>
 											</div>
 
 										</router-link>

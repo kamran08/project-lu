@@ -1,5 +1,6 @@
 <template>
     <div>
+        
         <div class="all-temp-header">
             <div class="container">
                 <h1 class="Product-Header">Ecommerce website template</h1>

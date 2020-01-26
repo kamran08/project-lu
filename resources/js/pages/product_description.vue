@@ -1,5 +1,6 @@
 <template>
     <div>
+        <headerSection/>
         <div class="all-temp-header">
             <div class="container">
                 <h1 class="Product-Header Product-desc-header">Ecommerce website template</h1>
@@ -296,7 +297,11 @@
 </template>
 
 <script>
+import headerSection from '../components/header.vue'
 export default {
+    components:{
+      headerSection,
+        },
     data(){
         return{
         alldata:{},

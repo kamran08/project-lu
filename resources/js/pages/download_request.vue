@@ -1,5 +1,7 @@
 <template>
     <div>
+         <headerSection/>
+
          <div class="second-section-account content-bg ptb-30">
             <div class="container">
                 <div class="section-content">
@@ -54,7 +56,11 @@
     </div>
 </template>
 <script>
+import headerSection from '../components/header.vue'
 export default {
+     components:{
+      headerSection,
+        },
     data(){
         return{
             from:{

@@ -160,7 +160,7 @@
 import headerSection from '../components/header.vue'
 
 export default {
-    omponents:{
+    components:{
       headerSection,
         },
     data(){
