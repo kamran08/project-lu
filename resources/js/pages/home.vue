@@ -213,9 +213,9 @@
 				<div class="col-md-6">
 					<div class="text-part mt-">
 						<h1 class="first-header">smartly manage your project,and share with other's</h1>
-						<p class="header-p">I'm a paragraph. Click here to add your own text and edit me. It’s easy.
-							Just click “Edit Text” or double click me to add your own content and make changes to the
-							font.</p>
+						<p class="header-p">Our project entitled as PROJECT RAKHO. It is very important for regular students of department of Computer Science and Engineering. We know students of department of Computer 
+						Science and Engineering provide a project after every 4 months, 
+						for making this they are face lot of problem.</p>
 
 						<router-link to="upload-project">
 							<button class="header-button">Upload project</button>
@@ -231,6 +231,8 @@
 		</div>
 
 	</header>
+
+
 
 
 	<!--========First Section========-->

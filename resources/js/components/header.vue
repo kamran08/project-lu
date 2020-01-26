@@ -5,7 +5,7 @@
 			<div class="container">
 				<nav class="navigation">
 					<div class="col-md-2">
-						<div class="logo-1">
+						<div class="logo-2">
 							<router-link to="home"></router-link>
 						</div>
 					</div>

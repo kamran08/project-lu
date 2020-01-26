@@ -2030,6 +2030,178 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -3288,6 +3460,8 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+//
+//
 //
 //
 //
@@ -69474,7 +69648,7 @@ var render = function() {
             _c("div", { staticClass: "col-md-2" }, [
               _c(
                 "div",
-                { staticClass: "logo-1" },
+                { staticClass: "logo-2" },
                 [_c("router-link", { attrs: { to: "home" } })],
                 1
               )
@@ -69905,15 +70079,303 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
+    _c("div", { staticClass: "main-nav" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("nav", { staticClass: "navigation" }, [
+          _c(
+            "div",
+            { staticClass: "col-md-2" },
+            [
+              _c("router-link", { attrs: { to: "/" } }, [
+                _c("div", { staticClass: "logo-1" })
+              ])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-8 center" }, [
+            _c("ul", { staticClass: "nav_list " }, [
+              _c(
+                "li",
+                [_c("router-link", { attrs: { to: "/" } }, [_vm._v("Home")])],
+                1
+              ),
+              _vm._v(" "),
+              _vm.authInfo
+                ? _c(
+                    "li",
+                    [
+                      _c("router-link", { attrs: { to: "/team-profile" } }, [
+                        _vm._v("Team Profile")
+                      ])
+                    ],
+                    1
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _vm._m(0),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _vm._m(2),
+              _vm._v(" "),
+              _vm._m(3)
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-2" }, [
+            _c("div", { staticClass: "dropdown" }, [
+              _vm._m(4),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "dropdown-content",
+                  attrs: { id: "myDropdown" }
+                },
+                [
+                  _c(
+                    "ul",
+                    { staticClass: "dropdown-item-wrap" },
+                    [
+                      _vm.authInfo
+                        ? [
+                            _c(
+                              "li",
+                              { staticClass: "dropdown-item" },
+                              [
+                                _c(
+                                  "router-link",
+                                  { attrs: { to: "add-member" } },
+                                  [
+                                    _c(
+                                      "div",
+                                      { staticClass: "img-drp-down " },
+                                      [
+                                        _c("img", {
+                                          staticClass: "hachib",
+                                          attrs: {
+                                            src:
+                                              "/assets/img/add-mem-small.png",
+                                            alt: ""
+                                          }
+                                        })
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "prgp-drp-down" },
+                                      [
+                                        _c("p", [
+                                          _vm._v(" Add your team member")
+                                        ])
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "li",
+                              { staticClass: "dropdown-item" },
+                              [
+                                _c(
+                                  "router-link",
+                                  { attrs: { to: "upload-project" } },
+                                  [
+                                    _c("div", { staticClass: "img-drp-down" }, [
+                                      _c("img", {
+                                        staticClass: "hachib",
+                                        attrs: {
+                                          src: "/assets/img/upload-small.png",
+                                          alt: ""
+                                        }
+                                      })
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "prgp-drp-down" },
+                                      [_c("p", [_vm._v("Upload your project")])]
+                                    )
+                                  ]
+                                )
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "li",
+                              { staticClass: "dropdown-item" },
+                              [
+                                _c(
+                                  "router-link",
+                                  { attrs: { to: "/myProject" } },
+                                  [
+                                    _c("div", { staticClass: "img-drp-down" }, [
+                                      _c("img", {
+                                        staticClass: "hachib",
+                                        attrs: {
+                                          src: "/assets/img/upload-small.png",
+                                          alt: ""
+                                        }
+                                      })
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "prgp-drp-down" },
+                                      [_c("p", [_vm._v("My Projects")])]
+                                    )
+                                  ]
+                                )
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "li",
+                              { staticClass: "dropdown-item" },
+                              [
+                                _c(
+                                  "router-link",
+                                  { attrs: { to: "team-profile" } },
+                                  [
+                                    _c("div", { staticClass: "img-drp-down" }, [
+                                      _c("img", {
+                                        staticClass: "hachib",
+                                        attrs: {
+                                          src: "/assets/img/team-pro.png",
+                                          alt: ""
+                                        }
+                                      })
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "prgp-drp-down" },
+                                      [
+                                        _c("p", [
+                                          _vm._v(
+                                            "See your team\n\t\t\t\t\t\t\t\t\t\t\t\t\tprofile"
+                                          )
+                                        ])
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "li",
+                              { staticClass: "dropdown-item" },
+                              [
+                                _c(
+                                  "router-link",
+                                  { attrs: { to: "/allrequest" } },
+                                  [
+                                    _c("div", { staticClass: "img-drp-down" }, [
+                                      _c("img", {
+                                        staticClass: "hachib",
+                                        attrs: {
+                                          src:
+                                            "/assets/img/notification-small.png",
+                                          alt: ""
+                                        }
+                                      })
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "prgp-drp-down" },
+                                      [_c("p", [_vm._v("See All requests")])]
+                                    )
+                                  ]
+                                )
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _vm._m(5)
+                          ]
+                        : [
+                            _c(
+                              "li",
+                              { staticClass: "dropdown-item" },
+                              [
+                                _c("router-link", { attrs: { to: "/login" } }, [
+                                  _c("div", { staticClass: "img-drp-down" }, [
+                                    _c("img", {
+                                      staticClass: "hachib",
+                                      attrs: {
+                                        src: "/assets/img/sign-out-small.png",
+                                        alt: ""
+                                      }
+                                    })
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "prgp-drp-down" }, [
+                                    _c("p", [_vm._v("Log In")])
+                                  ])
+                                ])
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "li",
+                              { staticClass: "dropdown-item" },
+                              [
+                                _c(
+                                  "router-link",
+                                  { attrs: { to: "/registration" } },
+                                  [
+                                    _c("div", { staticClass: "img-drp-down" }, [
+                                      _c("img", {
+                                        staticClass: "hachib",
+                                        attrs: {
+                                          src: "/assets/img/sign-out-small.png",
+                                          alt: ""
+                                        }
+                                      })
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "prgp-drp-down" },
+                                      [_c("p", [_vm._v("Registration")])]
+                                    )
+                                  ]
+                                )
+                              ],
+                              1
+                            )
+                          ]
+                    ],
+                    2
+                  )
+                ]
+              )
+            ])
+          ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
     _c("div", { staticClass: "second-section-add-member content-bg ptb-30" }, [
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "section-content" }, [
           _c("div", { staticClass: "authentication-row full-card" }, [
-            _vm._m(0),
+            _vm._m(6),
             _vm._v(" "),
             _c("div", { staticClass: " col-sm-12 col-md-5" }, [
               _c("div", { staticClass: "authentication-card auth-back" }, [
-                _vm._m(1),
+                _vm._m(7),
                 _vm._v(" "),
                 _c("div", { staticClass: "authentication-log" }, [
                   _c("div", { staticClass: "authentication-item" }, [
@@ -70025,8 +70487,6 @@ var render = function() {
                               [
                                 _c("div", [
                                   _c("div", { staticClass: "_1upload_main" }, [
-                                    _c("button", [_vm._v("hello")]),
-                                    _vm._v(" "),
                                     _c("p", { staticClass: "_1upload_icon" }, [
                                       _c("i", { staticClass: "fas fa-camera" })
                                     ])
@@ -70057,22 +70517,7 @@ var render = function() {
                     )
                   ])
                 ])
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "authentication save-and-exit-button " },
-                [
-                  _c("router-link", { attrs: { to: "/" } }, [
-                    _c(
-                      "button",
-                      { staticClass: "save-now-button add-member-button" },
-                      [_vm._v("Save and exit")]
-                    )
-                  ])
-                ],
-                1
-              )
+              ])
             ])
           ])
         ])
@@ -70081,6 +70526,70 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#about-section-id" } }, [_vm._v("About")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#first-section-id" } }, [_vm._v("Website")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#third-section-id" } }, [_vm._v("Apps")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#fifth-section-id" } }, [_vm._v("Games")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      { staticClass: "nav-button", attrs: { onclick: "myFunction()" } },
+      [
+        _c("span", [_c("i", { staticClass: "fas fa-user-circle" })]),
+        _vm._v(" My Account")
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "dropdown-item" }, [
+      _c("a", { attrs: { href: "/logout" } }, [
+        _c("div", { staticClass: "img-drp-down" }, [
+          _c("img", {
+            staticClass: "hachib",
+            attrs: { src: "/assets/img/sign-out-small.png", alt: "" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "prgp-drp-down" }, [
+          _c("p", [_vm._v("Sign out from website")])
+        ])
+      ])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -71857,7 +72366,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("p", { staticClass: "header-p" }, [
                   _vm._v(
-                    "I'm a paragraph. Click here to add your own text and edit me. It’s easy.\n\t\t\t\t\t\t\tJust click “Edit Text” or double click me to add your own content and make changes to the\n\t\t\t\t\t\t\tfont."
+                    "Our project entitled as PROJECT RAKHO. It is very important for regular students of department of Computer Science and Engineering. We know students of department of Computer \n\t\t\t\t\t\tScience and Engineering provide a project after every 4 months, \n\t\t\t\t\t\tfor making this they are face lot of problem."
                   )
                 ]),
                 _vm._v(" "),
@@ -95482,8 +95991,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! G:\project-rakho\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! G:\project-rakho\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\project-lu\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\project-lu\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

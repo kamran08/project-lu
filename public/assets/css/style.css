@@ -447,11 +447,14 @@ p{
 	
 }
 
-.first-header{
-	color: white;
-	text-transform: uppercase;
-	margin-right: -200px;
+.first-header {
+    color: white;
+    text-transform: uppercase;
+    margin-right: -200px;
+    font-size: 36px;
+    margin-bottom: 40px;
 }
+
 
 .header-description{
 	margin-top: 100px;		
@@ -1775,4 +1778,41 @@ input {
 }
 .coustom_image img{
 	height: 200px;
+}
+
+.authentication-item input {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+	color: #2c2c2c;
+	background: #F5F7FA;
+    outline: 0;
+}
+
+.about-us{
+	padding-top: 120px;
+}
+.section-header {
+    font-size: 35px;
+    color: 
+    black;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.about-p {
+    line-height: 26px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 16px;
+    padding-right: 50px;
+    text-align: justify;
+}
+
+.features span {
+    color:  blue;
+}
+
+.features p{
+	margin-top: 25px;
 }
