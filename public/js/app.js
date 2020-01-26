@@ -2150,6 +2150,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_header_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/header.vue */ "./resources/js/components/header.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -2313,7 +2314,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  omponents: {
+    headerSection: _components_header_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
   data: function data() {
     return {
       alldata: {},
@@ -2424,6 +2430,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_header_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/header.vue */ "./resources/js/components/header.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -2482,57 +2489,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    headerSection: _components_header_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
   data: function data() {
     return {
       alldata: {}
@@ -70212,220 +70173,228 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _vm._m(0),
-    _vm._v(" "),
-    _c("div", { staticClass: "second-section-account content-bg ptb-30" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-3 col-sm-3" }, [
-            _vm._m(1),
-            _vm._v(" "),
-            _c("div", { staticClass: "filter-card card-all-temp" }, [
-              _c(
-                "div",
-                { staticClass: "authentication-title list" },
-                [
-                  _c("h3", {}, [_vm._v("Categories")]),
-                  _vm._v(" "),
-                  _c(
-                    "CheckboxGroup",
-                    {
-                      on: { "on-change": _vm.getAlldata },
-                      model: {
-                        value: _vm.category,
-                        callback: function($$v) {
-                          _vm.category = $$v
-                        },
-                        expression: "category"
-                      }
-                    },
-                    _vm._l(_vm.allcategory, function(it, index) {
-                      return _c(
-                        "Checkbox",
-                        {
-                          key: index,
-                          staticClass: "checkbox",
-                          attrs: { label: it.category }
-                        },
-                        [_c("span", [_vm._v(_vm._s(it.category))])]
-                      )
-                    }),
-                    1
-                  )
-                ],
-                1
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "year-card card-all-temp product-desc-card" },
-              [
-                _c("h3", {}, [_vm._v("Year")]),
-                _vm._v(" "),
-                _c(
-                  "RadioGroup",
-                  {
-                    attrs: { vertical: "" },
-                    on: { "on-change": _vm.getAlldata },
-                    model: {
-                      value: _vm.year,
-                      callback: function($$v) {
-                        _vm.year = $$v
-                      },
-                      expression: "year"
-                    }
-                  },
-                  [
-                    _c("Radio", { attrs: { label: "3" } }, [
-                      _c("span", [_vm._v("3rd year")])
-                    ]),
-                    _vm._v(" "),
-                    _c("Radio", { attrs: { label: "4" } }, [
-                      _c("span", [_vm._v("4th yaer")])
-                    ])
-                  ],
-                  1
-                )
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "rating-card card-all-temp product-desc-card" },
-              [
-                _c("h3", {}, [_vm._v("Rating")]),
-                _vm._v(" "),
+  return _c(
+    "div",
+    [
+      _c("headerSection"),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "second-section-account content-bg ptb-30" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-3 col-sm-3" }, [
+              _vm._m(1),
+              _vm._v(" "),
+              _c("div", { staticClass: "filter-card card-all-temp" }, [
                 _c(
                   "div",
-                  { staticClass: "form-option-all-temps" },
+                  { staticClass: "authentication-title list" },
                   [
+                    _c("h3", {}, [_vm._v("Categories")]),
+                    _vm._v(" "),
                     _c(
                       "CheckboxGroup",
                       {
                         on: { "on-change": _vm.getAlldata },
                         model: {
-                          value: _vm.rate,
+                          value: _vm.category,
                           callback: function($$v) {
-                            _vm.rate = $$v
+                            _vm.category = $$v
                           },
-                          expression: "rate"
+                          expression: "category"
                         }
                       },
-                      [
-                        _c(
+                      _vm._l(_vm.allcategory, function(it, index) {
+                        return _c(
                           "Checkbox",
-                          { staticClass: "checkbox", attrs: { label: 1 } },
-                          [_c("span", [_vm._v("1 star and higher")])]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "Checkbox",
-                          { staticClass: "checkbox", attrs: { label: 2 } },
-                          [_c("span", [_vm._v("2 star and higher")])]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "Checkbox",
-                          { staticClass: "checkbox", attrs: { label: 3 } },
-                          [_c("span", [_vm._v("3 star and higher")])]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "Checkbox",
-                          { staticClass: "checkbox", attrs: { label: 4 } },
-                          [_c("span", [_vm._v("4 star and higher ")])]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "Checkbox",
-                          { staticClass: "checkbox", attrs: { label: 5 } },
-                          [_c("span", [_vm._v("5 star and higher ")])]
+                          {
+                            key: index,
+                            staticClass: "checkbox",
+                            attrs: { label: it.category }
+                          },
+                          [_c("span", [_vm._v(_vm._s(it.category))])]
                         )
-                      ],
+                      }),
                       1
                     )
                   ],
                   1
                 )
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-9 col-sm-9 " }, [
-            _c("div", { staticClass: "second-section all-templates-card" }, [
+              ]),
+              _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "flex-section" },
-                _vm._l(_vm.alldata.data, function(item, index) {
-                  return _c(
-                    "div",
+                { staticClass: "year-card card-all-temp product-desc-card" },
+                [
+                  _c("h3", {}, [_vm._v("Year")]),
+                  _vm._v(" "),
+                  _c(
+                    "RadioGroup",
                     {
-                      key: index,
-                      class: index % 2 == 0 ? "card-item mgr-15" : "card-item"
+                      attrs: { vertical: "" },
+                      on: { "on-change": _vm.getAlldata },
+                      model: {
+                        value: _vm.year,
+                        callback: function($$v) {
+                          _vm.year = $$v
+                        },
+                        expression: "year"
+                      }
                     },
                     [
-                      _c("div", { staticClass: "card-design first-card" }, [
-                        _c(
-                          "a",
-                          { attrs: { to: "product-description" / item.id } },
-                          [
-                            _c("div", { staticClass: "content-overlay" }),
-                            _vm._v(" "),
-                            _c("img", {
-                              staticClass: "content-image",
-                              attrs: { src: item.image }
-                            }),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "content-details fadeIn-bottom" },
-                              [
-                                _c("h3", { staticClass: "content-title" }, [
-                                  _vm._v(_vm._s(item.projectName))
-                                ]),
-                                _vm._v(" "),
-                                _c("p", { staticClass: "content-text" }, [
-                                  _vm._v(_vm._s(item.category))
-                                ]),
-                                _vm._v(" "),
-                                _c("p", { staticClass: "content-like" })
-                              ]
-                            )
-                          ]
-                        )
+                      _c("Radio", { attrs: { label: "3" } }, [
+                        _c("span", [_vm._v("3rd year")])
+                      ]),
+                      _vm._v(" "),
+                      _c("Radio", { attrs: { label: "4" } }, [
+                        _c("span", [_vm._v("4th yaer")])
                       ])
-                    ]
+                    ],
+                    1
                   )
-                }),
-                0
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "rating-card card-all-temp product-desc-card" },
+                [
+                  _c("h3", {}, [_vm._v("Rating")]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "form-option-all-temps" },
+                    [
+                      _c(
+                        "CheckboxGroup",
+                        {
+                          on: { "on-change": _vm.getAlldata },
+                          model: {
+                            value: _vm.rate,
+                            callback: function($$v) {
+                              _vm.rate = $$v
+                            },
+                            expression: "rate"
+                          }
+                        },
+                        [
+                          _c(
+                            "Checkbox",
+                            { staticClass: "checkbox", attrs: { label: 1 } },
+                            [_c("span", [_vm._v("1 star and higher")])]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "Checkbox",
+                            { staticClass: "checkbox", attrs: { label: 2 } },
+                            [_c("span", [_vm._v("2 star and higher")])]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "Checkbox",
+                            { staticClass: "checkbox", attrs: { label: 3 } },
+                            [_c("span", [_vm._v("3 star and higher")])]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "Checkbox",
+                            { staticClass: "checkbox", attrs: { label: 4 } },
+                            [_c("span", [_vm._v("4 star and higher ")])]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "Checkbox",
+                            { staticClass: "checkbox", attrs: { label: 5 } },
+                            [_c("span", [_vm._v("5 star and higher ")])]
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ]
               )
             ]),
             _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticStyle: { "padding-top": "30px", "text-align": "center" }
-              },
-              [
-                _c("Page", {
-                  attrs: {
-                    total: _vm.alldata.total,
-                    current: _vm.alldata.current_page,
-                    "prev-text": "Previous",
-                    "next-text": "Next"
-                  }
-                })
-              ],
-              1
-            )
+            _c("div", { staticClass: "col-md-9 col-sm-9 " }, [
+              _c("div", { staticClass: "second-section all-templates-card" }, [
+                _c(
+                  "div",
+                  { staticClass: "flex-section" },
+                  _vm._l(_vm.alldata.data, function(item, index) {
+                    return _c(
+                      "div",
+                      {
+                        key: index,
+                        class: index % 2 == 0 ? "card-item mgr-15" : "card-item"
+                      },
+                      [
+                        _c("div", { staticClass: "card-design first-card" }, [
+                          _c(
+                            "a",
+                            { attrs: { to: "product-description" / item.id } },
+                            [
+                              _c("div", { staticClass: "content-overlay" }),
+                              _vm._v(" "),
+                              _c("img", {
+                                staticClass: "content-image",
+                                attrs: { src: item.image }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "content-details fadeIn-bottom"
+                                },
+                                [
+                                  _c("h3", { staticClass: "content-title" }, [
+                                    _vm._v(_vm._s(item.projectName))
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("p", { staticClass: "content-text" }, [
+                                    _vm._v(_vm._s(item.category))
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("p", { staticClass: "content-like" })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  }),
+                  0
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticStyle: { "padding-top": "30px", "text-align": "center" }
+                },
+                [
+                  _c("Page", {
+                    attrs: {
+                      total: _vm.alldata.total,
+                      current: _vm.alldata.current_page,
+                      "prev-text": "Previous",
+                      "next-text": "Next"
+                    }
+                  })
+                ],
+                1
+              )
+            ])
           ])
         ])
       ])
-    ])
-  ])
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
@@ -70484,113 +70453,10 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("header", { staticClass: "header header-bg header-account" }, [
-      _c("div", { staticClass: "mobile-menu" }, [
-        _c("div", { staticClass: "container" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _vm._m(1),
-          _vm._v(" "),
-          _c("div", { staticClass: "mobile-open-container" }, [
-            _c("div", { staticClass: "main-nav-list" }, [
-              _c("ul", { staticClass: "nav-content" }, [
-                _c(
-                  "li",
-                  [_c("router-link", { attrs: { to: "/" } }, [_vm._v("Home")])],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c("router-link", { attrs: { to: "/about" } }, [
-                      _vm._v("About")
-                    ])
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c("router-link", { attrs: { to: "/" } }, [
-                      _vm._v("Website")
-                    ])
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [_c("router-link", { attrs: { to: "/" } }, [_vm._v("Apps")])],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c("router-link", { attrs: { to: "/" } }, [_vm._v("Games")])
-                  ],
-                  1
-                )
-              ])
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "main-nav" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("nav", { staticClass: "navigation" }, [
-            _vm._m(2),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-8 center" }, [
-              _c("ul", { staticClass: "nav_list nav-exept-home" }, [
-                _c(
-                  "li",
-                  [_c("router-link", { attrs: { to: "/" } }, [_vm._v("Home")])],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c("router-link", { attrs: { to: "/about" } }, [
-                      _vm._v("About")
-                    ])
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c("router-link", { attrs: { to: "/" } }, [
-                      _vm._v("Website")
-                    ])
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [_c("router-link", { attrs: { to: "/" } }, [_vm._v("Apps")])],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c("router-link", { attrs: { to: "/" } }, [_vm._v("Games")])
-                  ],
-                  1
-                )
-              ])
-            ])
-          ])
-        ])
-      ]),
+  return _c(
+    "div",
+    [
+      _c("headerSection"),
       _vm._v(" "),
       _c(
         "div",
@@ -70699,39 +70565,11 @@ var render = function() {
           ])
         ]
       )
-    ])
-  ])
+    ],
+    1
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "right main-nav-brand" }, [
-      _c("a", { attrs: { href: "home.html" } }, [
-        _c("img", { attrs: { src: "assets/img/sitelogo.png", alt: "" } })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mobile-toggle" }, [
-      _c("span", [_c("i", { staticClass: "fas fa-bars" })])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-2" }, [
-      _c("a", { attrs: { href: "home.html" } }, [
-        _c("div", { staticClass: "logo-2" })
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -95601,8 +95439,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\project-lu\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! E:\project-lu\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! G:\project-rakho\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! G:\project-rakho\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

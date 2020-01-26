@@ -1,56 +1,7 @@
 <template>
     <div>
-    <header class="header header-bg header-account">
-        <div class="mobile-menu">
-            <div class="container">
-                <div class="right main-nav-brand">
-                    <a href="home.html"><img src="assets/img/sitelogo.png" alt=""></a>
-                </div>
+   <headerSection/>
 
-
-                <div class="mobile-toggle">
-                    <span><i class="fas fa-bars"></i></span>
-                </div>
-                <div class="mobile-open-container">
-                    <div class="main-nav-list">
-                        <ul class="nav-content">
-                            <li ><router-link to="/">Home</router-link></li>
-                            <li ><router-link to="/about">About</router-link></li>
-                            <li ><router-link to="/">Website</router-link></li>
-                            <li ><router-link to="/">Apps</router-link></li>
-                            <li ><router-link to="/">Games</router-link></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="main-nav">
-            <div class="container">
-                <nav class="navigation">
-                    <div class="col-md-2">
-                        <a href="home.html">
-                            <div class="logo-2">
-                            
-                            </div>
-                        </a>
-                        
-                    </div>
-                    <div class="col-md-8 center">
-                        <ul class="nav_list nav-exept-home">
-                             <li ><router-link to="/">Home</router-link></li>
-                            <li ><router-link to="/about">About</router-link></li>
-                            <li ><router-link to="/">Website</router-link></li>
-                            <li ><router-link to="/">Apps</router-link></li>
-                            <li ><router-link to="/">Games</router-link></li>
-							
-
-                        </ul>
-                    </div>
-
-                
-                </nav>
-            </div>
-        </div>
 
 
         <div class="second-section-add-member content-bg ptb-30">
@@ -97,11 +48,15 @@
 
         </div>
 
-    </header>
     </div>
 </template>
 <script>
+import headerSection from '../components/header.vue'
+
 export default {
+     components:{
+      headerSection,
+    },
     data(){
         return{
             alldata:{}

@@ -1,5 +1,6 @@
 <template>
     <div>
+         <headerSection/>
         <div class="all-temp-header">
             <div class="container">
                 <h1 class="Product-Header">Templates and Plugins from $20</h1>
@@ -156,7 +157,12 @@
     </div>
 </template>
 <script>
+import headerSection from '../components/header.vue'
+
 export default {
+    omponents:{
+      headerSection,
+        },
     data(){
         return{
             alldata:{},
