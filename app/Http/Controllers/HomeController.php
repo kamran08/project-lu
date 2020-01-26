@@ -30,6 +30,41 @@ class HomeController extends Controller
         return $project;
        
     }
+    public function deleteMyProject(Request $request){
+        $data = $request->all();
+        if (!Auth::user()) {
+            return response()->json([
+                'msg' => "your are not auth user!!",
+            ], 401);
+        }
+         $project = [];
+         $id = Auth::user()->id;
+
+        $project = Project::where('id', $data['id'])->where('user_id', $id )->orderBy('id','desc')->limit(3)->get();
+        // else{
+        //     $project = Project::where('type', 'Website')->orderBy('id', 'desc')->limit(4);
+        // }
+        return $project;
+       
+    }
+    public function updateProject(Request $request){
+        $data = $request->all();
+        if (!Auth::user()) {
+            return response()->json([
+                'msg' => "your are not auth user!!",
+            ], 401);
+        }
+         $project = [];
+         $id = Auth::user()->id;
+
+        Project::where('id', $data['id'])->where('user_id', $id )->update($data);
+        $project = Project::where('id', $data['id'])->where('user_id', $id )->first();
+        // else{
+        //     $project = Project::where('type', 'Website')->orderBy('id', 'desc')->limit(4);
+        // }
+        return $project;
+       
+    }
     public function getAllMyProject(){
         if (!Auth::user()) {
             return response()->json([

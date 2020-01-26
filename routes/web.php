@@ -41,6 +41,8 @@ Route::post('/app/deleteReview', 'ReviewController@deleteReview');
 // my project
 Route::get('/app/getAllMyProject', 'HomeController@getAllMyProject');
 Route::post('/app/getAllMyProject', 'HomeController@getAllMyProject');
+Route::post('/app/deleteMyProject', 'HomeController@deleteMyProject');
+Route::post('/app/updateProject', 'HomeController@updateProject');
 
 
 
